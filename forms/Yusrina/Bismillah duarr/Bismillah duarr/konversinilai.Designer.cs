@@ -238,7 +238,7 @@
             this.btn_inputmatkul.Name = "btn_inputmatkul";
             this.btn_inputmatkul.Size = new System.Drawing.Size(158, 39);
             this.btn_inputmatkul.TabIndex = 4;
-            this.btn_inputmatkul.Text = "Input Matkul";
+            this.btn_inputmatkul.Text = "Tambahkan";
             this.btn_inputmatkul.UseVisualStyleBackColor = false;
             this.btn_inputmatkul.Click += new System.EventHandler(this.btn_inputmatkul_Click);
             // 
