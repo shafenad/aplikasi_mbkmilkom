@@ -41,9 +41,9 @@
             this.informasiAkunToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lyt_konversisks = new System.Windows.Forms.TableLayoutPanel();
+            this.lbl_keterangankonversisks = new System.Windows.Forms.Label();
             this.lbl_kompetensikonversisks = new System.Windows.Forms.Label();
             this.tbx_kompetensikonversisks = new System.Windows.Forms.TextBox();
-            this.lbl_keterangankonversisks = new System.Windows.Forms.Label();
             this.tbx_keterangankonversisks = new System.Windows.Forms.TextBox();
             this.lbl_matkulygdikonversi = new System.Windows.Forms.Label();
             this.cbx_matkulygdikonversi = new System.Windows.Forms.ComboBox();
@@ -87,7 +87,7 @@
             this.profilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1421, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(1184, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,7 +95,7 @@
             // 
             this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(131, 45);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(131, 35);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -106,7 +106,7 @@
             this.statusMOAToolStripMenuItem});
             this.mitraToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            this.mitraToolStripMenuItem.Size = new System.Drawing.Size(76, 45);
+            this.mitraToolStripMenuItem.Size = new System.Drawing.Size(76, 35);
             this.mitraToolStripMenuItem.Text = "Mitra";
             this.mitraToolStripMenuItem.Click += new System.EventHandler(this.mitraToolStripMenuItem_Click);
             // 
@@ -126,7 +126,7 @@
             // 
             this.mataKuliahToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            this.mataKuliahToolStripMenuItem.Size = new System.Drawing.Size(137, 45);
+            this.mataKuliahToolStripMenuItem.Size = new System.Drawing.Size(137, 35);
             this.mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             this.mataKuliahToolStripMenuItem.Click += new System.EventHandler(this.mataKuliahToolStripMenuItem_Click);
             // 
@@ -134,14 +134,14 @@
             // 
             this.konversiSKSToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            this.konversiSKSToolStripMenuItem.Size = new System.Drawing.Size(144, 45);
+            this.konversiSKSToolStripMenuItem.Size = new System.Drawing.Size(144, 35);
             this.konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             // 
             // konversiNilaiToolStripMenuItem
             // 
             this.konversiNilaiToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            this.konversiNilaiToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
+            this.konversiNilaiToolStripMenuItem.Size = new System.Drawing.Size(148, 35);
             this.konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             // 
             // profilToolStripMenuItem
@@ -151,7 +151,7 @@
             this.logOutToolStripMenuItem});
             this.profilToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(73, 45);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(73, 35);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.profilToolStripMenuItem_Click);
             // 
@@ -174,25 +174,35 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lyt_konversisks.ColumnCount = 1;
             this.lyt_konversisks.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lyt_konversisks.Controls.Add(this.lbl_kompetensikonversisks, 0, 0);
-            this.lyt_konversisks.Controls.Add(this.tbx_kompetensikonversisks, 0, 1);
             this.lyt_konversisks.Controls.Add(this.lbl_keterangankonversisks, 0, 2);
+            this.lyt_konversisks.Controls.Add(this.tbx_kompetensikonversisks, 0, 1);
             this.lyt_konversisks.Controls.Add(this.tbx_keterangankonversisks, 0, 3);
             this.lyt_konversisks.Controls.Add(this.lbl_matkulygdikonversi, 0, 4);
             this.lyt_konversisks.Controls.Add(this.cbx_matkulygdikonversi, 0, 5);
             this.lyt_konversisks.Controls.Add(this.panel1, 0, 6);
-            this.lyt_konversisks.Location = new System.Drawing.Point(21, 177);
+            this.lyt_konversisks.Controls.Add(this.lbl_kompetensikonversisks, 0, 0);
+            this.lyt_konversisks.Location = new System.Drawing.Point(22, 206);
             this.lyt_konversisks.Name = "lyt_konversisks";
             this.lyt_konversisks.RowCount = 7;
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 39.47368F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 60.52632F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 189F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 47F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
-            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 77F));
-            this.lyt_konversisks.Size = new System.Drawing.Size(575, 530);
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 29.06404F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 70.93596F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 35F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 154F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 39F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 51F));
+            this.lyt_konversisks.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 50F));
+            this.lyt_konversisks.Size = new System.Drawing.Size(575, 533);
             this.lyt_konversisks.TabIndex = 1;
+            // 
+            // lbl_keterangankonversisks
+            // 
+            this.lbl_keterangankonversisks.AutoSize = true;
+            this.lbl_keterangankonversisks.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_keterangankonversisks.Location = new System.Drawing.Point(3, 203);
+            this.lbl_keterangankonversisks.Name = "lbl_keterangankonversisks";
+            this.lbl_keterangankonversisks.Size = new System.Drawing.Size(146, 35);
+            this.lbl_keterangankonversisks.TabIndex = 2;
+            this.lbl_keterangankonversisks.Text = "Keterangan :";
             // 
             // lbl_kompetensikonversisks
             // 
@@ -208,35 +218,25 @@
             // tbx_kompetensikonversisks
             // 
             this.tbx_kompetensikonversisks.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_kompetensikonversisks.Location = new System.Drawing.Point(3, 41);
+            this.tbx_kompetensikonversisks.Location = new System.Drawing.Point(3, 62);
             this.tbx_kompetensikonversisks.Name = "tbx_kompetensikonversisks";
             this.tbx_kompetensikonversisks.Size = new System.Drawing.Size(461, 34);
             this.tbx_kompetensikonversisks.TabIndex = 1;
             // 
-            // lbl_keterangankonversisks
-            // 
-            this.lbl_keterangankonversisks.AutoSize = true;
-            this.lbl_keterangankonversisks.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_keterangankonversisks.Location = new System.Drawing.Point(3, 97);
-            this.lbl_keterangankonversisks.Name = "lbl_keterangankonversisks";
-            this.lbl_keterangankonversisks.Size = new System.Drawing.Size(146, 36);
-            this.lbl_keterangankonversisks.TabIndex = 2;
-            this.lbl_keterangankonversisks.Text = "Keterangan :";
-            // 
             // tbx_keterangankonversisks
             // 
             this.tbx_keterangankonversisks.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_keterangankonversisks.Location = new System.Drawing.Point(3, 147);
+            this.tbx_keterangankonversisks.Location = new System.Drawing.Point(3, 241);
             this.tbx_keterangankonversisks.Multiline = true;
             this.tbx_keterangankonversisks.Name = "tbx_keterangankonversisks";
-            this.tbx_keterangankonversisks.Size = new System.Drawing.Size(461, 163);
+            this.tbx_keterangankonversisks.Size = new System.Drawing.Size(461, 148);
             this.tbx_keterangankonversisks.TabIndex = 3;
             // 
             // lbl_matkulygdikonversi
             // 
             this.lbl_matkulygdikonversi.AutoSize = true;
             this.lbl_matkulygdikonversi.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_matkulygdikonversi.Location = new System.Drawing.Point(3, 333);
+            this.lbl_matkulygdikonversi.Location = new System.Drawing.Point(3, 392);
             this.lbl_matkulygdikonversi.Name = "lbl_matkulygdikonversi";
             this.lbl_matkulygdikonversi.Size = new System.Drawing.Size(321, 36);
             this.lbl_matkulygdikonversi.TabIndex = 4;
@@ -246,7 +246,7 @@
             // 
             this.cbx_matkulygdikonversi.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbx_matkulygdikonversi.FormattingEnabled = true;
-            this.cbx_matkulygdikonversi.Location = new System.Drawing.Point(3, 383);
+            this.cbx_matkulygdikonversi.Location = new System.Drawing.Point(3, 434);
             this.cbx_matkulygdikonversi.Name = "cbx_matkulygdikonversi";
             this.cbx_matkulygdikonversi.Size = new System.Drawing.Size(461, 39);
             this.cbx_matkulygdikonversi.TabIndex = 5;
@@ -255,9 +255,9 @@
             // 
             this.panel1.Controls.Add(this.lnk_carimatkulkonversisks);
             this.panel1.Controls.Add(this.btn_simpankonversisks);
-            this.panel1.Location = new System.Drawing.Point(3, 455);
+            this.panel1.Location = new System.Drawing.Point(3, 485);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(567, 72);
+            this.panel1.Size = new System.Drawing.Size(567, 45);
             this.panel1.TabIndex = 6;
             // 
             // lnk_carimatkulkonversisks
@@ -288,7 +288,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnl_konversisks.Controls.Add(this.tbl_matkulkonversisks);
-            this.pnl_konversisks.Location = new System.Drawing.Point(603, 174);
+            this.pnl_konversisks.Location = new System.Drawing.Point(603, 206);
             this.pnl_konversisks.Name = "pnl_konversisks";
             this.pnl_konversisks.Size = new System.Drawing.Size(569, 533);
             this.pnl_konversisks.TabIndex = 2;
@@ -434,6 +434,7 @@
             this.Name = "KonversiSKS";
             this.Text = "Baskom";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.KonversiSKS_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.lyt_konversisks.ResumeLayout(false);
