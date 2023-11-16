@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="View\DaftarMitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_ProfilTimMBKM.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DetailValidasiKonversiNilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_MemvalidasiKonversiSks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DetailValidasiKonversiSks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_PembagianTugasPIC.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_PembagianTugas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_PengajuanMOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_CariMataKuliah.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_TambahKonversiNilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_ProfilMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_LoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_MemvalidasiKonversiNilai.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_TambahKonversiSks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_TambahMataKuliahTempuh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_StatusMOA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_FormUbahKataSandi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_ProfilAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DataMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DataDosen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_TambahMitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_TambahPengajuanMitra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DashboardTimmbkm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DashboardMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_DashboardAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_LoginTimmbkm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_LoginMahasiswa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="View\v_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>
