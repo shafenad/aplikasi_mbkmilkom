@@ -15,9 +15,6 @@ namespace Baskom.Controller
         protected m_DataAkunAdmin m_DataAkunAdmin = new m_DataAkunAdmin();
         protected m_DataAkunMahasiswa m_DataAkunMahasiswa = new m_DataAkunMahasiswa();
         protected m_DataAkunTimmbkm m_DataAkunTimmbkm = new m_DataAkunTimmbkm();
-        private string nama_admin = "";
-        private string nidn = "";
-        private string nim = "";
         private v_DashboardAdmin_Lama v_DashboardAdmin = new v_DashboardAdmin_Lama();
         private v_DashboardMahasiswa_Lama v_DashboardMahasiswa = new v_DashboardMahasiswa_Lama();
         private v_DashboardTimmbkm_Lama v_DashboardTimmbkm = new v_DashboardTimmbkm_Lama();
@@ -26,44 +23,46 @@ namespace Baskom.Controller
         {
             //constructor
         }
-
-        public bool cekLoginAdmin(string nama_admin, string kata_sandi)
+        public void loginAdmin(string email, string kata_sandi)
         {
-            string[] dataAdmin = m_DataAkunAdmin.getAdminByNama(nama_admin, kata_sandi);
-            return dataAdmin.Length != 0;
+            bool check = this.m_DataAkunAdmin.cekLoginAdmin(email, kata_sandi);
+            if (check)
+            {
+                v_DashboardAdmin v_DashboardAdmin = new v_DashboardAdmin();
+                this.setDashboard(v_DashboardAdmin);
+            }
+            else
+            {
+                MessageBox.Show("Data Login Tidak Valid!");
+            }
         }
 
-        public bool cekLoginMahasiswa(string nim, string kata_sandi)
+        public void loginMahasiswa(string nim, string kata_sandi)
         {
-            string[] dataMahasiswa = m_DataAkunMahasiswa.getMahasiswaByNim(nim, kata_sandi);
-            return dataMahasiswa.Length != 0;
+            bool check = this.m_DataAkunMahasiswa.cekLoginMahasiswa(nim, kata_sandi);
+            if (check)
+            {
+                v_DashboardMahasiswa v_DashboardMahasiswa = new v_DashboardMahasiswa();
+                this.setDashboard(v_DashboardMahasiswa);
+            }
+            else
+            {
+                MessageBox.Show("Data Login Tidak Valid!");
+            }
         }
 
-        public bool cekLoginTimmbkm(string nidn, string kata_sandi)
+        public void loginTimmbkm(string nidn, string kata_sandi)
         {
-            string[] dataTimmbkm = m_DataAkunTimmbkm.getTimmbkmByNidn(nidn, kata_sandi);
-            return dataTimmbkm.Length != 0;
-        }
-
-        public void loginAdmin(object m_DataAkunAdmin)
-        {
-            v_DashboardAdmin v_DashboardAdmin = new v_DashboardAdmin();
-            // v_DashboardAdmin.data_akun_pengguna(m_DataAkunAdmin);
-            this.setDashboard(v_DashboardAdmin);
-        }
-
-        public void loginMahasiswa(object m_DataAkunMahasiswa)
-        {
-            v_DashboardMahasiswa v_DashboardMahasiswa = new v_DashboardMahasiswa();
-            // v_DashboardMahasiswa.data_akun_pengguna(m_DataAkunMahasiswa);
-            this.setDashboard(v_DashboardMahasiswa);
-        }
-
-        public void loginTimmbkm(object m_DataTimmbkm)
-        {
-            v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-            // v_DashboardTimmbkm.data_akun_pengguna(m_DataAkunTimmbkm);
-            this.setDashboard(v_DashboardTimmbkm);
+            bool check = this.m_DataAkunTimmbkm.cekLoginTimmbkm(nidn, kata_sandi);
+            if (check)
+            {
+                v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
+                this.setDashboard(v_DashboardTimmbkm);
+            }
+            else
+            {
+                MessageBox.Show("Data Login Tidak Valid!");
+            }
         }
 
         public void setDashboard(Form v_Dashboard)

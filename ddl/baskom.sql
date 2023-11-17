@@ -35,5 +35,5 @@ CREATE TABLE "Data_Akun_Mahasiswa"(
     batch_mbkm int,
     email varchar(64) unique,
     kata_sandi varchar(64),
-    
+    Data_Prodi_id_proi int
 	)

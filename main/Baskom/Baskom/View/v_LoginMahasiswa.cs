@@ -15,7 +15,6 @@ namespace Baskom.View
     public partial class v_LoginMahasiswa : Form
     {
         private c_Akun c_Akun = new c_Akun();
-        private m_DataAkunMahasiswa m_DataAkunMahasiswa = new m_DataAkunMahasiswa();
 
         public v_LoginMahasiswa()
         {
@@ -29,21 +28,9 @@ namespace Baskom.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*string nim_mahasiswa = tbx_nimlogin.Text;
+            string nim = tbx_nimlogin.Text;
             string kata_sandi = tbx_katasandilogin.Text;
-
-            bool notNull = this.loginMahasiswa(nim_mahasiswa, kata_sandi);
-
-            if (notNull == true)
-            {
-                bool validasi = c_Akun.cekLoginMahasiswa(nim_mahasiswa, kata_sandi);
-                if (validasi == true)
-                {*/
-                    c_Akun.loginMahasiswa(m_DataAkunMahasiswa);
-                    this.Hide();/*
-                }
-
-            }*/
+            c_Akun.loginMahasiswa(nim,kata_sandi);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

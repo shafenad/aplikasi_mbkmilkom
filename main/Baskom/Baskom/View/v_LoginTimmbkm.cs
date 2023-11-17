@@ -29,21 +29,9 @@ namespace Baskom.View
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            /*string nidn_timmbkm = tbx_NIDN.Text;
+            string nidn = tbx_NIDN.Text;
             string kata_sandi = tbx_katasandi.Text;
-
-            bool notNull = this.loginTimmbkm(nidn_timmbkm, kata_sandi);
-
-            if (notNull == true)
-            {
-                bool validasi = c_Akun.cekLoginTimmbkm(nidn_timmbkm, kata_sandi);
-                if (validasi == true)
-                {*/
-                    c_Akun.loginTimmbkm(m_DataAkunTimmbkm);
-                    this.Hide();
-                /*}
-
-            }*/
+            c_Akun.loginTimmbkm(nidn,kata_sandi);
         }
 
         private void tbx_NIDN_TextChanged(object sender, EventArgs e)

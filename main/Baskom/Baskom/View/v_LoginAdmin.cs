@@ -30,21 +30,9 @@ namespace Baskom.View
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            /*string email_admin = tbx_email.Text;
+            string nidn = tbx_email.Text;
             string kata_sandi = tbx_katasandi.Text;
-
-            bool notNull = this.loginAdmin(email_admin, kata_sandi);
-
-            if (notNull == true)
-            {
-                bool validasi = c_Akun.cekLoginAdmin(email_admin, kata_sandi);
-                if (validasi == true)
-                {
-                    */c_Akun.loginAdmin(m_DataAkunAdmin);
-                    this.Hide();/*
-                }
-
-            } */
+            c_Akun.loginAdmin(nidn, kata_sandi);
         }
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

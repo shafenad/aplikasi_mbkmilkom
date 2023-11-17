@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Npgsql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,23 +9,40 @@ namespace Baskom.Model
 {
     class m_DataAkunMahasiswa
     {
-        private int batch_mbkm;
-        private string email;
-        private string fakultas;
-        private int id_mahasiswa;
-        private string kata_sandi;
-        private string nama_mahasiswa;
-        private string nim;
-        private string no_wa;
-        private string program_studi;
-        private bool status_mahasiswa;
-        private int tahun_masuk;
+        private int? id_mahasiswa;
+        private string? nim;
+        private string? nama_mahasiswa;
+        private int? tahun_masuk;
+        private bool? status_mahasiswa;
+        private string? no_wa;
+        private int? batch_mbkm;
+        private string? email;
+        private string? kata_sandi;
+        private int? id_prodi;
 
-        public m_DataAkunMahasiswa()
+        public bool cekLoginMahasiswa(string nim, string kata_sandi)
         {
-            // constructor
+            string[] data_mahasiswa = getMahasiswaByNim(nim);
+            if (data_mahasiswa[1] == nim)
+            {
+                if (data_mahasiswa[8] == kata_sandi)
+                {
+                    this.id_mahasiswa = int.Parse(data_mahasiswa[0]);
+                    this.nim = data_mahasiswa[1];
+                    this.nama_mahasiswa = data_mahasiswa[2];
+                    this.tahun_masuk = int.Parse(data_mahasiswa[3]);
+                    this.status_mahasiswa = int.Parse(data_mahasiswa[4]) == 1? true:false;
+                    this.no_wa = data_mahasiswa[5];
+                    this.batch_mbkm = int.Parse(data_mahasiswa[6]);
+                    this.email = data_mahasiswa[7];
+                    this.kata_sandi = data_mahasiswa[8];
+                    this.id_prodi = int.Parse(data_mahasiswa[9]);
+                    return true;
+                }
+                return false;
+            }
+            return false;
         }
-
         private Array[] getMahasiswa()
         {
             Array[] result = new Array[1];
@@ -37,9 +55,24 @@ namespace Baskom.Model
             return result;
         }
 
-        public string[] getMahasiswaByNim(string nim, string kata_sandi)
+        public string[] getMahasiswaByNim(string nim)
         {
-            string[] result = new string[1];
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Mahasiswa\" WHERE nim = '{nim}'");
+            string[] result = new string[10];
+            while (reader.Read())
+            {
+                result[0] = reader[0].ToString();
+                result[1] = reader[1].ToString();
+                result[2] = reader[2].ToString();
+                result[3] = reader[3].ToString();
+                result[4] = reader[4].ToString();
+                result[5] = reader[5].ToString();
+                result[6] = reader[6].ToString();
+                result[7] = reader[7].ToString();
+                result[8] = reader[8].ToString();
+                result[9] = reader[9].ToString();
+            }
+            reader.Close();
             return result;
         }
     }
