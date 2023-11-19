@@ -30,9 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LihatMataKuliahSKS));
             this.lyt_lihatmatakuliah = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_carimatkulkonversisks = new System.Windows.Forms.Label();
-            this.tbx_carimatkulkonversisks = new System.Windows.Forms.TextBox();
-            this.btn_carimatkulkonversisks = new System.Windows.Forms.Button();
+            this.lbl_rekomendasimatkul = new System.Windows.Forms.Label();
             this.btn_kembalikonversisks = new System.Windows.Forms.Button();
             this.pnl_carimatkul = new System.Windows.Forms.Panel();
             this.tbl_matkulkonversisks = new System.Windows.Forms.DataGridView();
@@ -43,9 +41,10 @@
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lyt_lihatmatakuliah.SuspendLayout();
+            this.pnl_rekomendasimatkul = new System.Windows.Forms.Panel();
             this.pnl_carimatkul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_matkulkonversisks)).BeginInit();
+            this.pnl_rekomendasimatkul.SuspendLayout();
             this.SuspendLayout();
             // 
             // lyt_lihatmatakuliah
@@ -53,9 +52,6 @@
             this.lyt_lihatmatakuliah.ColumnCount = 2;
             this.lyt_lihatmatakuliah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.lyt_lihatmatakuliah.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.lyt_lihatmatakuliah.Controls.Add(this.lbl_carimatkulkonversisks, 0, 0);
-            this.lyt_lihatmatakuliah.Controls.Add(this.tbx_carimatkulkonversisks, 0, 1);
-            this.lyt_lihatmatakuliah.Controls.Add(this.btn_carimatkulkonversisks, 1, 1);
             this.lyt_lihatmatakuliah.Location = new System.Drawing.Point(39, 42);
             this.lyt_lihatmatakuliah.Name = "lyt_lihatmatakuliah";
             this.lyt_lihatmatakuliah.RowCount = 6;
@@ -68,34 +64,17 @@
             this.lyt_lihatmatakuliah.Size = new System.Drawing.Size(1078, 620);
             this.lyt_lihatmatakuliah.TabIndex = 0;
             // 
-            // lbl_carimatkulkonversisks
+            // lbl_rekomendasimatkul
             // 
-            this.lbl_carimatkulkonversisks.AutoSize = true;
-            this.lbl_carimatkulkonversisks.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_carimatkulkonversisks.Location = new System.Drawing.Point(3, 0);
-            this.lbl_carimatkulkonversisks.Name = "lbl_carimatkulkonversisks";
-            this.lbl_carimatkulkonversisks.Size = new System.Drawing.Size(197, 36);
-            this.lbl_carimatkulkonversisks.TabIndex = 0;
-            this.lbl_carimatkulkonversisks.Text = "Cari Mata Kuliah :";
-            // 
-            // tbx_carimatkulkonversisks
-            // 
-            this.tbx_carimatkulkonversisks.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbx_carimatkulkonversisks.Location = new System.Drawing.Point(3, 41);
-            this.tbx_carimatkulkonversisks.Name = "tbx_carimatkulkonversisks";
-            this.tbx_carimatkulkonversisks.Size = new System.Drawing.Size(533, 34);
-            this.tbx_carimatkulkonversisks.TabIndex = 1;
-            // 
-            // btn_carimatkulkonversisks
-            // 
-            this.btn_carimatkulkonversisks.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_carimatkulkonversisks.Location = new System.Drawing.Point(542, 41);
-            this.btn_carimatkulkonversisks.Name = "btn_carimatkulkonversisks";
-            this.btn_carimatkulkonversisks.Size = new System.Drawing.Size(104, 26);
-            this.btn_carimatkulkonversisks.TabIndex = 2;
-            this.btn_carimatkulkonversisks.Text = "Cari";
-            this.btn_carimatkulkonversisks.UseVisualStyleBackColor = true;
-            this.btn_carimatkulkonversisks.Click += new System.EventHandler(this.button1_Click);
+            this.lbl_rekomendasimatkul.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_rekomendasimatkul.AutoSize = true;
+            this.lbl_rekomendasimatkul.Font = new System.Drawing.Font("Poppins", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_rekomendasimatkul.Location = new System.Drawing.Point(158, 0);
+            this.lbl_rekomendasimatkul.Name = "lbl_rekomendasimatkul";
+            this.lbl_rekomendasimatkul.Size = new System.Drawing.Size(917, 64);
+            this.lbl_rekomendasimatkul.TabIndex = 0;
+            this.lbl_rekomendasimatkul.Text = "Rekomendasi Mata Kuliah Sesuai Program Mitra";
+            this.lbl_rekomendasimatkul.Click += new System.EventHandler(this.lbl_carimatkulkonversisks_Click);
             // 
             // btn_kembalikonversisks
             // 
@@ -185,11 +164,23 @@
             this.Column7.MinimumWidth = 8;
             this.Column7.Name = "Column7";
             // 
+            // pnl_rekomendasimatkul
+            // 
+            this.pnl_rekomendasimatkul.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_rekomendasimatkul.Controls.Add(this.lbl_rekomendasimatkul);
+            this.pnl_rekomendasimatkul.Location = new System.Drawing.Point(39, 42);
+            this.pnl_rekomendasimatkul.Name = "pnl_rekomendasimatkul";
+            this.pnl_rekomendasimatkul.Size = new System.Drawing.Size(1078, 82);
+            this.pnl_rekomendasimatkul.TabIndex = 2;
+            // 
             // LihatMataKuliahSKS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 28F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1156, 666);
+            this.Controls.Add(this.pnl_rekomendasimatkul);
             this.Controls.Add(this.pnl_carimatkul);
             this.Controls.Add(this.lyt_lihatmatakuliah);
             this.Font = new System.Drawing.Font("Poppins", 7.875F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -198,10 +189,10 @@
             this.Name = "LihatMataKuliahSKS";
             this.Text = "Baskom";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.lyt_lihatmatakuliah.ResumeLayout(false);
-            this.lyt_lihatmatakuliah.PerformLayout();
             this.pnl_carimatkul.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tbl_matkulkonversisks)).EndInit();
+            this.pnl_rekomendasimatkul.ResumeLayout(false);
+            this.pnl_rekomendasimatkul.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -209,9 +200,7 @@
         #endregion
 
         private System.Windows.Forms.TableLayoutPanel lyt_lihatmatakuliah;
-        private System.Windows.Forms.Label lbl_carimatkulkonversisks;
-        private System.Windows.Forms.TextBox tbx_carimatkulkonversisks;
-        private System.Windows.Forms.Button btn_carimatkulkonversisks;
+        private System.Windows.Forms.Label lbl_rekomendasimatkul;
         private System.Windows.Forms.Panel pnl_carimatkul;
         private System.Windows.Forms.DataGridView tbl_matkulkonversisks;
         private System.Windows.Forms.Button btn_kembalikonversisks;
@@ -222,5 +211,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.Panel pnl_rekomendasimatkul;
     }
 }

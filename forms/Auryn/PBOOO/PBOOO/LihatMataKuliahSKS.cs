@@ -28,5 +28,10 @@ namespace PBOOO
             konversisks.Show();
             this.Hide();
         }
+
+        private void lbl_carimatkulkonversisks_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

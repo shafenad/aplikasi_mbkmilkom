@@ -42,14 +42,14 @@
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lyt_konversisks = new System.Windows.Forms.TableLayoutPanel();
             this.lbl_keterangankonversisks = new System.Windows.Forms.Label();
-            this.lbl_kompetensikonversisks = new System.Windows.Forms.Label();
             this.tbx_kompetensikonversisks = new System.Windows.Forms.TextBox();
             this.tbx_keterangankonversisks = new System.Windows.Forms.TextBox();
             this.lbl_matkulygdikonversi = new System.Windows.Forms.Label();
             this.cbx_matkulygdikonversi = new System.Windows.Forms.ComboBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lnk_carimatkulkonversisks = new System.Windows.Forms.LinkLabel();
+            this.lnk_rekomendasimatkul = new System.Windows.Forms.LinkLabel();
             this.btn_simpankonversisks = new System.Windows.Forms.Button();
+            this.lbl_kompetensikonversisks = new System.Windows.Forms.Label();
             this.pnl_konversisks = new System.Windows.Forms.Panel();
             this.tbl_matkulkonversisks = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -204,17 +204,6 @@
             this.lbl_keterangankonversisks.TabIndex = 2;
             this.lbl_keterangankonversisks.Text = "Keterangan :";
             // 
-            // lbl_kompetensikonversisks
-            // 
-            this.lbl_kompetensikonversisks.AutoSize = true;
-            this.lbl_kompetensikonversisks.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_kompetensikonversisks.Location = new System.Drawing.Point(3, 0);
-            this.lbl_kompetensikonversisks.Name = "lbl_kompetensikonversisks";
-            this.lbl_kompetensikonversisks.Size = new System.Drawing.Size(370, 36);
-            this.lbl_kompetensikonversisks.TabIndex = 0;
-            this.lbl_kompetensikonversisks.Text = "Kompetensi yang dikembangkan :";
-            this.lbl_kompetensikonversisks.Click += new System.EventHandler(this.label1_Click);
-            // 
             // tbx_kompetensikonversisks
             // 
             this.tbx_kompetensikonversisks.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -253,24 +242,24 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lnk_carimatkulkonversisks);
+            this.panel1.Controls.Add(this.lnk_rekomendasimatkul);
             this.panel1.Controls.Add(this.btn_simpankonversisks);
             this.panel1.Location = new System.Drawing.Point(3, 485);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(567, 45);
             this.panel1.TabIndex = 6;
             // 
-            // lnk_carimatkulkonversisks
+            // lnk_rekomendasimatkul
             // 
-            this.lnk_carimatkulkonversisks.AutoSize = true;
-            this.lnk_carimatkulkonversisks.Font = new System.Drawing.Font("Poppins", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lnk_carimatkulkonversisks.Location = new System.Drawing.Point(272, 10);
-            this.lnk_carimatkulkonversisks.Name = "lnk_carimatkulkonversisks";
-            this.lnk_carimatkulkonversisks.Size = new System.Drawing.Size(124, 25);
-            this.lnk_carimatkulkonversisks.TabIndex = 1;
-            this.lnk_carimatkulkonversisks.TabStop = true;
-            this.lnk_carimatkulkonversisks.Text = "Cari Mata Kuliah";
-            this.lnk_carimatkulkonversisks.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.lnk_rekomendasimatkul.AutoSize = true;
+            this.lnk_rekomendasimatkul.Font = new System.Drawing.Font("Poppins", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lnk_rekomendasimatkul.Location = new System.Drawing.Point(269, 12);
+            this.lnk_rekomendasimatkul.Name = "lnk_rekomendasimatkul";
+            this.lnk_rekomendasimatkul.Size = new System.Drawing.Size(190, 25);
+            this.lnk_rekomendasimatkul.TabIndex = 1;
+            this.lnk_rekomendasimatkul.TabStop = true;
+            this.lnk_rekomendasimatkul.Text = "Rekomendasi Mata Kuliah";
+            this.lnk_rekomendasimatkul.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // btn_simpankonversisks
             // 
@@ -281,6 +270,17 @@
             this.btn_simpankonversisks.TabIndex = 0;
             this.btn_simpankonversisks.Text = "Simpan";
             this.btn_simpankonversisks.UseVisualStyleBackColor = true;
+            // 
+            // lbl_kompetensikonversisks
+            // 
+            this.lbl_kompetensikonversisks.AutoSize = true;
+            this.lbl_kompetensikonversisks.Font = new System.Drawing.Font("Poppins SemiBold", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_kompetensikonversisks.Location = new System.Drawing.Point(3, 0);
+            this.lbl_kompetensikonversisks.Name = "lbl_kompetensikonversisks";
+            this.lbl_kompetensikonversisks.Size = new System.Drawing.Size(370, 36);
+            this.lbl_kompetensikonversisks.TabIndex = 0;
+            this.lbl_kompetensikonversisks.Text = "Kompetensi yang dikembangkan :";
+            this.lbl_kompetensikonversisks.Click += new System.EventHandler(this.label1_Click);
             // 
             // pnl_konversisks
             // 
@@ -470,7 +470,7 @@
         private System.Windows.Forms.Label lbl_matkulygdikonversi;
         private System.Windows.Forms.ComboBox cbx_matkulygdikonversi;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.LinkLabel lnk_carimatkulkonversisks;
+        private System.Windows.Forms.LinkLabel lnk_rekomendasimatkul;
         private System.Windows.Forms.Button btn_simpankonversisks;
         private System.Windows.Forms.Panel pnl_konversisks;
         private System.Windows.Forms.DataGridView tbl_matkulkonversisks;
