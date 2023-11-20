@@ -30,7 +30,7 @@ namespace Baskom.View
         {
             string nim = tbx_nimlogin.Text;
             string kata_sandi = tbx_katasandilogin.Text;
-            c_Akun.loginMahasiswa(nim,kata_sandi);
+            c_Akun.loginMahasiswa(nim,kata_sandi,this);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

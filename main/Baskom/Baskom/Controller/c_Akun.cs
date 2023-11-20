@@ -11,25 +11,24 @@ namespace Baskom.Controller
 {
     class c_Akun
     {
-        private string kata_sandi = "";
         protected m_DataAkunAdmin m_DataAkunAdmin = new m_DataAkunAdmin();
         protected m_DataAkunMahasiswa m_DataAkunMahasiswa = new m_DataAkunMahasiswa();
         protected m_DataAkunTimmbkm m_DataAkunTimmbkm = new m_DataAkunTimmbkm();
-        private v_DashboardAdmin_Lama v_DashboardAdmin = new v_DashboardAdmin_Lama();
-        private v_DashboardMahasiswa_Lama v_DashboardMahasiswa = new v_DashboardMahasiswa_Lama();
-        private v_DashboardTimmbkm_Lama v_DashboardTimmbkm = new v_DashboardTimmbkm_Lama();
+        private c_Dashboard c_Dashboard;
 
         public c_Akun()
         {
             //constructor
         }
-        public void loginAdmin(string email, string kata_sandi)
+        public void loginAdmin(string email, string kata_sandi, v_LoginAdmin form)
         {
             bool check = this.m_DataAkunAdmin.cekLoginAdmin(email, kata_sandi);
             if (check)
             {
-                v_DashboardAdmin v_DashboardAdmin = new v_DashboardAdmin();
-                this.setDashboard(v_DashboardAdmin);
+                c_Dashboard c_Dashboard = new(m_DataAkunAdmin);
+                this.c_Dashboard = c_Dashboard;
+                c_Dashboard.setDashboardAdmin();
+                form.Hide();
             }
             else
             {
@@ -37,13 +36,15 @@ namespace Baskom.Controller
             }
         }
 
-        public void loginMahasiswa(string nim, string kata_sandi)
+        public void loginMahasiswa(string nim, string kata_sandi, v_LoginMahasiswa form)
         {
             bool check = this.m_DataAkunMahasiswa.cekLoginMahasiswa(nim, kata_sandi);
             if (check)
             {
-                v_DashboardMahasiswa v_DashboardMahasiswa = new v_DashboardMahasiswa();
-                this.setDashboard(v_DashboardMahasiswa);
+                c_Dashboard c_Dashboard = new(m_DataAkunMahasiswa);
+                this.c_Dashboard = c_Dashboard;
+                c_Dashboard.setDashboardMahasiswa();
+                form.Hide();
             }
             else
             {
@@ -51,23 +52,20 @@ namespace Baskom.Controller
             }
         }
 
-        public void loginTimmbkm(string nidn, string kata_sandi)
+        public void loginTimmbkm(string nidn, string kata_sandi, v_LoginTimmbkm form)
         {
             bool check = this.m_DataAkunTimmbkm.cekLoginTimmbkm(nidn, kata_sandi);
             if (check)
             {
-                v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-                this.setDashboard(v_DashboardTimmbkm);
+                c_Dashboard c_Dashboard = new(m_DataAkunTimmbkm);
+                this.c_Dashboard = c_Dashboard;
+                c_Dashboard.setDashboardTimmbkm();
+                form.Hide();
             }
             else
             {
                 MessageBox.Show("Data Login Tidak Valid!");
             }
-        }
-
-        public void setDashboard(Form v_Dashboard)
-        {
-            v_Dashboard.ShowDialog();
         }
     }
 }

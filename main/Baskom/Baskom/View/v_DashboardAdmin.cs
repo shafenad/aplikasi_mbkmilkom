@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baskom.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,13 +11,13 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_DashboardAdmin : Form
+    partial class v_DashboardAdmin : Form
     {
-        private object data_akun_pengguna;
-
-        public v_DashboardAdmin()
+        c_Dashboard c_Dashboard;
+        public v_DashboardAdmin(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -31,9 +32,7 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilAdmin v_ProfilAdmin = new v_ProfilAdmin();
-            v_ProfilAdmin.Show();
-            this.Hide();
+
         }
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -45,7 +44,7 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setDashboardAdmin();
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -60,26 +59,25 @@ namespace Baskom.View
 
         private void akunDosesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DataDosen v_DataDosen = new v_DataDosen();
-            v_DataDosen.Show();
-            this.Hide();
+
         }
 
         private void akunMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DataMahasiswa v_DataMahasiswa = new v_DataMahasiswa();
-            v_DataMahasiswa.Show();
-            this.Hide();
+
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginAdmin v_LoginAdmin = new v_LoginAdmin();
-            v_LoginAdmin.Show();
-            this.Hide();
+
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void manajemenAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

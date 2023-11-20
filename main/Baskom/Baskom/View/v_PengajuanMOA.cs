@@ -29,9 +29,7 @@ namespace Baskom.View
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DaftarMitra form3 = new DaftarMitra();
-            form3.Show();
-            this.Hide();
+
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -41,16 +39,12 @@ namespace Baskom.View
 
         private void lihatProfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilTimMBKM v_ProfilTimMBKM = new v_ProfilTimMBKM();
-            v_ProfilTimMBKM.Show();
-            this.Hide();
+    
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new v_MemvalidasiKonversiNilai();
-            v_MemvalidasiKonversiNilai.Show();
-            this.Hide();
+      
         }
 
         private void btn_simpan_Click(object sender, EventArgs e)
@@ -60,9 +54,7 @@ namespace Baskom.View
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-            v_DashboardTimmbkm.Show();
-            this.Hide();
+       
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,23 +64,17 @@ namespace Baskom.View
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PembagianTugas v_PembagianTugas = new v_PembagianTugas();
-            v_PembagianTugas.Show();
-            this.Hide();
+         
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new v_MemvalidasiKonversiSks();
-            v_MemvalidasiKonversiSks.Show();
-            this.Hide();
+        
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginTimmbkm v_LoginTimmbkm = new v_LoginTimmbkm();
-            v_LoginTimmbkm.Show();
-            this.Hide();
+           
         }
     }
 }

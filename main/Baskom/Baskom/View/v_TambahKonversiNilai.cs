@@ -71,9 +71,7 @@ namespace Baskom.View
 
         private void statusMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahMitra v_TambahMitra = new v_TambahMitra();
-            v_TambahMitra.Show();
-            this.Hide();
+
         }
 
         private void btn_simpannilai_Click(object sender, EventArgs e)
@@ -90,9 +88,7 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilMahasiswa v_ProfilMahasiswa = new v_ProfilMahasiswa();
-            v_ProfilMahasiswa.Show();
-            this.Hide();
+
         }
 
         private void btn_inputmatkul_Click(object sender, EventArgs e)
@@ -102,37 +98,27 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardMahasiswa v_DashboardMahasiswa = new v_DashboardMahasiswa();
-            v_DashboardMahasiswa.Show();
-            this.Hide();
+
         }
 
         private void statusMitraToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            v_StatusMOA v_StatusMitra = new v_StatusMOA();
-            v_StatusMitra.Show();
-            this.Hide();
+
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahMataKuliahTempuh v_MataKuliah = new v_TambahMataKuliahTempuh();
-            v_MataKuliah.Show();
-            this.Hide();
+
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new v_TambahKonversiSks();
-            v_TambahKonversiSks.Show();
-            this.Hide();
+
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginMahasiswa v_LoginMahasiswa = new v_LoginMahasiswa();
-            v_LoginMahasiswa.Show();
-            this.Hide();
+
         }
     }
 }

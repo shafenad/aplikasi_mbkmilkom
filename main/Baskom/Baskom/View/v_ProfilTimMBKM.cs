@@ -25,44 +25,32 @@ namespace Baskom.View
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-            v_DashboardTimmbkm.Show();
-            this.Hide();
+            
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PengajuanMOA v_PengajuanMOA = new v_PengajuanMOA();
-            v_PengajuanMOA.Show();
-            this.Hide();
+          
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PembagianTugas v_PembagianTugas = new v_PembagianTugas();
-            v_PembagianTugas.Show();
-            this.Hide();
+          
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new v_MemvalidasiKonversiSks();
-            v_MemvalidasiKonversiSks.Show();
-            this.Hide();
+          
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new v_MemvalidasiKonversiNilai();
-            v_MemvalidasiKonversiNilai.Show();
-            this.Hide();
+         
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginTimmbkm v_LoginTimmbkm = new v_LoginTimmbkm();
-            v_LoginTimmbkm.Show();
-            this.Hide();
+           
         }
     }
 }

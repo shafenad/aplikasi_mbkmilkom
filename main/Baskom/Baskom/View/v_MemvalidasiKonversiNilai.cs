@@ -36,9 +36,7 @@ namespace Baskom.View
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
-            v_DetailValidasiKonversiNilai v_DetailValidasiKonversiNilai = new v_DetailValidasiKonversiNilai();
-            v_DetailValidasiKonversiNilai.Show();
-            this.Hide();
+
         }
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
@@ -55,9 +53,7 @@ namespace Baskom.View
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PengajuanMOA v_PengajuanMOA = new v_PengajuanMOA();
-            v_PengajuanMOA.Show();
-            this.Hide();
+  
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -74,16 +70,12 @@ namespace Baskom.View
 
         private void lihatProfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilTimMBKM v_ProfilTimMBKM = new v_ProfilTimMBKM();
-            v_ProfilTimMBKM.Show();
-            this.Hide();
+ 
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new v_MemvalidasiKonversiSks();
-            v_MemvalidasiKonversiSks.Show();
-            this.Hide();
+           
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -93,23 +85,17 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-            v_DashboardTimmbkm.Show();
-            this.Hide();
+ 
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PembagianTugas v_PembagianTugas = new v_PembagianTugas();
-            v_PembagianTugas.Show();
-            this.Hide();
+     
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginTimmbkm v_LoginTimmbkm = new v_LoginTimmbkm();
-            v_LoginTimmbkm.Show();
-            this.Hide();
+          
         }
     }
 }
