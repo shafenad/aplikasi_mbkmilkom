@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baskom.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_ProfilAdmin : Form
+    partial class v_ProfilAdmin : Form
     {
-        public v_ProfilAdmin()
+        c_Dashboard c_Dashboard;
+        public v_ProfilAdmin(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -29,19 +32,19 @@ namespace Baskom.View
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            c_Dashboard.setFormUbahKataSandi();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDashboardAdmin();
         }
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Mitra form5 = new Mitra();
-            form5.Show();
-            this.Hide();*/
+            this.Hide();
+            c_Dashboard.setDataMitra();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -56,17 +59,31 @@ namespace Baskom.View
 
         private void akunDosenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDataDosen();
         }
 
         private void akunMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDataMahasiswa();
         }
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //this
+        }
 
+        private void tambahMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMataKuliah();
+        }
+
+        private void tambahProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahProgram();
         }
     }
 }

@@ -35,6 +35,9 @@
             akunDosesToolStripMenuItem = new ToolStripMenuItem();
             akunMahasiswaToolStripMenuItem = new ToolStripMenuItem();
             mitraToolStripMenuItem = new ToolStripMenuItem();
+            mataKuliahToolStripMenuItem = new ToolStripMenuItem();
+            tambahMataKuliahToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramToolStripMenuItem = new ToolStripMenuItem();
             profilToolStripMenuItem = new ToolStripMenuItem();
             informasiAkunToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem = new ToolStripMenuItem();
@@ -55,7 +58,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(24, 24);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, manajemenAkunToolStripMenuItem, mitraToolStripMenuItem, profilToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, manajemenAkunToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(6, 3, 0, 3);
@@ -83,14 +86,14 @@
             // akunDosesToolStripMenuItem
             // 
             akunDosesToolStripMenuItem.Name = "akunDosesToolStripMenuItem";
-            akunDosesToolStripMenuItem.Size = new Size(359, 44);
+            akunDosesToolStripMenuItem.Size = new Size(324, 44);
             akunDosesToolStripMenuItem.Text = "Akun Dosen";
             akunDosesToolStripMenuItem.Click += akunDosesToolStripMenuItem_Click;
             // 
             // akunMahasiswaToolStripMenuItem
             // 
             akunMahasiswaToolStripMenuItem.Name = "akunMahasiswaToolStripMenuItem";
-            akunMahasiswaToolStripMenuItem.Size = new Size(359, 44);
+            akunMahasiswaToolStripMenuItem.Size = new Size(324, 44);
             akunMahasiswaToolStripMenuItem.Text = "Akun Mahasiswa";
             akunMahasiswaToolStripMenuItem.Click += akunMahasiswaToolStripMenuItem_Click;
             // 
@@ -101,6 +104,27 @@
             mitraToolStripMenuItem.Size = new Size(86, 38);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
+            // 
+            // mataKuliahToolStripMenuItem
+            // 
+            mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMataKuliahToolStripMenuItem, tambahProgramToolStripMenuItem });
+            mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
+            mataKuliahToolStripMenuItem.Size = new Size(161, 38);
+            mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
+            // 
+            // tambahMataKuliahToolStripMenuItem
+            // 
+            tambahMataKuliahToolStripMenuItem.Name = "tambahMataKuliahToolStripMenuItem";
+            tambahMataKuliahToolStripMenuItem.Size = new Size(364, 44);
+            tambahMataKuliahToolStripMenuItem.Text = "Tambah Mata Kuliah";
+            tambahMataKuliahToolStripMenuItem.Click += tambahMataKuliahToolStripMenuItem_Click;
+            // 
+            // tambahProgramToolStripMenuItem
+            // 
+            tambahProgramToolStripMenuItem.Name = "tambahProgramToolStripMenuItem";
+            tambahProgramToolStripMenuItem.Size = new Size(364, 44);
+            tambahProgramToolStripMenuItem.Text = "Tambah Program";
+            tambahProgramToolStripMenuItem.Click += tambahProgramToolStripMenuItem_Click;
             // 
             // profilToolStripMenuItem
             // 
@@ -233,5 +257,8 @@
         private Panel panel2;
         private FileSystemWatcher fileSystemWatcher1;
         private Label lbl_dashboard;
+        private ToolStripMenuItem mataKuliahToolStripMenuItem;
+        private ToolStripMenuItem tambahMataKuliahToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramToolStripMenuItem;
     }
 }

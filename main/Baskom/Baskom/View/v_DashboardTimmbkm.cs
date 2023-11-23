@@ -18,7 +18,6 @@ namespace Baskom.View
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -38,42 +37,37 @@ namespace Baskom.View
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setMemvalidasiKonversiNilai();
         }
-
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //logout
         }
-
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setDaftarMitra();
         }
-
         private void pengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setPengajuanMOA();
         }
-
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setProfilTimMBKM();
         }
     }
 }

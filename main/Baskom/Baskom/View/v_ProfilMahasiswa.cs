@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baskom.Controller;
 
 namespace Baskom.View
 {
-    public partial class v_ProfilMahasiswa : Form
+    partial class v_ProfilMahasiswa : Form
     {
-        public v_ProfilMahasiswa()
+        private c_Dashboard c_Dashboard;
+        public v_ProfilMahasiswa(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -24,16 +27,13 @@ namespace Baskom.View
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*mitra form1 = new mitra();
-            form1.Show();
-            this.Hide();*/
+
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahKonversiNilai v_TambahKonversiNilai = new v_TambahKonversiNilai();
-            v_TambahKonversiNilai.Show();
             this.Hide();
+            c_Dashboard.setTambahKonversiNilai();
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
@@ -43,10 +43,7 @@ namespace Baskom.View
 
         private void lnk_ubahsandi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            /* formubahsandimhsw form6 = new formubahsandimhsw();
-             form6.Show();
-             this.Hide();*/
-
+            c_Dashboard.setFormUbahKataSandi();
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -66,39 +63,52 @@ namespace Baskom.View
 
         private void pengajuanMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*statusmitra form6 = new statusmitra();
-            form6.Show();
-            this.Hide();*/
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDashboardMahasiswa();
         }
 
         private void pengajuanMitraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setPengajuanMitra();
         }
 
         private void statusMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setStatusMOA();
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setTambahMataKuliahTempuh();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setTambahKonversiSks();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //logour
+        }
 
+        private void profilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this
         }
     }
 }

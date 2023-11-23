@@ -87,13 +87,13 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.04712F));
             tableLayoutPanel1.Controls.Add(lbl_DftrMahasiswa, 0, 0);
             tableLayoutPanel1.Controls.Add(tbl_konversinilai1, 0, 1);
-            tableLayoutPanel1.Location = new Point(40, 90);
-            tableLayoutPanel1.Margin = new Padding(5, 6, 5, 6);
+            tableLayoutPanel1.Location = new Point(52, 115);
+            tableLayoutPanel1.Margin = new Padding(6, 8, 6, 8);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 8.219178F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 91.78082F));
-            tableLayoutPanel1.Size = new Size(1273, 777);
+            tableLayoutPanel1.Size = new Size(1655, 995);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // lbl_DftrMahasiswa
@@ -101,10 +101,10 @@
             lbl_DftrMahasiswa.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbl_DftrMahasiswa.AutoSize = true;
             lbl_DftrMahasiswa.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_DftrMahasiswa.Location = new Point(5, 0);
-            lbl_DftrMahasiswa.Margin = new Padding(5, 0, 5, 0);
+            lbl_DftrMahasiswa.Location = new Point(6, 0);
+            lbl_DftrMahasiswa.Margin = new Padding(6, 0, 6, 0);
             lbl_DftrMahasiswa.Name = "lbl_DftrMahasiswa";
-            lbl_DftrMahasiswa.Size = new Size(1249, 40);
+            lbl_DftrMahasiswa.Size = new Size(1625, 55);
             lbl_DftrMahasiswa.TabIndex = 0;
             lbl_DftrMahasiswa.Text = "Daftar Mahasiswa";
             lbl_DftrMahasiswa.Click += label1_Click;
@@ -116,11 +116,11 @@
             tbl_konversinilai1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             tbl_konversinilai1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbl_konversinilai1.Columns.AddRange(new DataGridViewColumn[] { clm_NamaMhs, clm_nim, clm_prodi, clm_mitra, clm_posisi, btn_detail });
-            tbl_konversinilai1.Location = new Point(5, 69);
-            tbl_konversinilai1.Margin = new Padding(5, 6, 5, 6);
+            tbl_konversinilai1.Location = new Point(6, 89);
+            tbl_konversinilai1.Margin = new Padding(6, 8, 6, 8);
             tbl_konversinilai1.Name = "tbl_konversinilai1";
             tbl_konversinilai1.RowHeadersWidth = 62;
-            tbl_konversinilai1.Size = new Size(1249, 694);
+            tbl_konversinilai1.Size = new Size(1625, 888);
             tbl_konversinilai1.TabIndex = 1;
             tbl_konversinilai1.CellContentClick += dataGridView1_CellContentClick_1;
             // 
@@ -340,8 +340,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, penerimaanMitraToolStripMenuItem, pembagianTugasToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(10, 4, 0, 4);
-            menuStrip1.Size = new Size(1333, 36);
+            menuStrip1.Padding = new Padding(13, 5, 0, 5);
+            menuStrip1.Size = new Size(1733, 48);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -349,7 +349,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(107, 28);
+            dashboardToolStripMenuItem.Size = new Size(138, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -358,28 +358,28 @@
             penerimaanMitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { daftarMitraToolStripMenuItem, statusPengajuanMOAToolStripMenuItem });
             penerimaanMitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             penerimaanMitraToolStripMenuItem.Name = "penerimaanMitraToolStripMenuItem";
-            penerimaanMitraToolStripMenuItem.Size = new Size(166, 28);
+            penerimaanMitraToolStripMenuItem.Size = new Size(222, 38);
             penerimaanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             // 
             // daftarMitraToolStripMenuItem
             // 
             daftarMitraToolStripMenuItem.Name = "daftarMitraToolStripMenuItem";
-            daftarMitraToolStripMenuItem.Size = new Size(241, 34);
+            daftarMitraToolStripMenuItem.Size = new Size(359, 44);
             daftarMitraToolStripMenuItem.Text = "Daftar Mitra";
             daftarMitraToolStripMenuItem.Click += daftarMitraToolStripMenuItem_Click_1;
             // 
             // statusPengajuanMOAToolStripMenuItem
             // 
             statusPengajuanMOAToolStripMenuItem.Name = "statusPengajuanMOAToolStripMenuItem";
-            statusPengajuanMOAToolStripMenuItem.Size = new Size(241, 34);
-            statusPengajuanMOAToolStripMenuItem.Text = "Pengajuan MOA";
+            statusPengajuanMOAToolStripMenuItem.Size = new Size(359, 44);
+            statusPengajuanMOAToolStripMenuItem.Text = "Validasi MOA";
             statusPengajuanMOAToolStripMenuItem.Click += statusPengajuanMOAToolStripMenuItem_Click;
             // 
             // pembagianTugasToolStripMenuItem
             // 
             pembagianTugasToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pembagianTugasToolStripMenuItem.Name = "pembagianTugasToolStripMenuItem";
-            pembagianTugasToolStripMenuItem.Size = new Size(172, 28);
+            pembagianTugasToolStripMenuItem.Size = new Size(230, 38);
             pembagianTugasToolStripMenuItem.Text = "Pembagian Tugas";
             pembagianTugasToolStripMenuItem.Click += pembagianTugasToolStripMenuItem_Click;
             // 
@@ -387,7 +387,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(137, 28);
+            konversiSKSToolStripMenuItem.Size = new Size(181, 38);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -395,7 +395,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(136, 28);
+            konversiNilaiToolStripMenuItem.Size = new Size(182, 38);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -404,33 +404,33 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lihatProfilToolStripMenuItem, logoutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(67, 28);
+            profilToolStripMenuItem.Size = new Size(89, 38);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
             // lihatProfilToolStripMenuItem
             // 
             lihatProfilToolStripMenuItem.Name = "lihatProfilToolStripMenuItem";
-            lihatProfilToolStripMenuItem.Size = new Size(270, 34);
+            lihatProfilToolStripMenuItem.Size = new Size(302, 44);
             lihatProfilToolStripMenuItem.Text = "Informasi Akun";
             lihatProfilToolStripMenuItem.Click += lihatProfilToolStripMenuItem_Click;
             // 
             // logoutToolStripMenuItem
             // 
             logoutToolStripMenuItem.Name = "logoutToolStripMenuItem";
-            logoutToolStripMenuItem.Size = new Size(270, 34);
+            logoutToolStripMenuItem.Size = new Size(302, 44);
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
             // v_MemvalidasiKonversiNilai
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1333, 956);
+            ClientSize = new Size(1733, 1224);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(5, 6, 5, 6);
+            Margin = new Padding(6, 8, 6, 8);
             Name = "v_MemvalidasiKonversiNilai";
             Text = "Baskom";
             WindowState = FormWindowState.Maximized;

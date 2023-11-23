@@ -34,23 +34,17 @@ namespace Baskom.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*KonversiNilai form1 = new KonversiNilai();
-            form1.Show();
-            this.Hide();*/
+
         }
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DaftarMitra form3 = new DaftarMitra();
-            form3.Show();
-            this.Hide();
+
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PengajuanMOA v_PengajuanMOA = new v_PengajuanMOA();
-            v_PengajuanMOA.Show();
-            this.Hide();
+
         }
 
         private void label6_Click(object sender, EventArgs e)

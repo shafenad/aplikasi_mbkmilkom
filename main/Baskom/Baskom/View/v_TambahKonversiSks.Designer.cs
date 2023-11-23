@@ -80,7 +80,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1184, 30);
+            menuStrip1.Size = new Size(1184, 42);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -88,7 +88,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(114, 26);
+            dashboardToolStripMenuItem.Size = new Size(151, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -97,21 +97,21 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pengajuanMitraToolStripMenuItem, statusMOAToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(65, 26);
+            mitraToolStripMenuItem.Size = new Size(86, 38);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
             // pengajuanMitraToolStripMenuItem
             // 
             pengajuanMitraToolStripMenuItem.Name = "pengajuanMitraToolStripMenuItem";
-            pengajuanMitraToolStripMenuItem.Size = new Size(270, 34);
+            pengajuanMitraToolStripMenuItem.Size = new Size(319, 44);
             pengajuanMitraToolStripMenuItem.Text = "Pengajuan Mitra";
             pengajuanMitraToolStripMenuItem.Click += pengajuanMitraToolStripMenuItem_Click;
             // 
             // statusMOAToolStripMenuItem
             // 
             statusMOAToolStripMenuItem.Name = "statusMOAToolStripMenuItem";
-            statusMOAToolStripMenuItem.Size = new Size(270, 34);
+            statusMOAToolStripMenuItem.Size = new Size(319, 44);
             statusMOAToolStripMenuItem.Text = "Status MOA";
             statusMOAToolStripMenuItem.Click += statusMOAToolStripMenuItem_Click;
             // 
@@ -119,7 +119,7 @@
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(120, 26);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -127,14 +127,15 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(137, 26);
+            konversiSKSToolStripMenuItem.Size = new Size(181, 38);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
+            konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
             // konversiNilaiToolStripMenuItem
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(136, 26);
+            konversiNilaiToolStripMenuItem.Size = new Size(182, 38);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -143,21 +144,21 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(67, 26);
+            profilToolStripMenuItem.Size = new Size(89, 38);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(228, 34);
+            informasiAkunToolStripMenuItem.Size = new Size(302, 44);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(228, 34);
+            logOutToolStripMenuItem.Size = new Size(302, 44);
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
@@ -193,7 +194,7 @@
             lbl_keterangankonversisks.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_keterangankonversisks.Location = new Point(3, 203);
             lbl_keterangankonversisks.Name = "lbl_keterangankonversisks";
-            lbl_keterangankonversisks.Size = new Size(137, 25);
+            lbl_keterangankonversisks.Size = new Size(181, 31);
             lbl_keterangankonversisks.TabIndex = 2;
             lbl_keterangankonversisks.Text = "Keterangan :";
             // 
@@ -202,7 +203,7 @@
             tbx_kompetensikonversisks.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             tbx_kompetensikonversisks.Location = new Point(3, 27);
             tbx_kompetensikonversisks.Name = "tbx_kompetensikonversisks";
-            tbx_kompetensikonversisks.Size = new Size(461, 28);
+            tbx_kompetensikonversisks.Size = new Size(461, 35);
             tbx_kompetensikonversisks.TabIndex = 1;
             tbx_kompetensikonversisks.TextChanged += tbx_kompetensikonversisks_TextChanged;
             // 
@@ -221,7 +222,7 @@
             lbl_matkulygdikonversi.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_matkulygdikonversi.Location = new Point(3, 392);
             lbl_matkulygdikonversi.Name = "lbl_matkulygdikonversi";
-            lbl_matkulygdikonversi.Size = new Size(305, 25);
+            lbl_matkulygdikonversi.Size = new Size(412, 31);
             lbl_matkulygdikonversi.TabIndex = 4;
             lbl_matkulygdikonversi.Text = "Pilih Matkul Untuk Dikonversi :";
             // 
@@ -231,7 +232,7 @@
             cbx_matkulygdikonversi.FormattingEnabled = true;
             cbx_matkulygdikonversi.Location = new Point(3, 434);
             cbx_matkulygdikonversi.Name = "cbx_matkulygdikonversi";
-            cbx_matkulygdikonversi.Size = new Size(461, 30);
+            cbx_matkulygdikonversi.Size = new Size(461, 37);
             cbx_matkulygdikonversi.TabIndex = 5;
             // 
             // panel1
@@ -249,7 +250,7 @@
             lnk_carimatkulkonversisks.Font = new Font("Microsoft Sans Serif", 7F, FontStyle.Regular, GraphicsUnit.Point);
             lnk_carimatkulkonversisks.Location = new Point(272, 10);
             lnk_carimatkulkonversisks.Name = "lnk_carimatkulkonversisks";
-            lnk_carimatkulkonversisks.Size = new Size(111, 17);
+            lnk_carimatkulkonversisks.Size = new Size(145, 24);
             lnk_carimatkulkonversisks.TabIndex = 1;
             lnk_carimatkulkonversisks.TabStop = true;
             lnk_carimatkulkonversisks.Text = "Cari Mata Kuliah";
@@ -271,7 +272,7 @@
             lbl_kompetensikonversisks.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_kompetensikonversisks.Location = new Point(3, 0);
             lbl_kompetensikonversisks.Name = "lbl_kompetensikonversisks";
-            lbl_kompetensikonversisks.Size = new Size(338, 24);
+            lbl_kompetensikonversisks.Size = new Size(451, 24);
             lbl_kompetensikonversisks.TabIndex = 0;
             lbl_kompetensikonversisks.Text = "Kompetensi yang dikembangkan :";
             lbl_kompetensikonversisks.Click += label1_Click;
@@ -386,7 +387,7 @@
             lbl_nimkonversisks.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_nimkonversisks.Location = new Point(12, 56);
             lbl_nimkonversisks.Name = "lbl_nimkonversisks";
-            lbl_nimkonversisks.Size = new Size(128, 22);
+            lbl_nimkonversisks.Size = new Size(165, 29);
             lbl_nimkonversisks.TabIndex = 1;
             lbl_nimkonversisks.Text = "2224101010xx";
             lbl_nimkonversisks.Click += label3_Click;
@@ -397,13 +398,13 @@
             lbl_namakonversisks.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_namakonversisks.Location = new Point(12, 25);
             lbl_namakonversisks.Name = "lbl_namakonversisks";
-            lbl_namakonversisks.Size = new Size(190, 22);
+            lbl_namakonversisks.Size = new Size(248, 29);
             lbl_namakonversisks.TabIndex = 0;
             lbl_namakonversisks.Text = "AURYN DEVI SAGITA";
             // 
             // v_TambahKonversiSks
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1184, 780);
             Controls.Add(pnl_namakonversisks);

@@ -8,13 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PBO
+namespace Baskom.View
 {
-    public partial class TambahMahasiswa : Form
+    public partial class v_TambahDosen : Form
     {
-        public TambahMahasiswa()
+        public v_TambahDosen()
         {
             InitializeComponent();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

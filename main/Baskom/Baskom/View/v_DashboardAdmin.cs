@@ -32,18 +32,19 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setProfilAdmin();
         }
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*Mitra form5 = new Mitra();
-            form5.Show();
-            this.Hide();*/
+            this.Hide();
+            c_Dashboard.setDataMitra();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Hide();
             c_Dashboard.setDashboardAdmin();
         }
 
@@ -59,12 +60,14 @@ namespace Baskom.View
 
         private void akunDosesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDataDosen();
         }
 
         private void akunMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDataMahasiswa();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,6 +83,18 @@ namespace Baskom.View
         private void manajemenAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tambahMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMataKuliah();
+        }
+
+        private void tambahProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahProgram();
         }
     }
 }

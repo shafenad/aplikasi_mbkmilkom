@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baskom.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,20 +11,19 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_StatusMOA : Form
+    partial class v_StatusMOA : Form
     {
-        public v_StatusMOA()
+        c_Dashboard c_Dashboard;
+        public v_StatusMOA(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
-
         private void btn_simpanstatus_Click(object sender, EventArgs e)
         {
-            /*mitra form1 = new mitra();
-            form1.Show();
-            this.Hide();*/
+            this.Hide();
+            c_Dashboard.setDashboardMahasiswa();
         }
-
         private void statusmitra_Load(object sender, EventArgs e)
         {
 

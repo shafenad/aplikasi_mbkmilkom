@@ -7,15 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baskom.Controller;
 
 namespace Baskom.View
 {
-    public partial class v_MemvalidasiKonversiNilai : Form
+    partial class v_MemvalidasiKonversiNilai : Form
     {
-        public v_MemvalidasiKonversiNilai()
+        private c_Dashboard c_Dashboard;
+        public v_MemvalidasiKonversiNilai(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
-
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -30,8 +32,7 @@ namespace Baskom.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*DetailKonversiNilai form = new DetailKonversiNilai();
-            form.Show();*/
+
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -41,41 +42,41 @@ namespace Baskom.View
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*DaftarMitra form3 = new DaftarMitra();
-            form3.Show();*/
+
         }
 
         private void pengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*PengajuanMOA form4 = new PengajuanMOA();
-            form4.Show();*/
+
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-  
+            this.Hide();
+            c_Dashboard.setPengajuanMOA();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //this
         }
 
         private void daftarMitraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            /*DaftarMitra form3 = new DaftarMitra();
-            form3.Show();
-            this.Hide();*/
+            this.Hide();
+            c_Dashboard.setDaftarMitra();
         }
 
         private void lihatProfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
- 
+            this.Hide();
+            c_Dashboard.setProfilTimMBKM();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            this.Hide();
+            c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -85,17 +86,19 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
- 
+            this.Hide();
+            c_Dashboard.setDashboardTimmbkm();
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-     
+            this.Hide();
+            c_Dashboard.setPembagianTugas();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-          
+            //logout
         }
     }
 }

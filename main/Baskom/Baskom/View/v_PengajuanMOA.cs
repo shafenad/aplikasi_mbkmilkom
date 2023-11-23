@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baskom.Controller;
 
 namespace Baskom.View
 {
-    public partial class v_PengajuanMOA : Form
+    partial class v_PengajuanMOA : Form
     {
-        public v_PengajuanMOA()
+        private c_Dashboard c_Dashboard;
+        public v_PengajuanMOA(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -29,7 +32,8 @@ namespace Baskom.View
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            c_Dashboard.setDaftarMitra();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -39,12 +43,14 @@ namespace Baskom.View
 
         private void lihatProfilToolStripMenuItem_Click(object sender, EventArgs e)
         {
-    
+            this.Hide();
+            c_Dashboard.setProfilTimMBKM();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-      
+            this.Hide();
+            c_Dashboard.setMemvalidasiKonversiNilai();
         }
 
         private void btn_simpan_Click(object sender, EventArgs e)
@@ -54,27 +60,40 @@ namespace Baskom.View
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-       
+            this.Hide();
+            c_Dashboard.setDashboardTimmbkm();
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            //this
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-         
+            this.Hide();
+            c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-        
+            this.Hide();
+            c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            //logout
+        }
+
+        private void penerimaanMitraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }
