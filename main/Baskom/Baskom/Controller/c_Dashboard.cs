@@ -62,7 +62,7 @@ namespace Baskom.Controller
                 v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh = new(this);
                 v_TambahKonversiSks v_TambahKonversiSks = new(this);
                 v_TambahKonversiNilai v_TambahKonversiNilai = new(this);
-                v_ProfilMahasiswa v_ProfilMahasiswa = new(this);
+                v_ProfilMahasiswa v_ProfilMahasiswa = new(this, (m_DataAkunMahasiswa)data_akun_pengguna);
                 this.v_DashboardMahasiswa = v_DashboardMahasiswa;
                 this.v_PengajuanMitra = v_PengajuanMitra;
                 this.v_StatusMOA = v_StatusMOA;
@@ -79,7 +79,7 @@ namespace Baskom.Controller
                 v_PembagianTugas v_PembagianTugas = new(this);
                 v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this);
                 v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new(this);
-                v_ProfilTimMBKM v_ProfilTimMBKM = new(this);
+                v_ProfilTimMBKM v_ProfilTimMBKM = new(this,(m_DataAkunTimmbkm)data_akun_pengguna);
                 this.v_DashboardTimmbkm = v_DashboardTimmbkm;
                 this.v_DaftarMitra = v_DaftarMitra;
                 this.v_PengajuanMOA = v_PengajuanMOA;
@@ -91,7 +91,7 @@ namespace Baskom.Controller
             else if (data_akun_pengguna.GetType() == typeof(m_DataAkunAdmin))
             {
                 v_DashboardAdmin v_DashboardAdmin = new(this);
-                v_ProfilAdmin v_ProfilAdmin = new(this);
+                v_ProfilAdmin v_ProfilAdmin = new(this,(m_DataAkunAdmin)data_akun_pengguna);
                 v_DataMahasiswa v_DataMahasiswa = new(this);
                 v_DataDosen v_DataDosen = new(this);
                 v_DataMitra v_DataMitra = new(this);

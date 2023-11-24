@@ -9,16 +9,17 @@ namespace Baskom.Model
 {
     class m_DataAkunMahasiswa
     {
-        private int? id_mahasiswa;
-        private string? nim;
-        private string? nama_mahasiswa;
-        private int? tahun_masuk;
-        private bool? status_mahasiswa;
-        private string? no_wa;
-        private int? batch_mbkm;
-        private string? email;
-        private string? kata_sandi;
-        private int? id_prodi;
+        m_DataProdi m_DataProdi = new();
+        private int id_mahasiswa;
+        private string nim;
+        private string nama_mahasiswa;
+        private int tahun_masuk;
+        private bool status_mahasiswa;
+        private string no_wa;
+        private int batch_mbkm;
+        private string email;
+        private string kata_sandi;
+        private int id_prodi;
 
         public bool cekLoginMahasiswa(string nim, string kata_sandi)
         {
@@ -43,18 +44,6 @@ namespace Baskom.Model
             }
             return false;
         }
-        private Array[] getMahasiswa()
-        {
-            Array[] result = new Array[1];
-            return result;
-        }
-
-        private Array[] getMahasiswaById(int namanya1)
-        {
-            Array[] result = new Array[1];
-            return result;
-        }
-
         public string[] getMahasiswaByNim(string nim)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Mahasiswa\" WHERE nim = '{nim}'");
@@ -73,6 +62,22 @@ namespace Baskom.Model
                 result[9] = reader[9].ToString();
             }
             reader.Close();
+            return result;
+        }
+        public object[] getAttributes()
+        {
+            string nama_prodi = this.m_DataProdi.getNamaProdiById(id_prodi);
+            object[] result = new object[10];
+            result[0] = id_mahasiswa;
+            result[1] = nim;
+            result[2] = nama_mahasiswa;
+            result[3] = tahun_masuk;
+            result[4] = status_mahasiswa;
+            result[5] = no_wa;
+            result[6] = batch_mbkm;
+            result[7] = email;
+            result[8] = kata_sandi;
+            result[9] = nama_prodi;
             return result;
         }
     }

@@ -1,4 +1,5 @@
 ﻿using Baskom.Controller;
+using Baskom.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,10 +15,15 @@ namespace Baskom.View
     partial class v_ProfilAdmin : Form
     {
         c_Dashboard c_Dashboard;
-        public v_ProfilAdmin(c_Dashboard c_Dashboard)
+        m_DataAkunAdmin data_akun_pengguna;
+        public v_ProfilAdmin(c_Dashboard c_Dashboard, m_DataAkunAdmin data_akun_pengguna)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.data_akun_pengguna = data_akun_pengguna;
+            object[] array_data = data_akun_pengguna.getAttributes();
+            lbl_nama.Text = array_data[0].ToString();
+            lbl_katasandi.Text = array_data[1].ToString();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

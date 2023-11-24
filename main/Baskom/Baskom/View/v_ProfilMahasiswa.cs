@@ -8,16 +8,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Baskom.Controller;
+using Baskom.Model;
 
 namespace Baskom.View
 {
     partial class v_ProfilMahasiswa : Form
     {
+        m_DataAkunMahasiswa data_akun_pengguna;
         private c_Dashboard c_Dashboard;
-        public v_ProfilMahasiswa(c_Dashboard c_Dashboard)
+        public v_ProfilMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.data_akun_pengguna = data_akun_pengguna;
+            object[] array_data = data_akun_pengguna.getAttributes();
+            lbl_namamahasiswa.Text = array_data[2].ToString();
+            lbl_nimmahasiswa.Text = array_data[1].ToString();
+            lbl_prodi.Text = array_data[9].ToString();
+            lbl_thnmasuk.Text = array_data[3].ToString();
+            lbl_status.Text = (bool)array_data[4] ? "Aktif" : "Tidak Aktif";
+            lbl_nowa.Text = array_data[5].ToString();
+            lbl_batch.Text = array_data[6].ToString();
+            lbl_email.Text = array_data[7].ToString();
         }
 
         private void label12_Click(object sender, EventArgs e)

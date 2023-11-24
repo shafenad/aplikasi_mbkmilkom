@@ -9,9 +9,9 @@ namespace Baskom.Model
 {
     class m_DataAkunTimmbkm
     {
-        private string? id_timmbkm;
-        private string? nidn;
-        private int? timmbkm_id_dosen;
+        private string id_timmbkm;
+        private string nidn;
+        private int timmbkm_id_dosen;
         private m_DataAkunDosen m_DataAkunDosen = new m_DataAkunDosen();
 
         public bool cekLoginTimmbkm(string nidn, string kata_sandi)
@@ -40,6 +40,9 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
-
+        public object[] getDosenAttributes()
+        {
+            return m_DataAkunDosen.getAttributes(this.timmbkm_id_dosen);
+        }
     }
 }

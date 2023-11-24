@@ -105,9 +105,9 @@
             lbl_katasandi.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             lbl_katasandi.Location = new Point(120, 230);
             lbl_katasandi.Name = "lbl_katasandi";
-            lbl_katasandi.Size = new Size(73, 29);
+            lbl_katasandi.Size = new Size(219, 29);
             lbl_katasandi.TabIndex = 11;
-            lbl_katasandi.Text = "..........";
+            lbl_katasandi.Text = "nadilia@gmail.com";
             // 
             // lbl_akunadmin
             // 
@@ -148,9 +148,9 @@
             lbl_katasandi1.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_katasandi1.Location = new Point(120, 194);
             lbl_katasandi1.Name = "lbl_katasandi1";
-            lbl_katasandi1.Size = new Size(173, 31);
+            lbl_katasandi1.Size = new Size(103, 31);
             lbl_katasandi1.TabIndex = 3;
-            lbl_katasandi1.Text = "Kata Sandi :";
+            lbl_katasandi1.Text = "Email :";
             // 
             // panel1
             // 
@@ -180,7 +180,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, manajemenAkunToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 42);
+            menuStrip1.Size = new Size(800, 40);
             menuStrip1.TabIndex = 1;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -188,7 +188,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(151, 38);
+            dashboardToolStripMenuItem.Size = new Size(151, 36);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -197,7 +197,7 @@
             manajemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunDosenToolStripMenuItem, akunMahasiswaToolStripMenuItem });
             manajemenAkunToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             manajemenAkunToolStripMenuItem.Name = "manajemenAkunToolStripMenuItem";
-            manajemenAkunToolStripMenuItem.Size = new Size(218, 38);
+            manajemenAkunToolStripMenuItem.Size = new Size(218, 36);
             manajemenAkunToolStripMenuItem.Text = "Manajemen Akun";
             // 
             // akunDosenToolStripMenuItem
@@ -218,7 +218,7 @@
             // 
             mitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(86, 38);
+            mitraToolStripMenuItem.Size = new Size(86, 36);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
@@ -226,7 +226,7 @@
             // 
             mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMataKuliahToolStripMenuItem, tambahProgramToolStripMenuItem });
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(161, 38);
+            mataKuliahToolStripMenuItem.Size = new Size(161, 36);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             // 
             // tambahMataKuliahToolStripMenuItem
@@ -248,7 +248,7 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(89, 38);
+            profilToolStripMenuItem.Size = new Size(89, 36);
             profilToolStripMenuItem.Text = "Profil";
             // 
             // informasiAkunToolStripMenuItem
