@@ -41,13 +41,15 @@
             logoutToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             tbl_daftardosenadmin = new DataGridView();
+            Column1 = new DataGridViewLinkColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewButtonColumn();
             panel3 = new Panel();
             btn_tambahdaftardosenadmin = new Button();
             label1 = new Label();
             panel4 = new Panel();
-            Column3 = new DataGridViewButtonColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewLinkColumn();
+            tambahMitraProgramToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             msp_navadmindosen.SuspendLayout();
             panel2.SuspendLayout();
@@ -107,6 +109,7 @@
             // 
             // mitraToolStripMenuItem
             // 
+            mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramToolStripMenuItem });
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
             mitraToolStripMenuItem.Size = new Size(64, 30);
             mitraToolStripMenuItem.Text = "Mitra";
@@ -153,6 +156,28 @@
             tbl_daftardosenadmin.TabIndex = 0;
             tbl_daftardosenadmin.CellContentClick += dataGridView1_CellContentClick;
             // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nama";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.Resizable = DataGridViewTriState.True;
+            Column1.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "NIP";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Lihat";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Resizable = DataGridViewTriState.True;
+            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
             // panel3
             // 
             panel3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
@@ -195,27 +220,17 @@
             panel4.Size = new Size(233, 44);
             panel4.TabIndex = 4;
             // 
-            // Column3
+            // tambahMitraProgramToolStripMenuItem
             // 
-            Column3.HeaderText = "Lihat";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Resizable = DataGridViewTriState.True;
-            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
+            tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
+            tambahMitraProgramToolStripMenuItem.Size = new Size(324, 30);
+            tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
             // 
-            // Column2
+            // tambahProgramToolStripMenuItem
             // 
-            Column2.HeaderText = "NIP";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nama";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.Resizable = DataGridViewTriState.True;
-            Column1.SortMode = DataGridViewColumnSortMode.Automatic;
+            tambahProgramToolStripMenuItem.Name = "tambahProgramToolStripMenuItem";
+            tambahProgramToolStripMenuItem.Size = new Size(324, 30);
+            tambahProgramToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
             // 
             // daftardosen
             // 
@@ -264,5 +279,7 @@
         private DataGridViewLinkColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewButtonColumn Column3;
+        private ToolStripMenuItem tambahMitraProgramToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramToolStripMenuItem;
     }
 }

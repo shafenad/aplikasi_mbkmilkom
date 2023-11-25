@@ -46,6 +46,8 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             tbl_daftarmhsadmin = new DataGridView();
+            tambahMitraProgramToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramMataKuliahToolStripMenuItem = new ToolStripMenuItem();
             panel1.SuspendLayout();
             msp_navadminmhs.SuspendLayout();
             panel4.SuspendLayout();
@@ -101,6 +103,7 @@
             // 
             // mitraToolStripMenuItem
             // 
+            mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
             mitraToolStripMenuItem.Size = new Size(64, 30);
             mitraToolStripMenuItem.Text = "Mitra";
@@ -191,6 +194,18 @@
             tbl_daftarmhsadmin.TabIndex = 8;
             tbl_daftarmhsadmin.CellContentClick += tbl_daftarmhsadmin_CellContentClick;
             // 
+            // tambahMitraProgramToolStripMenuItem
+            // 
+            tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
+            tambahMitraProgramToolStripMenuItem.Size = new Size(324, 30);
+            tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
+            // 
+            // tambahProgramMataKuliahToolStripMenuItem
+            // 
+            tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(324, 30);
+            tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
+            // 
             // daftarmahasiswa
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -233,5 +248,7 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column1;
         private DataGridView tbl_daftarmhsadmin;
+        private ToolStripMenuItem tambahMitraProgramToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramMataKuliahToolStripMenuItem;
     }
 }
