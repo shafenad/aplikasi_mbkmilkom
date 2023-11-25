@@ -63,7 +63,7 @@
             lbl_tambahmahasiswa.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_tambahmahasiswa.Location = new Point(12, 31);
             lbl_tambahmahasiswa.Name = "lbl_tambahmahasiswa";
-            lbl_tambahmahasiswa.Size = new Size(401, 64);
+            lbl_tambahmahasiswa.Size = new Size(540, 84);
             lbl_tambahmahasiswa.TabIndex = 3;
             lbl_tambahmahasiswa.Text = "Tambah Mahasiswa";
             // 
@@ -105,7 +105,7 @@
             tbx_statusmahasiswa.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_statusmahasiswa.Location = new Point(3, 408);
             tbx_statusmahasiswa.Name = "tbx_statusmahasiswa";
-            tbx_statusmahasiswa.Size = new Size(416, 34);
+            tbx_statusmahasiswa.Size = new Size(416, 43);
             tbx_statusmahasiswa.TabIndex = 11;
             // 
             // lbl_statusmahasiswa
@@ -115,7 +115,7 @@
             lbl_statusmahasiswa.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_statusmahasiswa.Location = new Point(5, 369);
             lbl_statusmahasiswa.Name = "lbl_statusmahasiswa";
-            lbl_statusmahasiswa.Size = new Size(204, 36);
+            lbl_statusmahasiswa.Size = new Size(270, 48);
             lbl_statusmahasiswa.TabIndex = 10;
             lbl_statusmahasiswa.Text = "Status Mahasiswa";
             // 
@@ -124,7 +124,7 @@
             tbx_tahunmasuk.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_tahunmasuk.Location = new Point(3, 316);
             tbx_tahunmasuk.Name = "tbx_tahunmasuk";
-            tbx_tahunmasuk.Size = new Size(416, 34);
+            tbx_tahunmasuk.Size = new Size(416, 43);
             tbx_tahunmasuk.TabIndex = 9;
             // 
             // lbl_tahunmasuk
@@ -134,7 +134,7 @@
             lbl_tahunmasuk.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_tahunmasuk.Location = new Point(5, 277);
             lbl_tahunmasuk.Name = "lbl_tahunmasuk";
-            lbl_tahunmasuk.Size = new Size(153, 36);
+            lbl_tahunmasuk.Size = new Size(205, 48);
             lbl_tahunmasuk.TabIndex = 8;
             lbl_tahunmasuk.Text = "Tahun Masuk";
             // 
@@ -143,7 +143,7 @@
             tbx_programstudi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_programstudi.Location = new Point(3, 226);
             tbx_programstudi.Name = "tbx_programstudi";
-            tbx_programstudi.Size = new Size(416, 34);
+            tbx_programstudi.Size = new Size(416, 43);
             tbx_programstudi.TabIndex = 7;
             // 
             // lbl_programstudi
@@ -153,7 +153,7 @@
             lbl_programstudi.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_programstudi.Location = new Point(5, 187);
             lbl_programstudi.Name = "lbl_programstudi";
-            lbl_programstudi.Size = new Size(163, 36);
+            lbl_programstudi.Size = new Size(215, 48);
             lbl_programstudi.TabIndex = 6;
             lbl_programstudi.Text = "Program Studi";
             // 
@@ -162,8 +162,9 @@
             tbx_nim.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_nim.Location = new Point(3, 135);
             tbx_nim.Name = "tbx_nim";
-            tbx_nim.Size = new Size(416, 34);
+            tbx_nim.Size = new Size(416, 43);
             tbx_nim.TabIndex = 5;
+            tbx_nim.TextChanged += tbx_nim_TextChanged;
             // 
             // lbl_nim
             // 
@@ -172,7 +173,7 @@
             lbl_nim.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_nim.Location = new Point(5, 96);
             lbl_nim.Name = "lbl_nim";
-            lbl_nim.Size = new Size(54, 36);
+            lbl_nim.Size = new Size(72, 48);
             lbl_nim.TabIndex = 4;
             lbl_nim.Text = "NIM";
             // 
@@ -181,7 +182,7 @@
             tbx_nama.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_nama.Location = new Point(3, 44);
             tbx_nama.Name = "tbx_nama";
-            tbx_nama.Size = new Size(416, 34);
+            tbx_nama.Size = new Size(416, 43);
             tbx_nama.TabIndex = 3;
             // 
             // lbl_nama
@@ -191,7 +192,7 @@
             lbl_nama.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_nama.Location = new Point(5, 5);
             lbl_nama.Name = "lbl_nama";
-            lbl_nama.Size = new Size(79, 36);
+            lbl_nama.Size = new Size(104, 48);
             lbl_nama.TabIndex = 2;
             lbl_nama.Text = "Nama";
             // 
@@ -225,13 +226,14 @@
             btn_tambah.TabIndex = 14;
             btn_tambah.Text = "Tambah";
             btn_tambah.UseVisualStyleBackColor = false;
+            btn_tambah.Click += btn_tambah_Click;
             // 
             // tbx_katasandi
             // 
             tbx_katasandi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_katasandi.Location = new Point(3, 316);
             tbx_katasandi.Name = "tbx_katasandi";
-            tbx_katasandi.Size = new Size(416, 34);
+            tbx_katasandi.Size = new Size(416, 43);
             tbx_katasandi.TabIndex = 11;
             // 
             // lbl_katasandi
@@ -241,7 +243,7 @@
             lbl_katasandi.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_katasandi.Location = new Point(5, 277);
             lbl_katasandi.Name = "lbl_katasandi";
-            lbl_katasandi.Size = new Size(128, 36);
+            lbl_katasandi.Size = new Size(168, 48);
             lbl_katasandi.TabIndex = 10;
             lbl_katasandi.Text = "Kata Sandi";
             // 
@@ -250,7 +252,7 @@
             tbx_email.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_email.Location = new Point(3, 227);
             tbx_email.Name = "tbx_email";
-            tbx_email.Size = new Size(416, 34);
+            tbx_email.Size = new Size(416, 43);
             tbx_email.TabIndex = 9;
             // 
             // lbl_email
@@ -260,7 +262,7 @@
             lbl_email.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_email.Location = new Point(5, 188);
             lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(82, 36);
+            lbl_email.Size = new Size(108, 48);
             lbl_email.TabIndex = 8;
             lbl_email.Text = "E-Mail";
             // 
@@ -269,7 +271,7 @@
             tbx_batch.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_batch.Location = new Point(3, 135);
             tbx_batch.Name = "tbx_batch";
-            tbx_batch.Size = new Size(416, 34);
+            tbx_batch.Size = new Size(416, 43);
             tbx_batch.TabIndex = 7;
             // 
             // lbl_batch
@@ -279,7 +281,7 @@
             lbl_batch.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_batch.Location = new Point(5, 96);
             lbl_batch.Name = "lbl_batch";
-            lbl_batch.Size = new Size(75, 36);
+            lbl_batch.Size = new Size(99, 48);
             lbl_batch.TabIndex = 6;
             lbl_batch.Text = "Batch";
             // 
@@ -288,7 +290,7 @@
             tbx_nowhatsapp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_nowhatsapp.Location = new Point(3, 44);
             tbx_nowhatsapp.Name = "tbx_nowhatsapp";
-            tbx_nowhatsapp.Size = new Size(416, 34);
+            tbx_nowhatsapp.Size = new Size(416, 43);
             tbx_nowhatsapp.TabIndex = 5;
             // 
             // lbl_nowhatsapp
@@ -298,13 +300,13 @@
             lbl_nowhatsapp.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_nowhatsapp.Location = new Point(5, 5);
             lbl_nowhatsapp.Name = "lbl_nowhatsapp";
-            lbl_nowhatsapp.Size = new Size(161, 36);
+            lbl_nowhatsapp.Size = new Size(214, 48);
             lbl_nowhatsapp.TabIndex = 4;
             lbl_nowhatsapp.Text = "No. WhatsApp";
             // 
-            // TambahMahasiswa
+            // v_TambahMahasiswa
             // 
-            AutoScaleDimensions = new SizeF(11F, 31F);
+            AutoScaleDimensions = new SizeF(14F, 42F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(880, 558);
             Controls.Add(lbl_tambahmahasiswa);
@@ -312,7 +314,8 @@
             Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "TambahMahasiswa";
+            Name = "v_TambahMahasiswa";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "Baskom";
             tableLayoutPanel1.ResumeLayout(false);
             panel1.ResumeLayout(false);

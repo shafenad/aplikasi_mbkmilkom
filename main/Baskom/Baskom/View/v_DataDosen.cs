@@ -1,14 +1,24 @@
 using Baskom.Controller;
+using Baskom.Model;
 
 namespace Baskom.View
 {
     partial class v_DataDosen : Form
     {
         c_Dashboard c_Dashboard;
-        public v_DataDosen(c_Dashboard c_Dashboard)
+        c_DataDosen c_DataDosen;
+        private List<object> array_data;
+
+        public v_DataDosen(c_Dashboard c_Dashboard, m_DataAkunDosen m_DataAkunDosen)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.c_DataDosen = new c_DataDosen(m_DataAkunDosen);
+            array_data = this.c_DataDosen.initDataGridView();
+            foreach (object[] item in array_data)
+            {
+                tbl_daftardosenadmin.Rows.Add(item[3], item[1]);
+            }
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

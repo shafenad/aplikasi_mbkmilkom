@@ -49,6 +49,26 @@ namespace Baskom.Model
             }
             reader.Close();
         }
+        public List<object> getAllDosen()
+        {
+            List<object> result = new List<object>();
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Dosen\";");
+            int field_count = reader.FieldCount;
+            while (reader.Read())
+            {
+                object[] field_values = new object[field_count];
+                field_values[0] = reader[0];
+                field_values[1] = reader[1];
+                field_values[2] = reader[2];
+                field_values[3] = reader[3];
+                field_values[4] = reader[4];
+                field_values[5] = reader[5];
+                field_values[6] = reader[6];
+                result.Add(field_values);
+            }
+            reader.Close();
+            return result;
+        }
         public object[] getAttributes(int id_dosen)
         {
             this.setDosenById(id_dosen);

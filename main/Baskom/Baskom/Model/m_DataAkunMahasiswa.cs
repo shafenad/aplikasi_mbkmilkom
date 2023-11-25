@@ -1,6 +1,7 @@
 ﻿using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -60,6 +61,29 @@ namespace Baskom.Model
                 result[7] = reader[7].ToString();
                 result[8] = reader[8].ToString();
                 result[9] = reader[9].ToString();
+            }
+            reader.Close();
+            return result;
+        }
+        public List<object> getAllMahasiswa()
+        {
+            List<object> result = new List<object>();
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Mahasiswa\";");
+            int field_count = reader.FieldCount;
+            while (reader.Read())
+            {
+                object[] field_values = new object[field_count];
+                field_values[0] = reader[0];
+                field_values[1] = reader[1];
+                field_values[2] = reader[2];
+                field_values[3] = reader[3];
+                field_values[4] = reader[4];
+                field_values[5] = reader[5];
+                field_values[6] = reader[6];
+                field_values[7] = reader[7];
+                field_values[8] = reader[8];
+                field_values[9] = reader[9];
+                result.Add(field_values);
             }
             reader.Close();
             return result;

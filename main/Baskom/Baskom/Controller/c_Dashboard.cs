@@ -11,18 +11,10 @@ namespace Baskom.Controller
 {
     class c_Dashboard
     {
-        protected object? data_akun_pengguna;
-        protected m_DataAkunDosen m_DataAkunDosen;
-        protected m_DataAkunMahasiswa m_DataAkunMahasiswa;
-        protected m_DataAkunTimmbkm m_DataAkunTimmbkm;
-        protected m_DataDetailMitra m_DataDetailMitra;
-        protected m_DataDetailProgram m_DataDetailProgram;
-        protected m_DataKonversiNilai m_DataKonversiNilai;
-        protected m_DataKonversiSks m_DataKonversiSks;
-        protected m_DataMataKuliah m_DataMataKuliah;
-        protected m_DataMataKuliahTempuh m_DataMataKuliahTempuh;
-        protected m_DataPenerimaan m_DataPenerimaan;
-        protected m_DataProgram m_DataProgram;
+        private object? data_akun_pengguna;
+        private m_DataAkunDosen m_DataAkunDosen = new();
+        private m_DataAkunMahasiswa m_DataAkunMahasiswa = new();
+        private m_DataAkunTimmbkm m_DataAkunTimmbkm = new();
         private v_DashboardMahasiswa v_DashboardMahasiswa;
         private v_DashboardAdmin v_DashboardAdmin;
         private v_DashboardTimmbkm v_DashboardTimmbkm;
@@ -92,11 +84,13 @@ namespace Baskom.Controller
             {
                 v_DashboardAdmin v_DashboardAdmin = new(this);
                 v_ProfilAdmin v_ProfilAdmin = new(this,(m_DataAkunAdmin)data_akun_pengguna);
-                v_DataMahasiswa v_DataMahasiswa = new(this);
-                v_DataDosen v_DataDosen = new(this);
+                v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa);
+                v_DataDosen v_DataDosen = new(this, this.m_DataAkunDosen);
                 v_DataMitra v_DataMitra = new(this);
                 v_TambahProgram v_TambahProgram = new(this);
                 v_TambahMataKuliah v_TambahMataKuliah = new(this);
+                v_TambahDosen v_TambahDosen = new();
+                v_TambahMahasiswa v_TambahMahasiswa = new();
                 this.v_DashboardAdmin = v_DashboardAdmin;
                 this.v_ProfilAdmin = v_ProfilAdmin;
                 this.v_DataMahasiswa = v_DataMahasiswa;
@@ -104,6 +98,8 @@ namespace Baskom.Controller
                 this.v_DataMitra = v_DataMitra;
                 this.v_TambahProgram = v_TambahProgram;
                 this.v_TambahMataKuliah = v_TambahMataKuliah;
+                this.v_TambahDosen = v_TambahDosen;
+                this.v_TambahMahasiswa = v_TambahMahasiswa;
             }
         }
         public void logout() { }
@@ -204,6 +200,5 @@ namespace Baskom.Controller
         {
             this.v_TambahMataKuliah.Show();
         }
-        public void showDataAkun(string nama_mahasiswa, string nim) { }
     }
 }

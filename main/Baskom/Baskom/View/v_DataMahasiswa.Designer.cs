@@ -45,10 +45,10 @@
             panel4 = new Panel();
             label1 = new Label();
             btn_tambahdaftarmhsadmin = new Button();
-            Column3 = new DataGridViewButtonColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             tbl_daftarmhsadmin = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             msp_navadminmhs.SuspendLayout();
             panel4.SuspendLayout();
@@ -73,14 +73,14 @@
             msp_navadminmhs.Location = new Point(0, 0);
             msp_navadminmhs.Name = "msp_navadminmhs";
             msp_navadminmhs.Padding = new Padding(0);
-            msp_navadminmhs.Size = new Size(2142, 38);
+            msp_navadminmhs.Size = new Size(2142, 33);
             msp_navadminmhs.TabIndex = 0;
             msp_navadminmhs.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
             // 
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(151, 38);
+            dashboardToolStripMenuItem.Size = new Size(151, 33);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -88,7 +88,7 @@
             // 
             managemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunDosenToolStripMenuItem, akunToolStripMenuItem });
             managemenAkunToolStripMenuItem.Name = "managemenAkunToolStripMenuItem";
-            managemenAkunToolStripMenuItem.Size = new Size(226, 38);
+            managemenAkunToolStripMenuItem.Size = new Size(226, 33);
             managemenAkunToolStripMenuItem.Text = "Managemen Akun";
             // 
             // akunDosenToolStripMenuItem
@@ -108,7 +108,7 @@
             // mitraToolStripMenuItem
             // 
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(86, 38);
+            mitraToolStripMenuItem.Size = new Size(86, 33);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
@@ -116,7 +116,7 @@
             // 
             mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMataKuliahToolStripMenuItem, tambahProgramToolStripMenuItem });
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 33);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             // 
             // tambahMataKuliahToolStripMenuItem
@@ -137,7 +137,7 @@
             // 
             profileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logoutToolStripMenuItem });
             profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            profileToolStripMenuItem.Size = new Size(103, 38);
+            profileToolStripMenuItem.Size = new Size(103, 33);
             profileToolStripMenuItem.Text = "Profile";
             // 
             // informasiAkunToolStripMenuItem
@@ -190,26 +190,6 @@
             btn_tambahdaftarmhsadmin.UseVisualStyleBackColor = false;
             btn_tambahdaftarmhsadmin.Click += btn_tambahdaftarmhsadmin_Click;
             // 
-            // Column3
-            // 
-            Column3.HeaderText = "Lihat";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Resizable = DataGridViewTriState.True;
-            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "NIM";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nama";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            // 
             // tbl_daftarmhsadmin
             // 
             tbl_daftarmhsadmin.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
@@ -224,6 +204,28 @@
             tbl_daftarmhsadmin.Size = new Size(2055, 607);
             tbl_daftarmhsadmin.TabIndex = 8;
             tbl_daftarmhsadmin.CellContentClick += tbl_daftarmhsadmin_CellContentClick;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nama";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "NIM";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Lihat";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Resizable = DataGridViewTriState.True;
+            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // v_DataMahasiswa
             // 
@@ -264,12 +266,12 @@
         private Panel panel4;
         private Label label1;
         private Button btn_tambahdaftarmhsadmin;
-        private DataGridViewButtonColumn Column3;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column1;
         private DataGridView tbl_daftarmhsadmin;
         private ToolStripMenuItem mataKuliahToolStripMenuItem;
         private ToolStripMenuItem tambahMataKuliahToolStripMenuItem;
         private ToolStripMenuItem tambahProgramToolStripMenuItem;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewButtonColumn Column3;
     }
 }

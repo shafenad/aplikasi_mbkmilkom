@@ -1,4 +1,5 @@
 ﻿using Baskom.Controller;
+using Baskom.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,19 @@ namespace Baskom.View
 {
     partial class v_DataMahasiswa : Form
     {
-        c_Dashboard c_Dashboard;
-        public v_DataMahasiswa(c_Dashboard c_Dashboard)
+        private c_Dashboard c_Dashboard;
+        private c_DataMahasiswa c_DataMahasiswa;
+        private List<object> array_data;
+        public v_DataMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.c_DataMahasiswa = new c_DataMahasiswa(m_DataAkunMahasiswa);
+            array_data = this.c_DataMahasiswa.initDataGridView();
+            foreach (object[] item in array_data)
+            {
+                tbl_daftarmhsadmin.Rows.Add(item[2], item[1]);
+            }
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,7 +46,12 @@ namespace Baskom.View
 
         private void tbl_daftarmhsadmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            //int i = e.RowIndex;
+            //if (e.ColumnIndex ==  2 )
+            //{
+            //    string nim = tbl_daftarmhsadmin.Rows[i].Cells[1].Value.ToString();
 
+            //}
         }
 
         private void akunDosenToolStripMenuItem_Click(object sender, EventArgs e)
