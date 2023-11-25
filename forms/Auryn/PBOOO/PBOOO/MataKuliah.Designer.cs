@@ -49,13 +49,9 @@
             this.pnl_matakuliahkanan = new System.Windows.Forms.Panel();
             this.tbl_matkul = new System.Windows.Forms.DataGridView();
             this.lbl_daftarmatkul = new System.Windows.Forms.Label();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.menuStrip1.SuspendLayout();
             this.pnl_matakuliahkiri.SuspendLayout();
             this.pnl_matakuliahkanan.SuspendLayout();
@@ -75,7 +71,7 @@
             this.profilToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1364, 49);
+            this.menuStrip1.Size = new System.Drawing.Size(1137, 39);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -83,7 +79,7 @@
             // 
             this.dashboardToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(131, 45);
+            this.dashboardToolStripMenuItem.Size = new System.Drawing.Size(131, 35);
             this.dashboardToolStripMenuItem.Text = "Dashboard";
             this.dashboardToolStripMenuItem.Click += new System.EventHandler(this.dashboardToolStripMenuItem_Click);
             // 
@@ -94,7 +90,7 @@
             this.statusMOAToolStripMenuItem});
             this.mitraToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            this.mitraToolStripMenuItem.Size = new System.Drawing.Size(76, 45);
+            this.mitraToolStripMenuItem.Size = new System.Drawing.Size(76, 35);
             this.mitraToolStripMenuItem.Text = "Mitra";
             // 
             // pengajuanMitraToolStripMenuItem
@@ -113,14 +109,14 @@
             // 
             this.mataKuliahToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            this.mataKuliahToolStripMenuItem.Size = new System.Drawing.Size(137, 45);
+            this.mataKuliahToolStripMenuItem.Size = new System.Drawing.Size(137, 35);
             this.mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             // 
             // konversiSKSToolStripMenuItem
             // 
             this.konversiSKSToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            this.konversiSKSToolStripMenuItem.Size = new System.Drawing.Size(144, 45);
+            this.konversiSKSToolStripMenuItem.Size = new System.Drawing.Size(144, 35);
             this.konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             this.konversiSKSToolStripMenuItem.Click += new System.EventHandler(this.konversiSKSToolStripMenuItem_Click);
             // 
@@ -128,7 +124,7 @@
             // 
             this.konversiNilaiToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            this.konversiNilaiToolStripMenuItem.Size = new System.Drawing.Size(148, 45);
+            this.konversiNilaiToolStripMenuItem.Size = new System.Drawing.Size(148, 35);
             this.konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             // 
             // profilToolStripMenuItem
@@ -138,7 +134,7 @@
             this.logOutToolStripMenuItem});
             this.profilToolStripMenuItem.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            this.profilToolStripMenuItem.Size = new System.Drawing.Size(73, 45);
+            this.profilToolStripMenuItem.Size = new System.Drawing.Size(73, 35);
             this.profilToolStripMenuItem.Text = "Profil";
             this.profilToolStripMenuItem.Click += new System.EventHandler(this.profilToolStripMenuItem_Click);
             // 
@@ -220,13 +216,9 @@
             this.tbl_matkul.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tbl_matkul.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbl_matkul.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.Column5});
             this.tbl_matkul.Location = new System.Drawing.Point(69, 70);
             this.tbl_matkul.Name = "tbl_matkul";
             this.tbl_matkul.RowHeadersWidth = 82;
@@ -243,18 +235,6 @@
             this.lbl_daftarmatkul.Size = new System.Drawing.Size(209, 36);
             this.lbl_daftarmatkul.TabIndex = 0;
             this.lbl_daftarmatkul.Text = "Daftar Mata Kuliah";
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Kode";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tahun Kurikulum";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
             // 
             // Column3
             // 
@@ -273,18 +253,6 @@
             this.Column5.HeaderText = "Jumlah SKS";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "SKS Tatap Muka";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "SKS Praktikum";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
             // 
             // MataKuliah
             // 
@@ -334,12 +302,8 @@
         private System.Windows.Forms.ToolStripMenuItem logOutToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pengajuanMitraToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem statusMOAToolStripMenuItem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
     }
 }

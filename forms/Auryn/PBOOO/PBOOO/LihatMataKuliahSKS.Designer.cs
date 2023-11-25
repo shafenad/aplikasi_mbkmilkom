@@ -34,14 +34,10 @@
             this.btn_kembalikonversisks = new System.Windows.Forms.Button();
             this.pnl_carimatkul = new System.Windows.Forms.Panel();
             this.tbl_matkulkonversisks = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pnl_rekomendasimatkul = new System.Windows.Forms.Panel();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pnl_rekomendasimatkul = new System.Windows.Forms.Panel();
             this.pnl_carimatkul.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tbl_matkulkonversisks)).BeginInit();
             this.pnl_rekomendasimatkul.SuspendLayout();
@@ -108,13 +104,9 @@
             this.tbl_matkulkonversisks.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.tbl_matkulkonversisks.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tbl_matkulkonversisks.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
             this.Column3,
             this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
+            this.Column5});
             this.tbl_matkulkonversisks.Location = new System.Drawing.Point(19, 2);
             this.tbl_matkulkonversisks.Name = "tbl_matkulkonversisks";
             this.tbl_matkulkonversisks.RowHeadersWidth = 82;
@@ -122,17 +114,16 @@
             this.tbl_matkulkonversisks.Size = new System.Drawing.Size(1073, 370);
             this.tbl_matkulkonversisks.TabIndex = 0;
             // 
-            // Column1
+            // pnl_rekomendasimatkul
             // 
-            this.Column1.HeaderText = "Kode";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tahun Kurikulum";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
+            this.pnl_rekomendasimatkul.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnl_rekomendasimatkul.Controls.Add(this.lbl_rekomendasimatkul);
+            this.pnl_rekomendasimatkul.Location = new System.Drawing.Point(39, 42);
+            this.pnl_rekomendasimatkul.Name = "pnl_rekomendasimatkul";
+            this.pnl_rekomendasimatkul.Size = new System.Drawing.Size(1078, 82);
+            this.pnl_rekomendasimatkul.TabIndex = 2;
             // 
             // Column3
             // 
@@ -151,29 +142,6 @@
             this.Column5.HeaderText = "Jumlah SKS";
             this.Column5.MinimumWidth = 8;
             this.Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "SKS Tatap Muka";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "SKS Praktikum";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            // 
-            // pnl_rekomendasimatkul
-            // 
-            this.pnl_rekomendasimatkul.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnl_rekomendasimatkul.Controls.Add(this.lbl_rekomendasimatkul);
-            this.pnl_rekomendasimatkul.Location = new System.Drawing.Point(39, 42);
-            this.pnl_rekomendasimatkul.Name = "pnl_rekomendasimatkul";
-            this.pnl_rekomendasimatkul.Size = new System.Drawing.Size(1078, 82);
-            this.pnl_rekomendasimatkul.TabIndex = 2;
             // 
             // LihatMataKuliahSKS
             // 
@@ -204,13 +172,9 @@
         private System.Windows.Forms.Panel pnl_carimatkul;
         private System.Windows.Forms.DataGridView tbl_matkulkonversisks;
         private System.Windows.Forms.Button btn_kembalikonversisks;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Panel pnl_rekomendasimatkul;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.Panel pnl_rekomendasimatkul;
     }
 }
