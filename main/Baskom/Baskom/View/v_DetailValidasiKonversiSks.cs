@@ -19,8 +19,7 @@ namespace Baskom.View
 
         private void btn_simpan_Click(object sender, EventArgs e)
         {
-            new v_MemvalidasiKonversiSks().Show(); 
-            this.Hide();
+
         }
     }
 }

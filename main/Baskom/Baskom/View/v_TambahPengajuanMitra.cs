@@ -24,9 +24,7 @@ namespace Baskom.View
 
         private void btn_pengajuan_Click(object sender, EventArgs e)
         {
-            v_TambahMitra v_TambahMitra = new v_TambahMitra();
-            v_TambahMitra.Show();
-            this.Hide();
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

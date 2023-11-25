@@ -7,14 +7,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baskom.Controller;
 
 namespace Baskom.View
 {
-    public partial class v_TambahMataKuliahTempuh : Form
+    partial class v_TambahMataKuliahTempuh : Form
     {
-        public v_TambahMataKuliahTempuh()
+        private c_Dashboard c_Dashboard;
+        public v_TambahMataKuliahTempuh(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -24,9 +27,8 @@ namespace Baskom.View
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new v_TambahKonversiSks();
-            v_TambahKonversiSks.Show();
             this.Hide();
+            c_Dashboard.setTambahKonversiSks();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -36,44 +38,42 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardMahasiswa v_DashboardMahasiswa = new v_DashboardMahasiswa();
-            v_DashboardMahasiswa.Show();
             this.Hide();
+            c_Dashboard.setDashboardMahasiswa();
         }
 
         private void pengajuanMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahMitra v_TambahMitra = new v_TambahMitra();
-            v_TambahMitra.Show();
             this.Hide();
+            c_Dashboard.setPengajuanMitra();
         }
 
         private void statusMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_StatusMOA v_StatusMitra = new v_StatusMOA();
-            v_StatusMitra.Show();
             this.Hide();
+            c_Dashboard.setStatusMOA();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_TambahKonversiNilai v_TambahKonversiNilai = new v_TambahKonversiNilai();
-            v_TambahKonversiNilai.Show();
             this.Hide();
+            c_Dashboard.setTambahKonversiNilai();
         }
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilMahasiswa v_ProfilMahasiswa = new v_ProfilMahasiswa();
-            v_ProfilMahasiswa.Show();
             this.Hide();
+            c_Dashboard.setProfilMahasiswa();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginMahasiswa v_LoginMahasiswa = new v_LoginMahasiswa();
-            v_LoginMahasiswa.Show();
-            this.Hide();
+            //logout
+        }
+
+        private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this
         }
     }
 }

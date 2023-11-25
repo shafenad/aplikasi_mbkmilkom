@@ -7,62 +7,82 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Baskom.Controller;
+using Baskom.Model;
 
 namespace Baskom.View
 {
-    public partial class v_ProfilTimMBKM : Form
+    partial class v_ProfilTimMBKM : Form
     {
-        public v_ProfilTimMBKM()
+        private c_Dashboard c_Dashboard;
+        private m_DataAkunTimmbkm data_akun_pengguna;
+        public v_ProfilTimMBKM(c_Dashboard c_Dashboard, m_DataAkunTimmbkm data_akun_pengguna)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
+            this.data_akun_pengguna = data_akun_pengguna;
+            object[] array_data = data_akun_pengguna.getDosenAttributes();
+            label3.Text = array_data[2].ToString();
+            label4.Text = array_data[0].ToString();
+            label6.Text = array_data[1].ToString();
+            label8.Text = array_data[3].ToString();
+            label10.Text = array_data[4].ToString();
         }
 
         private void lnk_ubahsandi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            /*UbahKataSandi ubah_sandi = new UbahKataSandi();
-            ubah_sandi.Show();*/
+            c_Dashboard.setFormUbahKataSandi();
         }
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_DashboardTimmbkm v_DashboardTimmbkm = new v_DashboardTimmbkm();
-            v_DashboardTimmbkm.Show();
             this.Hide();
+            c_Dashboard.setDashboardTimmbkm();
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PengajuanMOA v_PengajuanMOA = new v_PengajuanMOA();
-            v_PengajuanMOA.Show();
             this.Hide();
+            c_Dashboard.setPengajuanMOA();
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PembagianTugas v_PembagianTugas = new v_PembagianTugas();
-            v_PembagianTugas.Show();
             this.Hide();
+            c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new v_MemvalidasiKonversiSks();
-            v_MemvalidasiKonversiSks.Show();
             this.Hide();
+            c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new v_MemvalidasiKonversiNilai();
-            v_MemvalidasiKonversiNilai.Show();
             this.Hide();
+            c_Dashboard.setMemvalidasiKonversiNilai();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginTimmbkm v_LoginTimmbkm = new v_LoginTimmbkm();
-            v_LoginTimmbkm.Show();
+            //logout
+        }
+
+        private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             this.Hide();
+            c_Dashboard.setDaftarMitra();
+        }
+
+        private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this
+        }
+
+        private void penerimaanMitraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Baskom.Controller;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,11 +11,13 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_DashboardTimmbkm : Form
+    partial class v_DashboardTimmbkm : Form
     {
-        public v_DashboardTimmbkm()
+        c_Dashboard c_Dashboard;
+        public v_DashboardTimmbkm(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
+            this.c_Dashboard = c_Dashboard;
         }
 
         private void Dashboard_Load(object sender, EventArgs e)
@@ -34,54 +37,37 @@ namespace Baskom.View
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PembagianTugas v_PembagianTugas = new v_PembagianTugas();
-            v_PembagianTugas.Show();
-            this.Hide();
+            c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new v_MemvalidasiKonversiSks();
-            v_MemvalidasiKonversiSks.Show();
-            this.Hide();
+            c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new v_MemvalidasiKonversiNilai();
-            v_MemvalidasiKonversiNilai.Show();
-            this.Hide();
+            c_Dashboard.setMemvalidasiKonversiNilai();
         }
-
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_LoginTimmbkm v_LoginTimmbkm = new v_LoginTimmbkm();
-            v_LoginTimmbkm.Show();
-            this.Hide();
+            //logout
         }
-
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            c_Dashboard.setDaftarMitra();
         }
-
         private void pengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_PengajuanMOA v_PengajuanMOA = new v_PengajuanMOA();
-            v_PengajuanMOA.Show();
-            this.Hide();
+            c_Dashboard.setPengajuanMOA();
         }
-
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            v_ProfilTimMBKM v_ProfilTimMBKM = new v_ProfilTimMBKM();
-            v_ProfilTimMBKM.Show();
-            this.Hide();
+            c_Dashboard.setProfilTimMBKM();
         }
     }
 }

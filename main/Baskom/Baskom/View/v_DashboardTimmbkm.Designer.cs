@@ -56,15 +56,15 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, penerimaanMitraToolStripMenuItem, pembagianTugasToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(7, 2, 0, 2);
-            menuStrip1.Size = new Size(1120, 33);
+            menuStrip1.Padding = new Padding(9, 3, 0, 3);
+            menuStrip1.Size = new Size(1456, 44);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
             // 
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(116, 29);
+            dashboardToolStripMenuItem.Size = new Size(149, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -72,42 +72,42 @@
             // 
             penerimaanMitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { daftarMitraToolStripMenuItem, pengajuanMOAToolStripMenuItem });
             penerimaanMitraToolStripMenuItem.Name = "penerimaanMitraToolStripMenuItem";
-            penerimaanMitraToolStripMenuItem.Size = new Size(165, 29);
+            penerimaanMitraToolStripMenuItem.Size = new Size(222, 38);
             penerimaanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             penerimaanMitraToolStripMenuItem.Click += penerimaanMitraToolStripMenuItem_Click;
             // 
             // daftarMitraToolStripMenuItem
             // 
             daftarMitraToolStripMenuItem.Name = "daftarMitraToolStripMenuItem";
-            daftarMitraToolStripMenuItem.Size = new Size(242, 34);
+            daftarMitraToolStripMenuItem.Size = new Size(359, 44);
             daftarMitraToolStripMenuItem.Text = "Daftar Mitra";
             daftarMitraToolStripMenuItem.Click += daftarMitraToolStripMenuItem_Click;
             // 
             // pengajuanMOAToolStripMenuItem
             // 
             pengajuanMOAToolStripMenuItem.Name = "pengajuanMOAToolStripMenuItem";
-            pengajuanMOAToolStripMenuItem.Size = new Size(242, 34);
-            pengajuanMOAToolStripMenuItem.Text = "Pengajuan MOA";
+            pengajuanMOAToolStripMenuItem.Size = new Size(359, 44);
+            pengajuanMOAToolStripMenuItem.Text = "Validasi MOA";
             pengajuanMOAToolStripMenuItem.Click += pengajuanMOAToolStripMenuItem_Click;
             // 
             // pembagianTugasToolStripMenuItem
             // 
             pembagianTugasToolStripMenuItem.Name = "pembagianTugasToolStripMenuItem";
-            pembagianTugasToolStripMenuItem.Size = new Size(168, 29);
+            pembagianTugasToolStripMenuItem.Size = new Size(222, 38);
             pembagianTugasToolStripMenuItem.Text = "Pembagian Tugas";
             pembagianTugasToolStripMenuItem.Click += pembagianTugasToolStripMenuItem_Click;
             // 
             // konversiSKSToolStripMenuItem
             // 
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(130, 29);
+            konversiSKSToolStripMenuItem.Size = new Size(171, 38);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
             // konversiNilaiToolStripMenuItem
             // 
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(134, 29);
+            konversiNilaiToolStripMenuItem.Size = new Size(179, 38);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -115,21 +115,21 @@
             // 
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(69, 29);
+            profilToolStripMenuItem.Size = new Size(89, 38);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(270, 34);
+            informasiAkunToolStripMenuItem.Size = new Size(308, 44);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(270, 34);
+            logOutToolStripMenuItem.Size = new Size(308, 44);
             logOutToolStripMenuItem.Text = "Log out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
@@ -137,10 +137,10 @@
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             panel2.Controls.Add(lbl_deskripsi);
-            panel2.Location = new Point(550, 4);
-            panel2.Margin = new Padding(3, 4, 3, 4);
+            panel2.Location = new Point(715, 5);
+            panel2.Margin = new Padding(4, 5, 4, 5);
             panel2.Name = "panel2";
-            panel2.Size = new Size(538, 496);
+            panel2.Size = new Size(699, 635);
             panel2.TabIndex = 2;
             // 
             // lbl_deskripsi
@@ -148,9 +148,10 @@
             lbl_deskripsi.Anchor = AnchorStyles.None;
             lbl_deskripsi.AutoSize = true;
             lbl_deskripsi.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_deskripsi.Location = new Point(47, 221);
+            lbl_deskripsi.Location = new Point(61, 283);
+            lbl_deskripsi.Margin = new Padding(4, 0, 4, 0);
             lbl_deskripsi.Name = "lbl_deskripsi";
-            lbl_deskripsi.Size = new Size(346, 22);
+            lbl_deskripsi.Size = new Size(463, 29);
             lbl_deskripsi.TabIndex = 0;
             lbl_deskripsi.Text = "lorem ipsum dolor sit amet, consectetur ....";
             // 
@@ -162,36 +163,36 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
             tableLayoutPanel1.Controls.Add(pic_logobaskom, 0, 0);
             tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(14, 58);
-            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Location = new Point(18, 74);
+            tableLayoutPanel1.Margin = new Padding(4, 5, 4, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 1;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(1092, 504);
+            tableLayoutPanel1.Size = new Size(1420, 645);
             tableLayoutPanel1.TabIndex = 3;
             // 
             // pic_logobaskom
             // 
             pic_logobaskom.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             pic_logobaskom.Image = (Image)resources.GetObject("pic_logobaskom.Image");
-            pic_logobaskom.Location = new Point(3, 4);
-            pic_logobaskom.Margin = new Padding(3, 4, 3, 4);
+            pic_logobaskom.Location = new Point(4, 5);
+            pic_logobaskom.Margin = new Padding(4, 5, 4, 5);
             pic_logobaskom.Name = "pic_logobaskom";
-            pic_logobaskom.Size = new Size(540, 496);
+            pic_logobaskom.Size = new Size(702, 635);
             pic_logobaskom.SizeMode = PictureBoxSizeMode.CenterImage;
             pic_logobaskom.TabIndex = 0;
             pic_logobaskom.TabStop = false;
             // 
             // v_DashboardTimmbkm
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1120, 562);
+            ClientSize = new Size(1456, 719);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(3, 4, 3, 4);
+            Margin = new Padding(4, 5, 4, 5);
             Name = "v_DashboardTimmbkm";
             Text = "Baskom";
             WindowState = FormWindowState.Maximized;

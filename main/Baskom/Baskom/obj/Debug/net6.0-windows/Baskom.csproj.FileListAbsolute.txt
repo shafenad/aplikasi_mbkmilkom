@@ -46,7 +46,6 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\Baskom.runtim
 D:\CINTA CODING\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\Baskom.dll
 D:\CINTA CODING\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\Baskom.pdb
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.Properties.Resources.resources
-D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.DaftarMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_CariMataKuliah.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DashboardAdmin.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DashboardMahasiswa.resources
@@ -72,7 +71,6 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahKonversiNilai.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahKonversiSks.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMataKuliahTempuh.resources
-D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahPengajuanMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj.GenerateResource.cache
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.GeneratedMSBuildEditorConfig.editorconfig
@@ -86,3 +84,10 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\Microsoft.Ext
 D:\CINTA CODING\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\Npgsql.dll
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj.AssemblyReference.cache
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj.CopyComplete
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DaftarMitra.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahDosen.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMahasiswa.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMataKuliah.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahProgram.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PengajuanMitra.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DataMitra.resources

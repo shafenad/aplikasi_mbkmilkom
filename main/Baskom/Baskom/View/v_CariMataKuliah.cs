@@ -24,9 +24,7 @@ namespace Baskom.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new v_TambahKonversiSks();
-            v_TambahKonversiSks.Show();
-            this.Hide();
+
         }
     }
 }

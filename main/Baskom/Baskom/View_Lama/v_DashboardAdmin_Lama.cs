@@ -9,8 +9,7 @@ namespace Baskom.View_Lama
 {
     class v_DashboardAdmin_Lama
     {
-        private c_Dashboard c_Dashboard = new c_Dashboard();
-        private object data_akun_pengguna = null;
+
 
         public v_DashboardAdmin_Lama()
         {
@@ -19,12 +18,12 @@ namespace Baskom.View_Lama
 
         public void klikManajemenProfilDosen()
         {
-            c_Dashboard.setManajemenProfilDosen();
+   
         }
 
         public void klikManajemenProfilMahasiswa()
         {
-            c_Dashboard.setManajemenProfilMahasiswa();
+          
         }
     }
 }

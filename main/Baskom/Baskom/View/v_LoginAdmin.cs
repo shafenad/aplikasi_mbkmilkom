@@ -32,7 +32,7 @@ namespace Baskom.View
         {
             string nidn = tbx_email.Text;
             string kata_sandi = tbx_katasandi.Text;
-            c_Akun.loginAdmin(nidn, kata_sandi);
+            c_Akun.loginAdmin(nidn, kata_sandi,this);
         }
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

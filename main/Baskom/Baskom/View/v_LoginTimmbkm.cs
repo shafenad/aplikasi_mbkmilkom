@@ -31,7 +31,7 @@ namespace Baskom.View
         {
             string nidn = tbx_NIDN.Text;
             string kata_sandi = tbx_katasandi.Text;
-            c_Akun.loginTimmbkm(nidn,kata_sandi);
+            c_Akun.loginTimmbkm(nidn,kata_sandi,this);
         }
 
         private void tbx_NIDN_TextChanged(object sender, EventArgs e)
