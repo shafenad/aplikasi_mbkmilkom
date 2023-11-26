@@ -88,6 +88,8 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahDosen.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMahasiswa.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMataKuliah.resources
-D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahProgram.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PengajuanMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DataMitra.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\PBO.UbahKataSandiProfil.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMitraProgram.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahProgramMataKuliah.resources

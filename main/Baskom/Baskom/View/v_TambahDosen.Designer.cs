@@ -29,277 +29,263 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_TambahDosen));
-            tableLayoutPanel1 = new TableLayoutPanel();
             panel1 = new Panel();
-            tbx_jabatan = new TextBox();
-            tbx_nidn = new TextBox();
-            lbl_jabatan = new Label();
-            lbl_nidn = new Label();
-            tbx_nip = new TextBox();
-            lbl_nip = new Label();
-            tbx_nama = new TextBox();
-            lbl_nama = new Label();
+            label1 = new Label();
+            label5 = new Label();
+            tbx_jabatantambahdosen = new TextBox();
+            label4 = new Label();
+            tbx_nidntambahdosen = new TextBox();
+            label3 = new Label();
+            tbx_niptambahdosen = new TextBox();
+            label2 = new Label();
+            tbx_namatambahdosen = new TextBox();
             panel2 = new Panel();
-            btn_tambah = new Button();
-            tbx_katasandi = new TextBox();
-            lbl_katasandi = new Label();
-            tbx_email = new TextBox();
-            lbl_email = new Label();
-            tbx_nowhatsapp = new TextBox();
-            lbl_nowhatsapp = new Label();
-            lbl_tambahdosen = new Label();
-            tableLayoutPanel1.SuspendLayout();
+            btn_tambahtambahdosen = new Button();
+            label8 = new Label();
+            tbx_katasanditambahdosen = new TextBox();
+            label9 = new Label();
+            tbx_emailtambahdosen = new TextBox();
+            label10 = new Label();
+            tbx_nowatambahdosen = new TextBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             SuspendLayout();
             // 
-            // tableLayoutPanel1
-            // 
-            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tableLayoutPanel1.ColumnCount = 2;
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Controls.Add(panel1, 0, 0);
-            tableLayoutPanel1.Controls.Add(panel2, 1, 0);
-            tableLayoutPanel1.Location = new Point(12, 110);
-            tableLayoutPanel1.Name = "tableLayoutPanel1";
-            tableLayoutPanel1.RowCount = 1;
-            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel1.Size = new Size(856, 356);
-            tableLayoutPanel1.TabIndex = 0;
-            // 
             // panel1
             // 
-            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(tbx_jabatan);
-            panel1.Controls.Add(tbx_nidn);
-            panel1.Controls.Add(lbl_jabatan);
-            panel1.Controls.Add(lbl_nidn);
-            panel1.Controls.Add(tbx_nip);
-            panel1.Controls.Add(lbl_nip);
-            panel1.Controls.Add(tbx_nama);
-            panel1.Controls.Add(lbl_nama);
-            panel1.Location = new Point(3, 3);
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackgroundImageLayout = ImageLayout.None;
+            panel1.Controls.Add(label1);
+            panel1.Controls.Add(label5);
+            panel1.Controls.Add(tbx_jabatantambahdosen);
+            panel1.Controls.Add(label4);
+            panel1.Controls.Add(tbx_nidntambahdosen);
+            panel1.Controls.Add(label3);
+            panel1.Controls.Add(tbx_niptambahdosen);
+            panel1.Controls.Add(label2);
+            panel1.Controls.Add(tbx_namatambahdosen);
+            panel1.Location = new Point(135, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(422, 350);
+            panel1.Size = new Size(1172, 937);
             panel1.TabIndex = 0;
             // 
-            // tbx_jabatan
+            // label1
             // 
-            tbx_jabatan.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_jabatan.Location = new Point(5, 304);
-            tbx_jabatan.Name = "tbx_jabatan";
-            tbx_jabatan.Size = new Size(416, 43);
-            tbx_jabatan.TabIndex = 4;
+            label1.AutoSize = true;
+            label1.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(3, 62);
+            label1.Name = "label1";
+            label1.Size = new Size(255, 53);
+            label1.TabIndex = 9;
+            label1.Text = "Tambah Dosen";
             // 
-            // tbx_nidn
+            // label5
             // 
-            tbx_nidn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_nidn.Location = new Point(5, 215);
-            tbx_nidn.Name = "tbx_nidn";
-            tbx_nidn.Size = new Size(416, 43);
-            tbx_nidn.TabIndex = 4;
+            label5.AutoSize = true;
+            label5.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.Location = new Point(3, 490);
+            label5.Name = "label5";
+            label5.Size = new Size(75, 26);
+            label5.TabIndex = 7;
+            label5.Text = "Jabatan";
+            label5.Click += label5_Click_1;
             // 
-            // lbl_jabatan
+            // tbx_jabatantambahdosen
             // 
-            lbl_jabatan.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_jabatan.AutoSize = true;
-            lbl_jabatan.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_jabatan.Location = new Point(7, 265);
-            lbl_jabatan.Name = "lbl_jabatan";
-            lbl_jabatan.Size = new Size(135, 48);
-            lbl_jabatan.TabIndex = 3;
-            lbl_jabatan.Text = "Jabatan";
+            tbx_jabatantambahdosen.Location = new Point(3, 523);
+            tbx_jabatantambahdosen.Multiline = true;
+            tbx_jabatantambahdosen.Name = "tbx_jabatantambahdosen";
+            tbx_jabatantambahdosen.Size = new Size(637, 42);
+            tbx_jabatantambahdosen.TabIndex = 6;
+            tbx_jabatantambahdosen.TextChanged += textBox4_TextChanged_1;
             // 
-            // lbl_nidn
+            // label4
             // 
-            lbl_nidn.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_nidn.AutoSize = true;
-            lbl_nidn.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_nidn.Location = new Point(7, 176);
-            lbl_nidn.Name = "lbl_nidn";
-            lbl_nidn.Size = new Size(87, 48);
-            lbl_nidn.TabIndex = 3;
-            lbl_nidn.Text = "NIDN";
+            label4.AutoSize = true;
+            label4.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(3, 391);
+            label4.Name = "label4";
+            label4.Size = new Size(49, 26);
+            label4.TabIndex = 5;
+            label4.Text = "NIDN";
+            label4.Click += label4_Click_1;
             // 
-            // tbx_nip
+            // tbx_nidntambahdosen
             // 
-            tbx_nip.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_nip.Location = new Point(3, 130);
-            tbx_nip.Name = "tbx_nip";
-            tbx_nip.Size = new Size(416, 43);
-            tbx_nip.TabIndex = 3;
+            tbx_nidntambahdosen.Location = new Point(3, 424);
+            tbx_nidntambahdosen.Multiline = true;
+            tbx_nidntambahdosen.Name = "tbx_nidntambahdosen";
+            tbx_nidntambahdosen.Size = new Size(637, 42);
+            tbx_nidntambahdosen.TabIndex = 4;
+            tbx_nidntambahdosen.TextChanged += textBox3_TextChanged_1;
             // 
-            // lbl_nip
+            // label3
             // 
-            lbl_nip.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_nip.AutoSize = true;
-            lbl_nip.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_nip.Location = new Point(5, 91);
-            lbl_nip.Name = "lbl_nip";
-            lbl_nip.Size = new Size(64, 48);
-            lbl_nip.TabIndex = 2;
-            lbl_nip.Text = "NIP";
+            label3.AutoSize = true;
+            label3.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(3, 292);
+            label3.Name = "label3";
+            label3.Size = new Size(36, 26);
+            label3.TabIndex = 3;
+            label3.Text = "NIP";
+            label3.Click += label3_Click;
             // 
-            // tbx_nama
+            // tbx_niptambahdosen
             // 
-            tbx_nama.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_nama.Location = new Point(3, 44);
-            tbx_nama.Name = "tbx_nama";
-            tbx_nama.Size = new Size(416, 43);
-            tbx_nama.TabIndex = 1;
+            tbx_niptambahdosen.Location = new Point(3, 325);
+            tbx_niptambahdosen.Multiline = true;
+            tbx_niptambahdosen.Name = "tbx_niptambahdosen";
+            tbx_niptambahdosen.Size = new Size(637, 42);
+            tbx_niptambahdosen.TabIndex = 2;
+            tbx_niptambahdosen.TextChanged += textBox2_TextChanged_1;
             // 
-            // lbl_nama
+            // label2
             // 
-            lbl_nama.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_nama.AutoSize = true;
-            lbl_nama.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_nama.Location = new Point(5, 5);
-            lbl_nama.Name = "lbl_nama";
-            lbl_nama.Size = new Size(104, 48);
-            lbl_nama.TabIndex = 0;
-            lbl_nama.Text = "Nama";
+            label2.AutoSize = true;
+            label2.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Location = new Point(3, 197);
+            label2.Name = "label2";
+            label2.Size = new Size(58, 26);
+            label2.TabIndex = 1;
+            label2.Text = "Nama";
+            label2.Click += label2_Click;
+            // 
+            // tbx_namatambahdosen
+            // 
+            tbx_namatambahdosen.Location = new Point(3, 230);
+            tbx_namatambahdosen.Multiline = true;
+            tbx_namatambahdosen.Name = "tbx_namatambahdosen";
+            tbx_namatambahdosen.Size = new Size(637, 42);
+            tbx_namatambahdosen.TabIndex = 0;
+            tbx_namatambahdosen.TextChanged += textBox1_TextChanged_1;
             // 
             // panel2
             // 
-            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Controls.Add(btn_tambah);
-            panel2.Controls.Add(tbx_katasandi);
-            panel2.Controls.Add(lbl_katasandi);
-            panel2.Controls.Add(tbx_email);
-            panel2.Controls.Add(lbl_email);
-            panel2.Controls.Add(tbx_nowhatsapp);
-            panel2.Controls.Add(lbl_nowhatsapp);
-            panel2.Location = new Point(431, 3);
+            panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel2.BackgroundImageLayout = ImageLayout.None;
+            panel2.Controls.Add(btn_tambahtambahdosen);
+            panel2.Controls.Add(label8);
+            panel2.Controls.Add(tbx_katasanditambahdosen);
+            panel2.Controls.Add(label9);
+            panel2.Controls.Add(tbx_emailtambahdosen);
+            panel2.Controls.Add(label10);
+            panel2.Controls.Add(tbx_nowatambahdosen);
+            panel2.Location = new Point(829, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(422, 350);
+            panel2.Size = new Size(1258, 937);
             panel2.TabIndex = 1;
             // 
-            // btn_tambah
+            // btn_tambahtambahdosen
             // 
-            btn_tambah.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_tambah.BackColor = SystemColors.MenuHighlight;
-            btn_tambah.BackgroundImageLayout = ImageLayout.None;
-            btn_tambah.Font = new Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_tambah.ForeColor = Color.White;
-            btn_tambah.Location = new Point(314, 306);
-            btn_tambah.Name = "btn_tambah";
-            btn_tambah.Size = new Size(105, 38);
-            btn_tambah.TabIndex = 13;
-            btn_tambah.Text = "Tambah";
-            btn_tambah.UseVisualStyleBackColor = false;
-            btn_tambah.Click += button3_Click;
+            btn_tambahtambahdosen.BackColor = SystemColors.Highlight;
+            btn_tambahtambahdosen.Font = new Font("Poppins SemiBold", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_tambahtambahdosen.ForeColor = SystemColors.HighlightText;
+            btn_tambahtambahdosen.Location = new Point(563, 523);
+            btn_tambahtambahdosen.Name = "btn_tambahtambahdosen";
+            btn_tambahtambahdosen.Size = new Size(125, 42);
+            btn_tambahtambahdosen.TabIndex = 6;
+            btn_tambahtambahdosen.Text = "Tambah";
+            btn_tambahtambahdosen.UseVisualStyleBackColor = false;
             // 
-            // tbx_katasandi
+            // label8
             // 
-            tbx_katasandi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_katasandi.Location = new Point(3, 217);
-            tbx_katasandi.Name = "tbx_katasandi";
-            tbx_katasandi.Size = new Size(416, 43);
-            tbx_katasandi.TabIndex = 7;
+            label8.AutoSize = true;
+            label8.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label8.Location = new Point(51, 391);
+            label8.Name = "label8";
+            label8.Size = new Size(93, 26);
+            label8.TabIndex = 5;
+            label8.Text = "Kata Sandi";
+            label8.Click += label8_Click;
             // 
-            // lbl_katasandi
+            // tbx_katasanditambahdosen
             // 
-            lbl_katasandi.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_katasandi.AutoSize = true;
-            lbl_katasandi.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_katasandi.Location = new Point(5, 178);
-            lbl_katasandi.Name = "lbl_katasandi";
-            lbl_katasandi.Size = new Size(168, 48);
-            lbl_katasandi.TabIndex = 6;
-            lbl_katasandi.Text = "Kata Sandi";
+            tbx_katasanditambahdosen.Location = new Point(51, 424);
+            tbx_katasanditambahdosen.Multiline = true;
+            tbx_katasanditambahdosen.Name = "tbx_katasanditambahdosen";
+            tbx_katasanditambahdosen.Size = new Size(637, 42);
+            tbx_katasanditambahdosen.TabIndex = 4;
+            tbx_katasanditambahdosen.TextChanged += textBox6_TextChanged;
             // 
-            // tbx_email
+            // label9
             // 
-            tbx_email.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_email.Location = new Point(3, 131);
-            tbx_email.Name = "tbx_email";
-            tbx_email.Size = new Size(416, 43);
-            tbx_email.TabIndex = 5;
+            label9.AutoSize = true;
+            label9.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label9.Location = new Point(51, 292);
+            label9.Name = "label9";
+            label9.Size = new Size(61, 26);
+            label9.TabIndex = 3;
+            label9.Text = "E-mail";
+            label9.Click += label9_Click;
             // 
-            // lbl_email
+            // tbx_emailtambahdosen
             // 
-            lbl_email.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_email.AutoSize = true;
-            lbl_email.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_email.Location = new Point(5, 92);
-            lbl_email.Name = "lbl_email";
-            lbl_email.Size = new Size(96, 48);
-            lbl_email.TabIndex = 4;
-            lbl_email.Text = "Email";
+            tbx_emailtambahdosen.Location = new Point(51, 325);
+            tbx_emailtambahdosen.Multiline = true;
+            tbx_emailtambahdosen.Name = "tbx_emailtambahdosen";
+            tbx_emailtambahdosen.Size = new Size(637, 42);
+            tbx_emailtambahdosen.TabIndex = 2;
+            tbx_emailtambahdosen.TextChanged += textBox7_TextChanged;
             // 
-            // tbx_nowhatsapp
+            // label10
             // 
-            tbx_nowhatsapp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_nowhatsapp.Location = new Point(3, 44);
-            tbx_nowhatsapp.Name = "tbx_nowhatsapp";
-            tbx_nowhatsapp.Size = new Size(416, 43);
-            tbx_nowhatsapp.TabIndex = 3;
+            label10.AutoSize = true;
+            label10.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label10.Location = new Point(51, 197);
+            label10.Name = "label10";
+            label10.Size = new Size(146, 26);
+            label10.TabIndex = 1;
+            label10.Text = "Nomor WhatsApp";
+            label10.Click += label10_Click;
             // 
-            // lbl_nowhatsapp
+            // tbx_nowatambahdosen
             // 
-            lbl_nowhatsapp.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            lbl_nowhatsapp.AutoSize = true;
-            lbl_nowhatsapp.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_nowhatsapp.Location = new Point(5, 5);
-            lbl_nowhatsapp.Name = "lbl_nowhatsapp";
-            lbl_nowhatsapp.Size = new Size(214, 48);
-            lbl_nowhatsapp.TabIndex = 2;
-            lbl_nowhatsapp.Text = "No. WhatsApp";
+            tbx_nowatambahdosen.Location = new Point(51, 230);
+            tbx_nowatambahdosen.Multiline = true;
+            tbx_nowatambahdosen.Name = "tbx_nowatambahdosen";
+            tbx_nowatambahdosen.Size = new Size(637, 42);
+            tbx_nowatambahdosen.TabIndex = 0;
+            tbx_nowatambahdosen.TextChanged += textBox8_TextChanged;
             // 
-            // lbl_tambahdosen
+            // tambahdosen
             // 
-            lbl_tambahdosen.AutoSize = true;
-            lbl_tambahdosen.Font = new Font("Poppins", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_tambahdosen.Location = new Point(12, 24);
-            lbl_tambahdosen.Name = "lbl_tambahdosen";
-            lbl_tambahdosen.Size = new Size(410, 84);
-            lbl_tambahdosen.TabIndex = 2;
-            lbl_tambahdosen.Text = "Tambah Dosen";
-            lbl_tambahdosen.Click += label2_Click;
-            // 
-            // v_TambahDosen
-            // 
-            AutoScaleDimensions = new SizeF(14F, 42F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(880, 558);
-            Controls.Add(lbl_tambahdosen);
-            Controls.Add(tableLayoutPanel1);
-            Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            ClientSize = new Size(1924, 937);
+            Controls.Add(panel2);
+            Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Margin = new Padding(3, 4, 3, 4);
-            Name = "v_TambahDosen";
+            Name = "tambahdosen";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Baskom";
-            tableLayoutPanel1.ResumeLayout(false);
+            WindowState = FormWindowState.Maximized;
+            Load += daftardosen_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private TableLayoutPanel tableLayoutPanel1;
         private Panel panel1;
+        private TextBox tbx_namatambahdosen;
+        private Label label3;
+        private TextBox tbx_niptambahdosen;
+        private Label label2;
+        private Label label5;
+        private TextBox tbx_jabatantambahdosen;
+        private Label label4;
+        private TextBox tbx_nidntambahdosen;
         private Panel panel2;
-        private TextBox tbx_nama;
-        private Label lbl_nama;
-        private Label lbl_tambahdosen;
-        private TextBox tbx_nip;
-        private Label lbl_nip;
-        private TextBox tbx_jabatan;
-        private TextBox tbx_nidn;
-        private Label lbl_jabatan;
-        private Label lbl_nidn;
-        private TextBox tbx_katasandi;
-        private Label lbl_katasandi;
-        private TextBox tbx_email;
-        private Label lbl_email;
-        private TextBox tbx_nowhatsapp;
-        private Label lbl_nowhatsapp;
-        private Button btn_tambah;
+        private Label label8;
+        private TextBox tbx_katasanditambahdosen;
+        private Label label9;
+        private TextBox tbx_emailtambahdosen;
+        private Label label10;
+        private TextBox tbx_nowatambahdosen;
+        private Label label1;
+        private Button btn_tambahtambahdosen;
     }
 }

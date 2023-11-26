@@ -1,6 +1,6 @@
 ﻿namespace Baskom.View
 {
-    partial class v_TambahProgram
+    partial class v_TambahProgramMataKuliah
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_TambahProgram));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_TambahProgramMataKuliah));
             tableLayoutPanel1 = new TableLayoutPanel();
             panel3 = new Panel();
             button1 = new Button();
@@ -57,6 +57,8 @@
             label6 = new Label();
             tableLayoutPanel3 = new TableLayoutPanel();
             panel5 = new Panel();
+            cbx_matakuliah = new ComboBox();
+            lbl_matakuliah = new Label();
             tbx_program = new TextBox();
             btn_tambah = new Button();
             lbl_progran = new Label();
@@ -72,9 +74,9 @@
             akunToolStripMenuItem = new ToolStripMenuItem();
             akunMahasiswaToolStripMenuItem = new ToolStripMenuItem();
             mitraToolStripMenuItem = new ToolStripMenuItem();
+            tambahMitraProgramToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramMataKuliahToolStripMenuItem = new ToolStripMenuItem();
             mataKuliahToolStripMenuItem = new ToolStripMenuItem();
-            tambahMataKuliahToolStripMenuItem = new ToolStripMenuItem();
-            tambahProgramToolStripMenuItem = new ToolStripMenuItem();
             profilToolStripMenuItem = new ToolStripMenuItem();
             informasiAkunToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem = new ToolStripMenuItem();
@@ -366,24 +368,45 @@
             tableLayoutPanel3.Name = "tableLayoutPanel3";
             tableLayoutPanel3.RowCount = 1;
             tableLayoutPanel3.RowStyles.Add(new RowStyle(SizeType.Percent, 50F));
-            tableLayoutPanel3.Size = new Size(856, 364);
+            tableLayoutPanel3.Size = new Size(856, 420);
             tableLayoutPanel3.TabIndex = 4;
             // 
             // panel5
             // 
             panel5.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel5.Controls.Add(cbx_matakuliah);
+            panel5.Controls.Add(lbl_matakuliah);
             panel5.Controls.Add(tbx_program);
             panel5.Controls.Add(btn_tambah);
             panel5.Controls.Add(lbl_progran);
             panel5.Location = new Point(3, 3);
             panel5.Name = "panel5";
-            panel5.Size = new Size(422, 358);
+            panel5.Size = new Size(422, 414);
             panel5.TabIndex = 0;
+            // 
+            // cbx_matakuliah
+            // 
+            cbx_matakuliah.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cbx_matakuliah.FormattingEnabled = true;
+            cbx_matakuliah.Location = new Point(5, 134);
+            cbx_matakuliah.Name = "cbx_matakuliah";
+            cbx_matakuliah.Size = new Size(414, 50);
+            cbx_matakuliah.TabIndex = 15;
+            // 
+            // lbl_matakuliah
+            // 
+            lbl_matakuliah.AutoSize = true;
+            lbl_matakuliah.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_matakuliah.Location = new Point(5, 95);
+            lbl_matakuliah.Name = "lbl_matakuliah";
+            lbl_matakuliah.Size = new Size(184, 48);
+            lbl_matakuliah.TabIndex = 14;
+            lbl_matakuliah.Text = "Mata Kuliah";
             // 
             // tbx_program
             // 
             tbx_program.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_program.Location = new Point(5, 100);
+            tbx_program.Location = new Point(5, 44);
             tbx_program.Name = "tbx_program";
             tbx_program.Size = new Size(414, 43);
             tbx_program.TabIndex = 13;
@@ -395,7 +418,7 @@
             btn_tambah.BackgroundImageLayout = ImageLayout.None;
             btn_tambah.Font = new Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_tambah.ForeColor = Color.White;
-            btn_tambah.Location = new Point(5, 317);
+            btn_tambah.Location = new Point(5, 373);
             btn_tambah.Name = "btn_tambah";
             btn_tambah.Size = new Size(105, 38);
             btn_tambah.TabIndex = 12;
@@ -407,7 +430,7 @@
             lbl_progran.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             lbl_progran.AutoSize = true;
             lbl_progran.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_progran.Location = new Point(5, 61);
+            lbl_progran.Location = new Point(5, 5);
             lbl_progran.Name = "lbl_progran";
             lbl_progran.Size = new Size(139, 48);
             lbl_progran.TabIndex = 9;
@@ -415,17 +438,17 @@
             // 
             // panel6
             // 
-            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            panel6.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel6.Controls.Add(tbl_daftarprogram);
             panel6.Controls.Add(lbl_daftarprogran);
             panel6.Location = new Point(431, 3);
             panel6.Name = "panel6";
-            panel6.Size = new Size(422, 358);
+            panel6.Size = new Size(422, 414);
             panel6.TabIndex = 1;
             // 
             // tbl_daftarprogram
             // 
-            tbl_daftarprogram.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbl_daftarprogram.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbl_daftarprogram.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tbl_daftarprogram.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbl_daftarprogram.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2 });
@@ -433,7 +456,7 @@
             tbl_daftarprogram.Name = "tbl_daftarprogram";
             tbl_daftarprogram.RowHeadersWidth = 62;
             tbl_daftarprogram.RowTemplate.Height = 33;
-            tbl_daftarprogram.Size = new Size(415, 311);
+            tbl_daftarprogram.Size = new Size(415, 367);
             tbl_daftarprogram.TabIndex = 2;
             tbl_daftarprogram.CellContentClick += dataGridView3_CellContentClick;
             // 
@@ -445,7 +468,7 @@
             // 
             // Column2
             // 
-            Column2.HeaderText = "Hapus";
+            Column2.HeaderText = "Mata Kuliah";
             Column2.MinimumWidth = 8;
             Column2.Name = "Column2";
             // 
@@ -467,13 +490,12 @@
             btn_simpan.BackgroundImageLayout = ImageLayout.None;
             btn_simpan.Font = new Font("Poppins Medium", 9F, FontStyle.Bold, GraphicsUnit.Point);
             btn_simpan.ForeColor = Color.White;
-            btn_simpan.Location = new Point(763, 446);
+            btn_simpan.Location = new Point(772, 520);
             btn_simpan.Name = "btn_simpan";
             btn_simpan.Size = new Size(105, 38);
             btn_simpan.TabIndex = 9;
             btn_simpan.Text = "Simpan";
             btn_simpan.UseVisualStyleBackColor = false;
-            btn_simpan.Click += btn_simpan_Click;
             // 
             // menuStrip2
             // 
@@ -517,34 +539,34 @@
             // 
             // mitraToolStripMenuItem
             // 
+            mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
             mitraToolStripMenuItem.Size = new Size(99, 46);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click_1;
             // 
+            // tambahMitraProgramToolStripMenuItem
+            // 
+            tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
+            tambahMitraProgramToolStripMenuItem.Size = new Size(512, 50);
+            tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
+            tambahMitraProgramToolStripMenuItem.Click += tambahMitraProgramToolStripMenuItem_Click;
+            // 
+            // tambahProgramMataKuliahToolStripMenuItem
+            // 
+            tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(512, 50);
+            tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
+            tambahProgramMataKuliahToolStripMenuItem.Click += tambahProgramMataKuliahToolStripMenuItem_Click;
+            // 
             // mataKuliahToolStripMenuItem
             // 
-            mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMataKuliahToolStripMenuItem, tambahProgramToolStripMenuItem });
             mataKuliahToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
             mataKuliahToolStripMenuItem.Size = new Size(178, 46);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
-            // 
-            // tambahMataKuliahToolStripMenuItem
-            // 
-            tambahMataKuliahToolStripMenuItem.Name = "tambahMataKuliahToolStripMenuItem";
-            tambahMataKuliahToolStripMenuItem.Size = new Size(402, 50);
-            tambahMataKuliahToolStripMenuItem.Text = "Tambah Mata Kuliah";
-            tambahMataKuliahToolStripMenuItem.Click += tambahMataKuliahToolStripMenuItem_Click;
-            // 
-            // tambahProgramToolStripMenuItem
-            // 
-            tambahProgramToolStripMenuItem.Name = "tambahProgramToolStripMenuItem";
-            tambahProgramToolStripMenuItem.Size = new Size(402, 50);
-            tambahProgramToolStripMenuItem.Text = "Tambah Program";
-            tambahProgramToolStripMenuItem.Click += tambahProgramToolStripMenuItem_Click;
             // 
             // profilToolStripMenuItem
             // 
@@ -557,17 +579,18 @@
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(332, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click_1;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(332, 50);
+            logOutToolStripMenuItem.Size = new Size(359, 50);
             logOutToolStripMenuItem.Text = "Log Out";
+            logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
-            // v_TambahProgram
+            // v_TambahProgramMataKuliah
             // 
             AutoScaleDimensions = new SizeF(14F, 42F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -578,7 +601,7 @@
             Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "v_TambahProgram";
+            Name = "v_TambahProgramMataKuliah";
             Text = "Baskom";
             WindowState = FormWindowState.Maximized;
             tableLayoutPanel1.ResumeLayout(false);
@@ -637,8 +660,6 @@
         private Panel panel6;
         private Label lbl_progran;
         private DataGridView tbl_daftarprogram;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
         private Label lbl_daftarprogran;
         private Button btn_tambah;
         private Button btn_simpan;
@@ -649,11 +670,15 @@
         private ToolStripMenuItem akunMahasiswaToolStripMenuItem;
         private ToolStripMenuItem mitraToolStripMenuItem;
         private ToolStripMenuItem mataKuliahToolStripMenuItem;
-        private ToolStripMenuItem tambahMataKuliahToolStripMenuItem;
-        private ToolStripMenuItem tambahProgramToolStripMenuItem;
         private ToolStripMenuItem profilToolStripMenuItem;
         private ToolStripMenuItem informasiAkunToolStripMenuItem;
         private ToolStripMenuItem logOutToolStripMenuItem;
         private TextBox tbx_program;
+        private ToolStripMenuItem tambahMitraProgramToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramMataKuliahToolStripMenuItem;
+        private ComboBox cbx_matakuliah;
+        private Label lbl_matakuliah;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
     }
 }

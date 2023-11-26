@@ -36,9 +36,9 @@
             akunDosenToolStripMenuItem = new ToolStripMenuItem();
             akunToolStripMenuItem = new ToolStripMenuItem();
             mitraToolStripMenuItem = new ToolStripMenuItem();
+            tambahMitraProgramToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramMataKuliahToolStripMenuItem = new ToolStripMenuItem();
             mataKuliahToolStripMenuItem = new ToolStripMenuItem();
-            tambahMataKuliahToolStripMenuItem = new ToolStripMenuItem();
-            tambahProgramToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             informasiAkunToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
@@ -73,14 +73,14 @@
             msp_navadminmhs.Location = new Point(0, 0);
             msp_navadminmhs.Name = "msp_navadminmhs";
             msp_navadminmhs.Padding = new Padding(0);
-            msp_navadminmhs.Size = new Size(2142, 33);
+            msp_navadminmhs.Size = new Size(2142, 38);
             msp_navadminmhs.TabIndex = 0;
             msp_navadminmhs.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
             // 
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(151, 33);
+            dashboardToolStripMenuItem.Size = new Size(151, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -88,7 +88,7 @@
             // 
             managemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunDosenToolStripMenuItem, akunToolStripMenuItem });
             managemenAkunToolStripMenuItem.Name = "managemenAkunToolStripMenuItem";
-            managemenAkunToolStripMenuItem.Size = new Size(226, 33);
+            managemenAkunToolStripMenuItem.Size = new Size(226, 38);
             managemenAkunToolStripMenuItem.Text = "Managemen Akun";
             // 
             // akunDosenToolStripMenuItem
@@ -107,37 +107,38 @@
             // 
             // mitraToolStripMenuItem
             // 
+            mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(86, 33);
+            mitraToolStripMenuItem.Size = new Size(86, 38);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
+            // tambahMitraProgramToolStripMenuItem
+            // 
+            tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
+            tambahMitraProgramToolStripMenuItem.Size = new Size(464, 44);
+            tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
+            tambahMitraProgramToolStripMenuItem.Click += tambahMitraProgramToolStripMenuItem_Click;
+            // 
+            // tambahProgramMataKuliahToolStripMenuItem
+            // 
+            tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(464, 44);
+            tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
+            tambahProgramMataKuliahToolStripMenuItem.Click += tambahProgramMataKuliahToolStripMenuItem_Click;
+            // 
             // mataKuliahToolStripMenuItem
             // 
-            mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMataKuliahToolStripMenuItem, tambahProgramToolStripMenuItem });
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(158, 33);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
-            // 
-            // tambahMataKuliahToolStripMenuItem
-            // 
-            tambahMataKuliahToolStripMenuItem.Name = "tambahMataKuliahToolStripMenuItem";
-            tambahMataKuliahToolStripMenuItem.Size = new Size(365, 44);
-            tambahMataKuliahToolStripMenuItem.Text = "Tambah Mata Kuliah";
-            tambahMataKuliahToolStripMenuItem.Click += tambahMataKuliahToolStripMenuItem_Click;
-            // 
-            // tambahProgramToolStripMenuItem
-            // 
-            tambahProgramToolStripMenuItem.Name = "tambahProgramToolStripMenuItem";
-            tambahProgramToolStripMenuItem.Size = new Size(365, 44);
-            tambahProgramToolStripMenuItem.Text = "Tambah Program";
-            tambahProgramToolStripMenuItem.Click += tambahProgramToolStripMenuItem_Click;
+            mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
             profileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logoutToolStripMenuItem });
             profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            profileToolStripMenuItem.Size = new Size(103, 33);
+            profileToolStripMenuItem.Size = new Size(103, 38);
             profileToolStripMenuItem.Text = "Profile";
             // 
             // informasiAkunToolStripMenuItem
@@ -268,10 +269,10 @@
         private Button btn_tambahdaftarmhsadmin;
         private DataGridView tbl_daftarmhsadmin;
         private ToolStripMenuItem mataKuliahToolStripMenuItem;
-        private ToolStripMenuItem tambahMataKuliahToolStripMenuItem;
-        private ToolStripMenuItem tambahProgramToolStripMenuItem;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewButtonColumn Column3;
+        private ToolStripMenuItem tambahMitraProgramToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramMataKuliahToolStripMenuItem;
     }
 }

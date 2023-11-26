@@ -36,21 +36,21 @@
             akunDosenToolStripMenuItem = new ToolStripMenuItem();
             akunToolStripMenuItem = new ToolStripMenuItem();
             mitraToolStripMenuItem = new ToolStripMenuItem();
+            tambahMitraProgramToolStripMenuItem = new ToolStripMenuItem();
+            tambahProgramMataKuliahToolStripMenuItem = new ToolStripMenuItem();
             mataKuliahToolStripMenuItem = new ToolStripMenuItem();
-            tambagToolStripMenuItem = new ToolStripMenuItem();
-            tambahProgramToolStripMenuItem = new ToolStripMenuItem();
             profileToolStripMenuItem = new ToolStripMenuItem();
             informasiAkunToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
             panel2 = new Panel();
             tbl_daftardosenadmin = new DataGridView();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewButtonColumn();
             panel3 = new Panel();
             btn_tambahdaftardosenadmin = new Button();
             label1 = new Label();
             panel4 = new Panel();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewButtonColumn();
             panel1.SuspendLayout();
             msp_navadmindosen.SuspendLayout();
             panel2.SuspendLayout();
@@ -77,7 +77,7 @@
             msp_navadmindosen.Location = new Point(0, 0);
             msp_navadmindosen.Name = "msp_navadmindosen";
             msp_navadmindosen.Padding = new Padding(0);
-            msp_navadmindosen.Size = new Size(1882, 33);
+            msp_navadmindosen.Size = new Size(1882, 38);
             msp_navadmindosen.TabIndex = 0;
             msp_navadmindosen.Text = "menuStrip1";
             msp_navadmindosen.ItemClicked += menuStrip1_ItemClicked_1;
@@ -85,7 +85,7 @@
             // dashboardToolStripMenuItem
             // 
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(151, 33);
+            dashboardToolStripMenuItem.Size = new Size(151, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -93,7 +93,7 @@
             // 
             managemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunDosenToolStripMenuItem, akunToolStripMenuItem });
             managemenAkunToolStripMenuItem.Name = "managemenAkunToolStripMenuItem";
-            managemenAkunToolStripMenuItem.Size = new Size(226, 33);
+            managemenAkunToolStripMenuItem.Size = new Size(226, 38);
             managemenAkunToolStripMenuItem.Text = "Managemen Akun";
             // 
             // akunDosenToolStripMenuItem
@@ -112,37 +112,38 @@
             // 
             // mitraToolStripMenuItem
             // 
+            mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(86, 33);
+            mitraToolStripMenuItem.Size = new Size(86, 38);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
+            // tambahMitraProgramToolStripMenuItem
+            // 
+            tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
+            tambahMitraProgramToolStripMenuItem.Size = new Size(464, 44);
+            tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
+            tambahMitraProgramToolStripMenuItem.Click += tambahMitraProgramToolStripMenuItem_Click;
+            // 
+            // tambahProgramMataKuliahToolStripMenuItem
+            // 
+            tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(464, 44);
+            tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
+            tambahProgramMataKuliahToolStripMenuItem.Click += tambahProgramMataKuliahToolStripMenuItem_Click;
+            // 
             // mataKuliahToolStripMenuItem
             // 
-            mataKuliahToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambagToolStripMenuItem, tambahProgramToolStripMenuItem });
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(158, 33);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
-            // 
-            // tambagToolStripMenuItem
-            // 
-            tambagToolStripMenuItem.Name = "tambagToolStripMenuItem";
-            tambagToolStripMenuItem.Size = new Size(365, 44);
-            tambagToolStripMenuItem.Text = "Tambah Mata Kuliah";
-            tambagToolStripMenuItem.Click += tambagToolStripMenuItem_Click;
-            // 
-            // tambahProgramToolStripMenuItem
-            // 
-            tambahProgramToolStripMenuItem.Name = "tambahProgramToolStripMenuItem";
-            tambahProgramToolStripMenuItem.Size = new Size(365, 44);
-            tambahProgramToolStripMenuItem.Text = "Tambah Program";
-            tambahProgramToolStripMenuItem.Click += tambahProgramToolStripMenuItem_Click;
+            mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
             // profileToolStripMenuItem
             // 
             profileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logoutToolStripMenuItem });
             profileToolStripMenuItem.Name = "profileToolStripMenuItem";
-            profileToolStripMenuItem.Size = new Size(103, 33);
+            profileToolStripMenuItem.Size = new Size(103, 38);
             profileToolStripMenuItem.Text = "Profile";
             profileToolStripMenuItem.Click += profileToolStripMenuItem_Click;
             // 
@@ -184,6 +185,29 @@
             tbl_daftardosenadmin.Size = new Size(1794, 456);
             tbl_daftardosenadmin.TabIndex = 0;
             tbl_daftardosenadmin.CellContentClick += dataGridView1_CellContentClick;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Nama";
+            Column1.MinimumWidth = 6;
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            Column1.Resizable = DataGridViewTriState.True;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "NIP";
+            Column2.MinimumWidth = 6;
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Lihat";
+            Column3.MinimumWidth = 6;
+            Column3.Name = "Column3";
+            Column3.Resizable = DataGridViewTriState.True;
+            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // panel3
             // 
@@ -231,29 +255,6 @@
             panel4.Size = new Size(378, 70);
             panel4.TabIndex = 4;
             // 
-            // Column1
-            // 
-            Column1.HeaderText = "Nama";
-            Column1.MinimumWidth = 6;
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            Column1.Resizable = DataGridViewTriState.True;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "NIP";
-            Column2.MinimumWidth = 6;
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Lihat";
-            Column3.MinimumWidth = 6;
-            Column3.Name = "Column3";
-            Column3.Resizable = DataGridViewTriState.True;
-            Column3.SortMode = DataGridViewColumnSortMode.Automatic;
-            // 
             // v_DataDosen
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
@@ -300,10 +301,10 @@
         private ToolStripMenuItem informasiAkunToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
         private ToolStripMenuItem mataKuliahToolStripMenuItem;
-        private ToolStripMenuItem tambagToolStripMenuItem;
-        private ToolStripMenuItem tambahProgramToolStripMenuItem;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewButtonColumn Column3;
+        private ToolStripMenuItem tambahMitraProgramToolStripMenuItem;
+        private ToolStripMenuItem tambahProgramMataKuliahToolStripMenuItem;
     }
 }

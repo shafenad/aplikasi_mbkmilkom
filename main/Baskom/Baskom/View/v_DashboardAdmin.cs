@@ -44,8 +44,7 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDashboardAdmin();
+            //this
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -95,6 +94,24 @@ namespace Baskom.View
         {
             this.Hide();
             c_Dashboard.setTambahProgram();
+        }
+
+        private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMataKuliah();
+        }
+
+        private void tambahMitraProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMitraProgram();
+        }
+
+        private void tambahProgramMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahProgramMataKuliah();
         }
     }
 }

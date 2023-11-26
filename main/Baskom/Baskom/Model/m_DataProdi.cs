@@ -20,5 +20,16 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
+        public int getIdProdiByNama(string nama_prodi)
+        {
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Prodi\" WHERE nama_prodi = '{nama_prodi}'");
+            int result = 0;
+            while (reader.Read())
+            {
+                result = int.Parse(reader[0].ToString());
+            }
+            reader.Close();
+            return result;
+        }
     }
 }

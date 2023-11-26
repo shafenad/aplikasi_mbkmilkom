@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    partial class v_TambahProgram : Form
+    partial class v_TambahProgramMataKuliah : Form
     {
         c_Dashboard c_Dashboard;
-        public v_TambahProgram(c_Dashboard c_Dashboard)
+        public v_TambahProgramMataKuliah(c_Dashboard c_Dashboard)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
@@ -48,20 +48,34 @@ namespace Baskom.View
 
         private void mitraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDataMitra();
+
         }
 
         private void tambahMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setTambahMataKuliah();
+
         }
 
         private void informasiAkunToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             this.Hide();
             c_Dashboard.setProfilAdmin();
+        }
+
+        private void tambahMitraProgramToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMitraProgram();
+        }
+
+        private void tambahProgramMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this
+        }
+
+        private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //this
         }
 
         private void akunToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,20 +90,9 @@ namespace Baskom.View
             c_Dashboard.setDataMahasiswa();
         }
 
-        private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void tambahProgramToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            c_Dashboard.setTambahProgram();
-        }
-
-        private void btn_simpan_Click(object sender, EventArgs e)
-        {
-
+            //logout
         }
     }
 }

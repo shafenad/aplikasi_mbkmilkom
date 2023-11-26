@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Baskom.Controller;
+using Baskom.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,25 +12,55 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_TambahMahasiswa : Form
+    partial class v_TambahMahasiswa : Form
     {
-        public v_TambahMahasiswa()
+        c_TambahMahasiswa c_TambahMahasiswa;
+        public v_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi)
         {
             InitializeComponent();
+            this.c_TambahMahasiswa = new c_TambahMahasiswa(m_DataAkunMahasiswa, m_DataProdi);
         }
 
-        private void btn_tambah_Click(object sender, EventArgs e)
+        private void label9_Click(object sender, EventArgs e)
         {
-            string nama_mahasiswa = tbx_nama.Text;
-            string nim = tbx_nim.Text;
-            string prodi = tbx_programstudi.Text;
-            string tahun_masuk = tbx_tahunmasuk.Text;
 
         }
 
-        private void tbx_nim_TextChanged(object sender, EventArgs e)
+        private void btn_tambahtambahmhs_Click(object sender, EventArgs e)
         {
-
+            string message = "";
+            if (!int.TryParse(tbx_tahunmasukmahasiswatambahmhs.Text,out _))
+            {
+                message = "Tahun Masuk Bernilai Angka!";
+                MessageBox.Show(message);
+            }
+            else if (!int.TryParse(tbx_bacthmahasiswatambahmhs.Text, out _))
+            {
+                message = "Batch MBKM Bernilai Angka!";
+                MessageBox.Show(message);
+            }
+            else
+            {
+                object[] mahasiswa = new object[9];
+                mahasiswa[0] = tbx_nimhasiswatambahmhs.Text;
+                mahasiswa[1] = tbx_namamahasiswatambahmhs.Text;
+                mahasiswa[2] = int.Parse(tbx_tahunmasukmahasiswatambahmhs.Text);
+                mahasiswa[3] = cmbstatusmahasiswamhs.Text == "Aktif" ? 1 : 0;
+                mahasiswa[4] = tbx_nowamahasiswatambahmhs.Text;
+                mahasiswa[5] = int.Parse(tbx_bacthmahasiswatambahmhs.Text);
+                mahasiswa[6] = tbx_emailmahasiswatambahmhs.Text;
+                mahasiswa[7] = tbx_katasandimahasiswatambahmhs.Text;
+                mahasiswa[8] = cmbprogramstudimhs.Text;
+                message = c_TambahMahasiswa.tambahMahasiswaBaru(mahasiswa);
+                if (message.Length > 0)
+                {
+                    MessageBox.Show(message);
+                }
+                else
+                {
+                    this.Close();
+                }
+            }
         }
     }
 }

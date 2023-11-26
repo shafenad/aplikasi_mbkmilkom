@@ -15,6 +15,8 @@ namespace Baskom.Controller
         private m_DataAkunDosen m_DataAkunDosen = new();
         private m_DataAkunMahasiswa m_DataAkunMahasiswa = new();
         private m_DataAkunTimmbkm m_DataAkunTimmbkm = new();
+        private m_DataProdi m_DataProdi = new();
+        private m_DataMataKuliah m_DataMataKuliah = new();
         private v_DashboardMahasiswa v_DashboardMahasiswa;
         private v_DashboardAdmin v_DashboardAdmin;
         private v_DashboardTimmbkm v_DashboardTimmbkm;
@@ -38,8 +40,9 @@ namespace Baskom.Controller
         private v_TambahMahasiswa v_TambahMahasiswa;
         private v_FormUbahKataSandi v_FormUbahKataSandi;
         private v_DataMitra v_DataMitra;
-        private v_TambahProgram v_TambahProgram;
+        private v_TambahProgramMataKuliah v_TambahProgramMataKuliah;
         private v_TambahMataKuliah v_TambahMataKuliah;
+        private v_TambahMitraProgram v_TambahMitraProgram;
 
 
         public c_Dashboard(object data_akun_pengguna)
@@ -87,19 +90,21 @@ namespace Baskom.Controller
                 v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa);
                 v_DataDosen v_DataDosen = new(this, this.m_DataAkunDosen);
                 v_DataMitra v_DataMitra = new(this);
-                v_TambahProgram v_TambahProgram = new(this);
-                v_TambahMataKuliah v_TambahMataKuliah = new(this);
+                v_TambahProgramMataKuliah v_TambahProgramMataKuliah = new(this);
+                v_TambahMataKuliah v_TambahMataKuliah = new(this,this.m_DataMataKuliah);
+                v_TambahMitraProgram v_TambahMitraProgram = new(this);
                 v_TambahDosen v_TambahDosen = new();
-                v_TambahMahasiswa v_TambahMahasiswa = new();
+                v_TambahMahasiswa v_TambahMahasiswa = new(this.m_DataAkunMahasiswa, this.m_DataProdi);
                 this.v_DashboardAdmin = v_DashboardAdmin;
                 this.v_ProfilAdmin = v_ProfilAdmin;
                 this.v_DataMahasiswa = v_DataMahasiswa;
                 this.v_DataDosen = v_DataDosen;
                 this.v_DataMitra = v_DataMitra;
-                this.v_TambahProgram = v_TambahProgram;
+                this.v_TambahProgramMataKuliah = v_TambahProgramMataKuliah;
                 this.v_TambahMataKuliah = v_TambahMataKuliah;
                 this.v_TambahDosen = v_TambahDosen;
                 this.v_TambahMahasiswa = v_TambahMahasiswa;
+                this.v_TambahMitraProgram = v_TambahMitraProgram;
             }
         }
         public void logout() { }
@@ -194,11 +199,19 @@ namespace Baskom.Controller
         }
         public void setTambahProgram()
         {
-            this.v_TambahProgram.Show();
+            this.v_TambahProgramMataKuliah.Show();
         }
         public void setTambahMataKuliah()
         {
             this.v_TambahMataKuliah.Show();
+        }
+        public void setTambahMitraProgram()
+        {
+            this.v_TambahMitraProgram.Show();
+        }
+        public void setTambahProgramMataKuliah()
+        {
+            this.v_TambahProgramMataKuliah.Show();
         }
     }
 }

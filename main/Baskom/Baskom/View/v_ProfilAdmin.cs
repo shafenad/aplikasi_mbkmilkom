@@ -91,5 +91,23 @@ namespace Baskom.View
             this.Hide();
             c_Dashboard.setTambahProgram();
         }
+
+        private void tambahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMitraProgram();
+        }
+
+        private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahMataKuliah();
+        }
+
+        private void tambahProgramMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            c_Dashboard.setTambahProgramMataKuliah();
+        }
     }
 }

@@ -18,10 +18,11 @@ namespace Baskom.Database
         {
             conn.Close();
         }
-        public static void sendData(string query)
+        public static int sendData(string query)
         {
             NpgsqlCommand cmd = new NpgsqlCommand(query,conn);
-            cmd.ExecuteNonQuery();
+            int rows_affected = cmd.ExecuteNonQuery();
+            return rows_affected;
         }
         public static NpgsqlDataReader getData(string query)
         {
