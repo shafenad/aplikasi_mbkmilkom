@@ -16,14 +16,21 @@ namespace Baskom.Model
 
         public bool cekLoginTimmbkm(string nidn, string kata_sandi)
         {
-            string[] dataTimmbkm = getTimmbkmByNidn(nidn);
-            object[] dataDosen = this.m_DataAkunDosen.getDosenById(int.Parse(dataTimmbkm[2]));
-            if (dataDosen[6].ToString() == kata_sandi)
+            string[] timmbkm = getTimmbkmByNidn(nidn);
+            try
             {
-                this.id_timmbkm = dataTimmbkm[0];
-                this.nidn = nidn;
-                this.timmbkm_id_dosen = int.Parse(dataTimmbkm[2]);
-                return true;
+                object[] dosen = this.m_DataAkunDosen.getDosenById(int.Parse(timmbkm[2]));
+                if (dosen[6].ToString() == kata_sandi)
+                {
+                    this.id_timmbkm = timmbkm[0];
+                    this.nidn = nidn;
+                    this.timmbkm_id_dosen = int.Parse(timmbkm[2]);
+                    return true;
+                }
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
             return false;
         }

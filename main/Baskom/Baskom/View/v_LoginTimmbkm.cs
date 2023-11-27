@@ -18,7 +18,7 @@ namespace Baskom.View
         private v_Login v_Login;
         private m_DataAkunTimmbkm m_DataAkunTimmbkm = new();
 
-        public v_LoginTimmbkm(v_Login v_Login,c_Akun c_Akun)
+        public v_LoginTimmbkm(v_Login v_Login, c_Akun c_Akun)
         {
             InitializeComponent();
             this.c_Akun = c_Akun;
@@ -34,7 +34,7 @@ namespace Baskom.View
         {
             string nidn = tbx_NIDN.Text;
             string kata_sandi = tbx_katasandi.Text;
-            c_Akun.loginTimmbkm(nidn,kata_sandi,this);
+            c_Akun.loginTimmbkm(nidn, kata_sandi, this);
         }
 
         private void tbx_NIDN_TextChanged(object sender, EventArgs e)

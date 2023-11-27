@@ -123,6 +123,7 @@
             btn_lihat.TabIndex = 10;
             btn_lihat.Text = "Lihat";
             btn_lihat.UseVisualStyleBackColor = true;
+            btn_lihat.Click += btn_lihat_Click;
             // 
             // panel1
             // 
@@ -211,7 +212,7 @@
             lbl_ubahkatasandi.TabIndex = 0;
             lbl_ubahkatasandi.Text = "Ubah Kata Sandi";
             // 
-            // Profil
+            // v_UbahKataSandiProfil
             // 
             AutoScaleDimensions = new SizeF(11F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -220,7 +221,7 @@
             Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "Profil";
+            Name = "v_UbahKataSandiProfil";
             Text = "Baskom";
             WindowState = FormWindowState.Maximized;
             Load += Form4_Load;

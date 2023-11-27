@@ -35,7 +35,6 @@
             tbx_katasandi = new TextBox();
             tbx_NIDN = new TextBox();
             lnk_loginsebagaiyanglain = new LinkLabel();
-            lnk_lupasandi = new LinkLabel();
             lbl_KataSandi = new Label();
             lbl_NIDN = new Label();
             lbl_logintimMBKM = new Label();
@@ -56,7 +55,6 @@
             panel2.Controls.Add(tbx_katasandi);
             panel2.Controls.Add(tbx_NIDN);
             panel2.Controls.Add(lnk_loginsebagaiyanglain);
-            panel2.Controls.Add(lnk_lupasandi);
             panel2.Controls.Add(lbl_KataSandi);
             panel2.Controls.Add(lbl_NIDN);
             panel2.Controls.Add(lbl_logintimMBKM);
@@ -120,18 +118,6 @@
             lnk_loginsebagaiyanglain.TabStop = true;
             lnk_loginsebagaiyanglain.Text = "log in sebagai yang lain";
             lnk_loginsebagaiyanglain.LinkClicked += lnk_loginsebagaiyanglain_LinkClicked;
-            // 
-            // lnk_lupasandi
-            // 
-            lnk_lupasandi.AutoSize = true;
-            lnk_lupasandi.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Regular, GraphicsUnit.Point);
-            lnk_lupasandi.Location = new Point(30, 412);
-            lnk_lupasandi.Name = "lnk_lupasandi";
-            lnk_lupasandi.Size = new Size(125, 20);
-            lnk_lupasandi.TabIndex = 3;
-            lnk_lupasandi.TabStop = true;
-            lnk_lupasandi.Text = "lupa kata sandi?";
-            lnk_lupasandi.LinkClicked += lnk_lupasandi_LinkClicked;
             // 
             // lbl_KataSandi
             // 
@@ -226,7 +212,6 @@
         private TextBox tbx_katasandi;
         private TextBox tbx_NIDN;
         private LinkLabel lnk_loginsebagaiyanglain;
-        private LinkLabel lnk_lupasandi;
         private Label lbl_KataSandi;
         private Label lbl_NIDN;
         private TableLayoutPanel tableLayoutPanel1;

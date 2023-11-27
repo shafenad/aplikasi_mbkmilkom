@@ -11,8 +11,8 @@ namespace Baskom.Model
     {
         private int id_admin;
         private string email;
-        private string kata_sandi;
         private string nama_admin;
+        private string kata_sandi;
 
         public bool cekLoginAdmin(string email, string kata_sandi)
         {
@@ -50,9 +50,11 @@ namespace Baskom.Model
         }
         public object[] getAttributes()
         {
-            object[] result = new object[2];
-            result[0] = nama_admin;
-            result[1] = email;
+            object[] result = new object[4];
+            result[0] = this.nama_admin;
+            result[1] = this.email;
+            result[2] = this.nama_admin;
+            result[3] = this.kata_sandi;
             return result;
         }
     }

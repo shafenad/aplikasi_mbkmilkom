@@ -14,22 +14,21 @@ namespace Baskom.View
 {
     partial class v_ProfilMahasiswa : Form
     {
-        m_DataAkunMahasiswa data_akun_pengguna;
         private c_Dashboard c_Dashboard;
+        private object[] atribut_data_akun;
         public v_ProfilMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-            this.data_akun_pengguna = data_akun_pengguna;
-            object[] array_data = data_akun_pengguna.getAttributes();
-            lbl_namamahasiswa.Text = array_data[2].ToString();
-            lbl_nimmahasiswa.Text = array_data[1].ToString();
-            lbl_prodi.Text = array_data[9].ToString();
-            lbl_thnmasuk.Text = array_data[3].ToString();
-            lbl_status.Text = (bool)array_data[4] ? "Aktif" : "Tidak Aktif";
-            lbl_nowa.Text = array_data[5].ToString();
-            lbl_batch.Text = array_data[6].ToString();
-            lbl_email.Text = array_data[7].ToString();
+            this.atribut_data_akun = data_akun_pengguna.getAttributes();
+            lbl_namamahasiswa.Text = atribut_data_akun[2].ToString();
+            lbl_nimmahasiswa.Text = atribut_data_akun[1].ToString();
+            lbl_prodi.Text = atribut_data_akun[9].ToString();
+            lbl_thnmasuk.Text = atribut_data_akun[3].ToString();
+            lbl_status.Text = (bool)atribut_data_akun[4] ? "Aktif" : "Tidak Aktif";
+            lbl_nowa.Text = atribut_data_akun[5].ToString();
+            lbl_batch.Text = atribut_data_akun[6].ToString();
+            lbl_email.Text = atribut_data_akun[7].ToString();
         }
 
         private void label12_Click(object sender, EventArgs e)

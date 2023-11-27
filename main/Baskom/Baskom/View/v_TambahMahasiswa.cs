@@ -29,7 +29,7 @@ namespace Baskom.View
         private void btn_tambahtambahmhs_Click(object sender, EventArgs e)
         {
             string message = "";
-            if (!int.TryParse(tbx_tahunmasukmahasiswatambahmhs.Text,out _))
+            if (!int.TryParse(tbx_tahunmasukmahasiswatambahmhs.Text, out _))
             {
                 message = "Tahun Masuk Bernilai Angka!";
                 MessageBox.Show(message);
@@ -61,6 +61,11 @@ namespace Baskom.View
                     this.Close();
                 }
             }
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

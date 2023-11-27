@@ -92,21 +92,26 @@ namespace Baskom.Model
         {
             string nama_prodi = this.m_DataProdi.getNamaProdiById(id_prodi);
             object[] result = new object[10];
-            result[0] = id_mahasiswa;
-            result[1] = nim;
-            result[2] = nama_mahasiswa;
-            result[3] = tahun_masuk;
-            result[4] = status_mahasiswa;
-            result[5] = no_wa;
-            result[6] = batch_mbkm;
-            result[7] = email;
-            result[8] = kata_sandi;
+            result[0] = this.id_mahasiswa;
+            result[1] = this.nim;
+            result[2] = this.nama_mahasiswa;
+            result[3] = this.tahun_masuk;
+            result[4] = this.status_mahasiswa;
+            result[5] = this.no_wa;
+            result[6] = this.batch_mbkm;
+            result[7] = this.email;
+            result[8] = this.kata_sandi;
             result[9] = nama_prodi;
             return result;
         }
         public void sendMahasiswa(object[] mahasiswa)
         {
             Database.Database.sendData($"INSERT INTO \"Data_Akun_Mahasiswa\" (nim,nama_mahasiswa,tahun_masuk,status_mahasiswa,no_wa,batch_mbkm,email,kata_sandi,id_prodi) VALUES ('{mahasiswa[0]}','{mahasiswa[1]}',{mahasiswa[2]},{mahasiswa[3]},'{mahasiswa[4]}',{mahasiswa[5]},'{mahasiswa[6]}','{mahasiswa[7]}',{mahasiswa[8]});");
+        }
+        public void updateKataSandi(int id_mahasiswa,string kata_sandi_baru)
+        {
+            Database.Database.sendData($"UPDATE \"Data_Akun_Mahasiswa\" SET kata_sandi = '{kata_sandi_baru}' WHERE id_mahasiswa = {id_mahasiswa}");
+            this.kata_sandi = kata_sandi_baru;
         }
     }
 }
