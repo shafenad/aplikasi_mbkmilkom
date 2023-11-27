@@ -106,8 +106,7 @@ namespace Baskom.Model
         }
         public void sendMahasiswa(object[] mahasiswa)
         {
-            string query = $"INSERT INTO \"Data_Akun_Mahasiswa\" (nim,nama_mahasiswa,tahun_masuk,status_mahasiswa,no_wa,batch_mbkm,email,kata_sandi,id_prodi) VALUES ('{mahasiswa[0]}','{mahasiswa[1]}',{mahasiswa[2]},{mahasiswa[3]},'{mahasiswa[4]}',{mahasiswa[5]},'{mahasiswa[6]}','{mahasiswa[7]}',{mahasiswa[8]});";
-            Database.Database.sendData(query);
+            Database.Database.sendData($"INSERT INTO \"Data_Akun_Mahasiswa\" (nim,nama_mahasiswa,tahun_masuk,status_mahasiswa,no_wa,batch_mbkm,email,kata_sandi,id_prodi) VALUES ('{mahasiswa[0]}','{mahasiswa[1]}',{mahasiswa[2]},{mahasiswa[3]},'{mahasiswa[4]}',{mahasiswa[5]},'{mahasiswa[6]}','{mahasiswa[7]}',{mahasiswa[8]});");
         }
     }
 }

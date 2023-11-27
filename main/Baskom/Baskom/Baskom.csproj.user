@@ -10,16 +10,13 @@
     <Compile Update="View\v_TambahProgramMataKuliah.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\UbahKataSandiProfil.cs">
+    <Compile Update="View\v_UbahKataSandiProfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\v_TambahDosen.cs">
+    <Compile Update="View\v_TambahDosenTimmbkm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\v_TambahMahasiswa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\v_DataMitra.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\v_DaftarMitra.cs">
@@ -68,9 +65,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\v_StatusMOA.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="View\v_FormUbahKataSandi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\v_ProfilAdmin.cs">

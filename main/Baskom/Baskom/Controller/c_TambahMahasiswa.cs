@@ -9,9 +9,9 @@ namespace Baskom.Controller
 {
     internal class c_TambahMahasiswa
     {
-        private List<object> array_data;
-        m_DataAkunMahasiswa m_DataAkunMahasiswa;
-        m_DataProdi m_DataProdi;
+        private List<object>? array_data;
+        private m_DataAkunMahasiswa m_DataAkunMahasiswa;
+        private m_DataProdi m_DataProdi;
         public c_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa,m_DataProdi m_DataProdi)
         {
             this.m_DataAkunMahasiswa = m_DataAkunMahasiswa;
@@ -20,7 +20,7 @@ namespace Baskom.Controller
 
         public string tambahMahasiswaBaru(object[] mahasiswa)
         {
-            this.array_data = m_DataAkunMahasiswa.getAllMahasiswa();
+            this.array_data = this.m_DataAkunMahasiswa.getAllMahasiswa();
             string message = "";
             foreach (object[] item in this.array_data)
             {

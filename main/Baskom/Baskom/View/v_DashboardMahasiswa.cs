@@ -30,8 +30,7 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDashboardMahasiswa();
+            //this
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -87,7 +86,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            c_Dashboard.setLogout();
         }
     }
 }

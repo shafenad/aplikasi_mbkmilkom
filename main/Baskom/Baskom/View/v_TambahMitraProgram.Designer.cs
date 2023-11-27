@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_TambahMitraProgram));
             lyt_mitra = new TableLayoutPanel();
             panel1 = new Panel();
-            tbx_namamitra = new TextBox();
+            cbx_namamitra = new ComboBox();
             btn_tambah = new Button();
             cbx_program = new ComboBox();
             lbl_program = new Label();
@@ -79,7 +79,7 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            panel1.Controls.Add(tbx_namamitra);
+            panel1.Controls.Add(cbx_namamitra);
             panel1.Controls.Add(btn_tambah);
             panel1.Controls.Add(cbx_program);
             panel1.Controls.Add(lbl_program);
@@ -89,13 +89,17 @@
             panel1.Size = new Size(382, 508);
             panel1.TabIndex = 0;
             // 
-            // tbx_namamitra
+            // cbx_namamitra
             // 
-            tbx_namamitra.Anchor = AnchorStyles.Left | AnchorStyles.Right;
-            tbx_namamitra.Location = new Point(3, 45);
-            tbx_namamitra.Name = "tbx_namamitra";
-            tbx_namamitra.Size = new Size(376, 43);
-            tbx_namamitra.TabIndex = 7;
+            cbx_namamitra.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            cbx_namamitra.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            cbx_namamitra.ForeColor = Color.Black;
+            cbx_namamitra.FormattingEnabled = true;
+            cbx_namamitra.Location = new Point(0, 45);
+            cbx_namamitra.Name = "cbx_namamitra";
+            cbx_namamitra.Size = new Size(376, 50);
+            cbx_namamitra.TabIndex = 8;
+            cbx_namamitra.SelectedIndexChanged += cbx_namamitra_SelectedIndexChanged;
             // 
             // btn_tambah
             // 
@@ -110,6 +114,7 @@
             btn_tambah.TabIndex = 6;
             btn_tambah.Text = "Tambah";
             btn_tambah.UseVisualStyleBackColor = false;
+            btn_tambah.Click += btn_tambah_Click;
             // 
             // cbx_program
             // 
@@ -231,14 +236,14 @@
             // akunToolStripMenuItem
             // 
             akunToolStripMenuItem.Name = "akunToolStripMenuItem";
-            akunToolStripMenuItem.Size = new Size(359, 50);
+            akunToolStripMenuItem.Size = new Size(355, 50);
             akunToolStripMenuItem.Text = "Akun Dosen";
             akunToolStripMenuItem.Click += akunToolStripMenuItem_Click;
             // 
             // akunMahasiswaToolStripMenuItem
             // 
             akunMahasiswaToolStripMenuItem.Name = "akunMahasiswaToolStripMenuItem";
-            akunMahasiswaToolStripMenuItem.Size = new Size(359, 50);
+            akunMahasiswaToolStripMenuItem.Size = new Size(355, 50);
             akunMahasiswaToolStripMenuItem.Text = "Akun Mahasiswa";
             akunMahasiswaToolStripMenuItem.Click += akunMahasiswaToolStripMenuItem_Click;
             // 
@@ -284,15 +289,16 @@
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(332, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click_1;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(332, 50);
+            logOutToolStripMenuItem.Size = new Size(359, 50);
             logOutToolStripMenuItem.Text = "Log Out";
+            logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click_1;
             // 
             // v_TambahMitraProgram
             // 
@@ -347,6 +353,6 @@
         private ToolStripMenuItem tambahProgramMataKuliahToolStripMenuItem;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
-        private TextBox tbx_namamitra;
+        private ComboBox cbx_namamitra;
     }
 }

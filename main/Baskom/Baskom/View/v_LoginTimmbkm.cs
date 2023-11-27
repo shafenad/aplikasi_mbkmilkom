@@ -12,14 +12,17 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_LoginTimmbkm : Form
+    partial class v_LoginTimmbkm : Form
     {
-        private c_Akun c_Akun = new c_Akun();
-        private m_DataAkunTimmbkm m_DataAkunTimmbkm = new m_DataAkunTimmbkm();
+        private c_Akun c_Akun;
+        private v_Login v_Login;
+        private m_DataAkunTimmbkm m_DataAkunTimmbkm = new();
 
-        public v_LoginTimmbkm()
+        public v_LoginTimmbkm(v_Login v_Login,c_Akun c_Akun)
         {
             InitializeComponent();
+            this.c_Akun = c_Akun;
+            this.v_Login = v_Login;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -51,9 +54,8 @@ namespace Baskom.View
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v_Login v_Login = new v_Login();
             v_Login.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void pic_logobaskom_Click(object sender, EventArgs e)

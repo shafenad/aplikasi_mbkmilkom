@@ -17,8 +17,8 @@ namespace Baskom.Model
         public bool cekLoginTimmbkm(string nidn, string kata_sandi)
         {
             string[] dataTimmbkm = getTimmbkmByNidn(nidn);
-            string[] dataDosen = this.m_DataAkunDosen.getDosenById(int.Parse(dataTimmbkm[2]));
-            if (dataDosen[6] == kata_sandi)
+            object[] dataDosen = this.m_DataAkunDosen.getDosenById(int.Parse(dataTimmbkm[2]));
+            if (dataDosen[6].ToString() == kata_sandi)
             {
                 this.id_timmbkm = dataTimmbkm[0];
                 this.nidn = nidn;
@@ -43,6 +43,11 @@ namespace Baskom.Model
         public object[] getDosenAttributes()
         {
             return m_DataAkunDosen.getAttributes(this.timmbkm_id_dosen);
+        }
+        public void sendTimmbkm(string nidn, string id_dosen)
+        {
+            string query = $"INSERT INTO \"Data_Akun_Timmbkm\" (nidn,id_dosen) VALUES ('{nidn}',{id_dosen});";
+            Database.Database.sendData(query);
         }
     }
 }

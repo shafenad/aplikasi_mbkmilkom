@@ -68,7 +68,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)

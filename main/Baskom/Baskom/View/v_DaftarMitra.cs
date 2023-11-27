@@ -22,7 +22,8 @@ namespace Baskom.View
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this
+            this.Hide();
+            c_Dashboard.setLogout();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -73,7 +74,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
     }
 }

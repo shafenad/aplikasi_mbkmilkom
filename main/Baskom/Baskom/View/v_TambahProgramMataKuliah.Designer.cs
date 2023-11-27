@@ -406,7 +406,7 @@
             // tbx_program
             // 
             tbx_program.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbx_program.Location = new Point(5, 44);
+            tbx_program.Location = new Point(4, 44);
             tbx_program.Name = "tbx_program";
             tbx_program.Size = new Size(414, 43);
             tbx_program.TabIndex = 13;
@@ -424,6 +424,7 @@
             btn_tambah.TabIndex = 12;
             btn_tambah.Text = "Tambah";
             btn_tambah.UseVisualStyleBackColor = false;
+            btn_tambah.Click += btn_tambah_Click;
             // 
             // lbl_progran
             // 
@@ -526,14 +527,14 @@
             // akunToolStripMenuItem
             // 
             akunToolStripMenuItem.Name = "akunToolStripMenuItem";
-            akunToolStripMenuItem.Size = new Size(355, 50);
+            akunToolStripMenuItem.Size = new Size(359, 50);
             akunToolStripMenuItem.Text = "Akun Dosen";
             akunToolStripMenuItem.Click += akunToolStripMenuItem_Click;
             // 
             // akunMahasiswaToolStripMenuItem
             // 
             akunMahasiswaToolStripMenuItem.Name = "akunMahasiswaToolStripMenuItem";
-            akunMahasiswaToolStripMenuItem.Size = new Size(355, 50);
+            akunMahasiswaToolStripMenuItem.Size = new Size(359, 50);
             akunMahasiswaToolStripMenuItem.Text = "Akun Mahasiswa";
             akunMahasiswaToolStripMenuItem.Click += akunMahasiswaToolStripMenuItem_Click;
             // 

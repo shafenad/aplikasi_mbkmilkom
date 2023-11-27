@@ -80,13 +80,13 @@ namespace Baskom.View
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDataMitra();
+
         }
 
         private void tambahMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)

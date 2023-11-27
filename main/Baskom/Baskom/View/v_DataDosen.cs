@@ -14,6 +14,11 @@ namespace Baskom.View
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.c_DataDosen = new c_DataDosen(m_DataAkunDosen);
+            this.initDataGridView();
+        }
+        public void initDataGridView()
+        {
+            tbl_daftardosenadmin.Rows.Clear();
             array_data = this.c_DataDosen.initDataGridView();
             foreach (object[] item in array_data)
             {
@@ -48,7 +53,8 @@ namespace Baskom.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            c_Dashboard.setTambahDosen();
+            c_Dashboard.setTambahDosenTimmbkm();
+            this.initDataGridView();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -76,7 +82,8 @@ namespace Baskom.View
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,8 +99,7 @@ namespace Baskom.View
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDataMitra();
+
         }
 
         private void tambahProgramToolStripMenuItem_Click(object sender, EventArgs e)

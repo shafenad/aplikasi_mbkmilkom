@@ -11,22 +11,22 @@ namespace Baskom.Controller
 {
     class c_Akun
     {
-        protected m_DataAkunAdmin m_DataAkunAdmin = new m_DataAkunAdmin();
-        protected m_DataAkunMahasiswa m_DataAkunMahasiswa = new m_DataAkunMahasiswa();
-        protected m_DataAkunTimmbkm m_DataAkunTimmbkm = new m_DataAkunTimmbkm();
-        private c_Dashboard c_Dashboard;
+        private m_DataAkunAdmin m_DataAkunAdmin;
+        private m_DataAkunMahasiswa m_DataAkunMahasiswa;
+        private m_DataAkunTimmbkm m_DataAkunTimmbkm;
+        private v_Login v_Login;
 
-        public c_Akun()
+        public c_Akun(v_Login v_Login)
         {
-            //constructor
+            this.v_Login = v_Login;
         }
         public void loginAdmin(string email, string kata_sandi, v_LoginAdmin form)
         {
+            this.m_DataAkunAdmin = new m_DataAkunAdmin();
             bool check = this.m_DataAkunAdmin.cekLoginAdmin(email, kata_sandi);
             if (check)
             {
-                c_Dashboard c_Dashboard = new(m_DataAkunAdmin);
-                this.c_Dashboard = c_Dashboard;
+                c_Dashboard c_Dashboard = new(this.v_Login,this.m_DataAkunAdmin);
                 c_Dashboard.setDashboardAdmin();
                 form.Hide();
             }
@@ -38,11 +38,11 @@ namespace Baskom.Controller
 
         public void loginMahasiswa(string nim, string kata_sandi, v_LoginMahasiswa form)
         {
+            this.m_DataAkunMahasiswa = new m_DataAkunMahasiswa();
             bool check = this.m_DataAkunMahasiswa.cekLoginMahasiswa(nim, kata_sandi);
             if (check)
             {
-                c_Dashboard c_Dashboard = new(m_DataAkunMahasiswa);
-                this.c_Dashboard = c_Dashboard;
+                c_Dashboard c_Dashboard = new(this.v_Login,this.m_DataAkunMahasiswa);
                 c_Dashboard.setDashboardMahasiswa();
                 form.Hide();
             }
@@ -54,11 +54,11 @@ namespace Baskom.Controller
 
         public void loginTimmbkm(string nidn, string kata_sandi, v_LoginTimmbkm form)
         {
+            this.m_DataAkunTimmbkm = new m_DataAkunTimmbkm();
             bool check = this.m_DataAkunTimmbkm.cekLoginTimmbkm(nidn, kata_sandi);
             if (check)
             {
-                c_Dashboard c_Dashboard = new(m_DataAkunTimmbkm);
-                this.c_Dashboard = c_Dashboard;
+                c_Dashboard c_Dashboard = new(this.v_Login,this.m_DataAkunTimmbkm);
                 c_Dashboard.setDashboardTimmbkm();
                 form.Hide();
             }

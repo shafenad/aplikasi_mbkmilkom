@@ -38,8 +38,7 @@ namespace Baskom.View
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setDataMitra();
+
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
@@ -71,7 +70,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)

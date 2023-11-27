@@ -9,45 +9,39 @@ namespace Baskom.Model
 {
     class m_DataAkunDosen
     {
-        private int id_dosen;
-        private string nip;
-        private string nidn;
-        private string nama_dosen;
-        private string no_wa;
-        private string email;
-        private string kata_sandi;
-        public string[] getDosenById(int id_dosen)
+        public object[] getDosenById(int id_dosen)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Dosen\" WHERE id_dosen = '{id_dosen}'");
-            string[] result = new string[7];
+            object[] result = new object[7];
             while (reader.Read())
             {
-                result[0] = reader[0].ToString();
-                result[1] = reader[1].ToString();
-                result[2] = reader[2].ToString();
-                result[3] = reader[3].ToString();
-                result[4] = reader[4].ToString();
-                result[5] = reader[5].ToString();
-                result[6] = reader[6].ToString();
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
+                result[4] = reader[4];
+                result[5] = reader[5];
+                result[6] = reader[6];
             }
             reader.Close();
             return result;
         }
-        public void setDosenById(int id_dosen)
+        public object[] getDosenByNidn(string nidn)
         {
-            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Dosen\" WHERE id_dosen = '{id_dosen}'");
-            string[] result = new string[7];
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Dosen\" WHERE nidn = '{nidn}'");
+            object[] result = new object[7];
             while (reader.Read())
             {
-                this.id_dosen = int.Parse(reader[0].ToString());
-                this.nip = reader[1].ToString();
-                this.nidn = reader[2].ToString();
-                this.nama_dosen = reader[3].ToString();
-                this.no_wa = reader[4].ToString();
-                this.email = reader[5].ToString();
-                this.kata_sandi = reader[6].ToString();
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
+                result[4] = reader[4];
+                result[5] = reader[5];
+                result[6] = reader[6];
             }
             reader.Close();
+            return result;
         }
         public List<object> getAllDosen()
         {
@@ -71,14 +65,18 @@ namespace Baskom.Model
         }
         public object[] getAttributes(int id_dosen)
         {
-            this.setDosenById(id_dosen);
+            object[] dosen = getDosenById(id_dosen);
             object[] result = new object[6];
-            result[0] = this.nip;
-            result[1] = this.nidn;
-            result[2] = this.nama_dosen;
-            result[3] = this.no_wa;
-            result[4] = this.email;
+            result[0] = dosen[0];
+            result[1] = dosen[1];
+            result[2] = dosen[2];
+            result[3] = dosen[3];
+            result[4] = dosen[4];
             return result;
+        }
+        public void sendDosen(object[] dosen)
+        {
+            Database.Database.sendData($"INSERT INTO \"Data_Akun_Dosen\" (nip, nidn, nama_dosen, no_wa, email, kata_sandi) VALUES ('{dosen[0]}','{dosen[1]}','{dosen[2]}','{dosen[3]}','{dosen[4]}','{dosen[5]}');");
         }
     }
 }

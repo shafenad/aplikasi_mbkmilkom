@@ -143,7 +143,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void mitraToolStripMenuItem_Click_2(object sender, EventArgs e)

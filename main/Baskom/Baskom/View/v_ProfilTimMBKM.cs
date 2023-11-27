@@ -31,7 +31,7 @@ namespace Baskom.View
 
         private void lnk_ubahsandi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            c_Dashboard.setFormUbahKataSandi();
+            c_Dashboard.setUbahKataSandiProfil();
         }
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,7 +66,8 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
         }
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)

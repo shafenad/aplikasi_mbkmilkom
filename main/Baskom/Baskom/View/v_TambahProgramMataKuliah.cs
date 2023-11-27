@@ -1,4 +1,5 @@
 ﻿using Baskom.Controller;
+using Baskom.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,11 +14,36 @@ namespace Baskom.View
 {
     partial class v_TambahProgramMataKuliah : Form
     {
-        c_Dashboard c_Dashboard;
-        public v_TambahProgramMataKuliah(c_Dashboard c_Dashboard)
+        private c_Dashboard c_Dashboard;
+        private c_TambahProgramMataKuliah c_TambahProgramMataKuliah;
+        private List<object> matkul = new List<object>();
+        private List<object> detail_program = new List<object>();
+        private List<object> dropdown_matkul = new List<object>();
+        public v_TambahProgramMataKuliah(c_Dashboard c_Dashboard, m_DataMataKuliah m_DataMataKuliah, m_DataProgram m_DataProgram, m_DataDetailProgram m_DataDetailProgram)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.c_TambahProgramMataKuliah = new c_TambahProgramMataKuliah(m_DataMataKuliah, m_DataProgram, m_DataDetailProgram);
+            this.init();
+        }
+        public void init()
+        {
+            dropdown_matkul.Clear();
+            cbx_matakuliah.DataSource = null;
+            tbl_daftarprogram.Rows.Clear();
+
+            this.detail_program = c_TambahProgramMataKuliah.initDetailProgram();
+            this.matkul = c_TambahProgramMataKuliah.initMatkul();
+
+            foreach (object[] item in detail_program)
+            {
+                tbl_daftarprogram.Rows.Add(item[0], item[1]);
+            }
+            foreach (object[] item in this.matkul)
+            {
+                dropdown_matkul.Add(item[2]);
+            }
+            cbx_matakuliah.DataSource = this.dropdown_matkul;
         }
 
         private void dataGridView3_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -75,7 +101,8 @@ namespace Baskom.View
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this
+            this.Hide();
+            c_Dashboard.setTambahMataKuliah();
         }
 
         private void akunToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +119,21 @@ namespace Baskom.View
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //logout
+            this.Close();
+            c_Dashboard.setLogout();
+        }
+
+        private void btn_tambah_Click(object sender, EventArgs e)
+        {
+            string message = c_TambahProgramMataKuliah.tambahDetailMitraBaru(tbx_program.Text, cbx_matakuliah.Text); ;
+            if (message.Length > 0)
+            {
+                MessageBox.Show(message);
+            }
+            else
+            {
+                this.init();
+            }
         }
     }
 }

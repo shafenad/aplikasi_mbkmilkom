@@ -21,7 +21,7 @@ namespace Baskom.View
         }
         private void btn_simpanstatus_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardMahasiswa();
         }
         private void statusmitra_Load(object sender, EventArgs e)

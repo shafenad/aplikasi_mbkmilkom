@@ -12,13 +12,17 @@ using System.Windows.Forms;
 
 namespace Baskom.View
 {
-    public partial class v_LoginMahasiswa : Form
+    partial class v_LoginMahasiswa : Form
     {
-        private c_Akun c_Akun = new c_Akun();
+        private c_Akun c_Akun;
+        private v_Login v_Login;
+        private m_DataAkunMahasiswa m_DataAkunMahasiswa = new();
 
-        public v_LoginMahasiswa()
+        public v_LoginMahasiswa(v_Login v_Login, c_Akun c_Akun)
         {
             InitializeComponent();
+            this.c_Akun = c_Akun;
+            this.v_Login = v_Login;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -35,9 +39,8 @@ namespace Baskom.View
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v_Login v_Login = new v_Login();
             v_Login.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

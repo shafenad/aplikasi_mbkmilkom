@@ -14,12 +14,13 @@ namespace Baskom.View
 {
     public partial class v_Login : Form
     {
+        private c_Login c_Login;
         public v_Login()
         {
             InitializeComponent();
+            this.c_Login = new c_Login(this);
         }
 
-        private c_Login c_Login = new c_Login();
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -33,8 +34,8 @@ namespace Baskom.View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            c_Login.setLoginMahasiswa();
             this.Hide();
+            c_Login.setLoginMahasiswa();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -54,14 +55,14 @@ namespace Baskom.View
 
         private void button2_Click(object sender, EventArgs e)
         {
-            c_Login.setLoginTimmbkm();   
             this.Hide();
+            c_Login.setLoginTimmbkm();   
         }
 
         private void btn_loginadmin_Click(object sender, EventArgs e)
         {
-            c_Login.setLoginAdmin();
             this.Hide();
+            c_Login.setLoginAdmin();
         }
     }
 }

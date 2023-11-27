@@ -3,14 +3,17 @@ using Baskom.Model;
 
 namespace Baskom.View
 {
-    public partial class v_LoginAdmin : Form
+    partial class v_LoginAdmin : Form
     {
-        private c_Akun c_Akun = new c_Akun();
-        private m_DataAkunAdmin m_DataAkunAdmin = new m_DataAkunAdmin();
+        private c_Akun c_Akun;
+        private v_Login v_Login;
+        private m_DataAkunAdmin m_DataAkunAdmin = new();
 
-        public v_LoginAdmin()
+        public v_LoginAdmin(v_Login v_Login, c_Akun c_Akun)
         {
             InitializeComponent();
+            this.c_Akun = c_Akun;
+            this.v_Login = v_Login;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -37,9 +40,8 @@ namespace Baskom.View
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v_Login v_Login = new v_Login();
             v_Login.Show();
-            this.Hide();
+            this.Close();
         }
 
         public bool loginAdmin(string email_admin, string kata_sandi)

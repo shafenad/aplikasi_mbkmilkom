@@ -487,15 +487,16 @@
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(332, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click_1;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(332, 50);
+            logOutToolStripMenuItem.Size = new Size(359, 50);
             logOutToolStripMenuItem.Text = "Log Out";
+            logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click_1;
             // 
             // v_TambahMataKuliah
             // 

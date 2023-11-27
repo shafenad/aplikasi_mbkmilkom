@@ -123,7 +123,7 @@ namespace Baskom.View
         private void btn_tambahmatkul_Click(object sender, EventArgs e)
         {
             string message = "";
-            if (!int.TryParse(tbx_jumlahsks.Text,out _))
+            if (!int.TryParse(tbx_jumlahsks.Text, out _))
             {
                 message = "Jumlah SKS Bernilai Angka!";
                 MessageBox.Show(message);
@@ -140,8 +140,13 @@ namespace Baskom.View
             else
             {
                 this.initDataGridView();
-                this.Close();
             }
+        }
+
+        private void logOutToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+            c_Dashboard.setLogout();
         }
     }
 }
