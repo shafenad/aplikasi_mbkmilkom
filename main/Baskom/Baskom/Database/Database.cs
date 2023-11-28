@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Npgsql;
+using NpgsqlTypes;
 
 namespace Baskom.Database
 {
@@ -29,6 +30,17 @@ namespace Baskom.Database
             NpgsqlCommand cmd = new NpgsqlCommand(query,conn);
             NpgsqlDataReader reader = cmd.ExecuteReader();
             return reader;
+        }
+        public static void send2BindData(List<object> data_status, List<object> data_id, string query)
+        {
+            NpgsqlCommand cmd = new NpgsqlCommand(query);
+            NpgsqlParameter p = new NpgsqlParameter("data_status", NpgsqlDbType.Array | NpgsqlDbType.Text);
+            NpgsqlParameter q = new NpgsqlParameter("data_id", NpgsqlDbType.Array | NpgsqlDbType.Text);
+            p.Value = data_status;
+            q.Value = data_id;
+            cmd.Parameters.Add(p);
+            cmd.Parameters.Add(q);
+            cmd.ExecuteNonQuery();
         }
     }
 }

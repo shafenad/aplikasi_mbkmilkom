@@ -9,16 +9,6 @@ namespace Baskom.View_Lama
 {
     class v_MelihatKonversiNilai
     {
-        private c_KonversiNilai c_KonversiNilai = new c_KonversiNilai();
 
-        public v_MelihatKonversiNilai()
-        {
-            // constructor
-        }
-
-        public void klikDetail()
-        {
-            c_KonversiNilai.showKonversiNilai();
-        }
     }
 }

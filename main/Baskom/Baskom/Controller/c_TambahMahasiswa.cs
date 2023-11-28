@@ -9,7 +9,6 @@ namespace Baskom.Controller
 {
     internal class c_TambahMahasiswa
     {
-        private List<object>? array_data;
         private m_DataAkunMahasiswa m_DataAkunMahasiswa;
         private m_DataProdi m_DataProdi;
         public c_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa,m_DataProdi m_DataProdi)
@@ -20,9 +19,9 @@ namespace Baskom.Controller
 
         public string tambahMahasiswaBaru(object[] mahasiswa)
         {
-            this.array_data = this.m_DataAkunMahasiswa.getAllMahasiswa();
+            List<object[]> data_mahasiswa = this.m_DataAkunMahasiswa.getAllMahasiswa();
             string message = "";
-            foreach (object[] item in this.array_data)
+            foreach (object[] item in data_mahasiswa)
             {
                 if (item[1].ToString() == mahasiswa[0].ToString())
                 {
@@ -40,7 +39,7 @@ namespace Baskom.Controller
                     return message;
                 }
             }
-            int id_prodi = m_DataProdi.getIdProdiByNama(mahasiswa[8].ToString());
+            int id_prodi = m_DataProdi.getIdProdiByNama((string)mahasiswa[8]);
             mahasiswa[8] = id_prodi;
             m_DataAkunMahasiswa.sendMahasiswa(mahasiswa);
             return message;

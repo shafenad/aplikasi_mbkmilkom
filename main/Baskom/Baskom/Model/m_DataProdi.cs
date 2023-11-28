@@ -9,27 +9,27 @@ namespace Baskom.Model
 {
     internal class m_DataProdi
     {
+        private int id_prodi;
+        private string nama_prodi;
         public string getNamaProdiById(int id_prodi)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Prodi\" WHERE id_prodi = '{id_prodi}'");
-            string result = "";
             while (reader.Read())
             {
-                result = reader[1].ToString();
+                this.nama_prodi = (string)reader[1];
             }
             reader.Close();
-            return result;
+            return this.nama_prodi;
         }
         public int getIdProdiByNama(string nama_prodi)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Prodi\" WHERE nama_prodi = '{nama_prodi}'");
-            int result = 0;
             while (reader.Read())
             {
-                result = int.Parse(reader[0].ToString());
+                this.id_prodi = (int)reader[0];
             }
             reader.Close();
-            return result;
+            return this.id_prodi;
         }
     }
 }

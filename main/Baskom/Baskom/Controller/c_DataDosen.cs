@@ -14,9 +14,9 @@ namespace Baskom.Controller
         {
             this.m_DataAkunDosen = m_DataAkunDosen;
         }
-        public List<object> initDataGridView()
+        public List<object[]> initDataGridView()
         {
-            List<object> result = this.m_DataAkunDosen.getAllDosen();
+            List<object[]> result = this.m_DataAkunDosen.getAllDosen();
             return result;
         }
     }

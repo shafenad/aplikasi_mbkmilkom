@@ -16,27 +16,28 @@ namespace Baskom.Model
 
         public bool cekLoginAdmin(string email, string kata_sandi)
         {
-            string[] data_admin = getAdminByEmail(email);
-            if (data_admin[3] == kata_sandi)
+            object[] data_admin = getAdminByEmail(email);
+            if ((string)data_admin[3] == kata_sandi)
             {
-                this.id_admin = int.Parse(data_admin[0]);
+                this.id_admin = (int)data_admin[0];
                 this.email = email;
                 this.kata_sandi = kata_sandi;
-                this.nama_admin = data_admin[1];
+                this.nama_admin = (string)data_admin[1];
                 return true;
             }
             return false;
         }
-        public string[] getAdminByEmail(string email)
+        public object[] getAdminByEmail(string email)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Admin\" WHERE email = '{email}'");
-            string[] result = new string[4];
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result[0] = reader[0].ToString();
-                result[1] = reader[1].ToString();
-                result[2] = reader[2].ToString();
-                result[3] = reader[3].ToString();
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
             }
             reader.Close();
             return result;

@@ -40,7 +40,7 @@
     <Compile Update="View\v_PembagianTugas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\v_PengajuanMOA.cs">
+    <Compile Update="View\v_ValidasiMOA.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="View\v_CariMataKuliah.cs">

@@ -14,9 +14,9 @@ namespace Baskom.Controller
         {
             this.m_DataAkunMahasiswa = m_DataAkunMahasiswa;
         }
-        public List<object> initDataGridView()
+        public List<object[]> initDataGridView()
         {
-            List<object> result = this.m_DataAkunMahasiswa.getAllMahasiswa();
+            List<object[]> result = this.m_DataAkunMahasiswa.getAllMahasiswa();
             return result;
         }
     }

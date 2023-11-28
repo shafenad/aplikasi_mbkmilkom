@@ -16,19 +16,18 @@ namespace Baskom.View
     {
         private c_Dashboard c_Dashboard;
         private c_DataMahasiswa c_DataMahasiswa;
-        private List<object> array_data;
         public v_DataMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.c_DataMahasiswa = new c_DataMahasiswa(m_DataAkunMahasiswa);
-            this.initDataGridView();
+            this.init();
         }
-        public void initDataGridView()
+        public void init()
         {
             tbl_daftarmhsadmin.Rows.Clear();
-            array_data = this.c_DataMahasiswa.initDataGridView();
-            foreach (object[] item in array_data)
+            List<object[]> data_mahasiswa = this.c_DataMahasiswa.initDataGridView();
+            foreach (object[] item in data_mahasiswa)
             {
                 tbl_daftarmhsadmin.Rows.Add(item[2], item[1]);
             }
@@ -47,7 +46,7 @@ namespace Baskom.View
         private void btn_tambahdaftarmhsadmin_Click(object sender, EventArgs e)
         {
             c_Dashboard.setTambahMahasiswa();
-            this.initDataGridView();
+            this.init();
         }
 
         private void tbl_daftarmhsadmin_CellContentClick(object sender, DataGridViewCellEventArgs e)

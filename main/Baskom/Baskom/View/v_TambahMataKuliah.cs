@@ -14,21 +14,20 @@ namespace Baskom.View
 {
     partial class v_TambahMataKuliah : Form
     {
-        c_Dashboard c_Dashboard;
-        c_TambahMataKuliah c_TambahMataKuliah;
-        List<object> array_data = new List<object>();
+        private c_Dashboard c_Dashboard;
+        private c_TambahMataKuliah c_TambahMataKuliah;
         public v_TambahMataKuliah(c_Dashboard c_Dashboard, m_DataMataKuliah m_DataMataKuliah)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.c_TambahMataKuliah = new c_TambahMataKuliah(m_DataMataKuliah);
-            this.initDataGridView();
+            this.init();
         }
-        public void initDataGridView()
+        public void init()
         {
             tbl_daftarmatkul.Rows.Clear();
-            array_data = this.c_TambahMataKuliah.initDataGridView();
-            foreach (object[] item in array_data)
+            List<object[]> data = this.c_TambahMataKuliah.initDataGridView();
+            foreach (object[] item in data)
             {
                 tbl_daftarmatkul.Rows.Add(item[1], item[2], item[3]);
             }
@@ -139,7 +138,7 @@ namespace Baskom.View
             }
             else
             {
-                this.initDataGridView();
+                this.init();
             }
         }
 

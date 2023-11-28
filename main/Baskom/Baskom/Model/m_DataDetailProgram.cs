@@ -9,9 +9,9 @@ namespace Baskom.Model
 {
     class m_DataDetailProgram
     {
-        public List<object> getAllDetailProgram()
+        public List<object[]> getAllDetailProgram()
         {
-            List<object> result = new List<object>();
+            List<object[]> result = new List<object[]>();
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Detail_Program\";");
             int field_count = reader.FieldCount;
             while (reader.Read())

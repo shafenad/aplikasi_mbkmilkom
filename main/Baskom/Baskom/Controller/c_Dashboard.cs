@@ -22,6 +22,8 @@ namespace Baskom.Controller
         private m_DataProgram m_DataProgram = new();
         private m_DataDetailMitra m_DataDetailMitra = new();
         private m_DataDetailProgram m_DataDetailProgram = new();
+        private m_DataBkp m_DataBkp = new();
+        private m_DataPengajuanMOA m_DataPengajuanMOA = new();
         private v_DashboardMahasiswa v_DashboardMahasiswa;
         private v_DashboardAdmin v_DashboardAdmin;
         private v_DashboardTimmbkm v_DashboardTimmbkm;
@@ -31,7 +33,7 @@ namespace Baskom.Controller
         private v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks;
         private v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai;
         private v_PembagianTugas v_PembagianTugas;
-        private v_PengajuanMOA v_PengajuanMOA;
+        private v_ValidasiMOA v_ValidasiMOA;
         private v_ProfilMahasiswa v_ProfilMahasiswa;
         private v_ProfilTimMBKM v_ProfilTimMBKM;
         private v_ProfilAdmin v_ProfilAdmin;
@@ -73,15 +75,15 @@ namespace Baskom.Controller
             this.data_akun_pengguna = data_akun_pengguna;
             this.v_UbahKataSandiProfil = new v_UbahKataSandiProfil(data_akun_pengguna);
             v_DashboardTimmbkm v_DashboardTimmbkm = new(this);
-            v_DaftarMitra v_DaftarMitra = new(this);
-            v_PengajuanMOA v_PengajuanMOA = new(this);
+            v_DaftarMitra v_DaftarMitra = new(this,this.m_DataMitra,this.m_DataBkp);
+            v_ValidasiMOA v_ValidasiMOA = new(this,m_DataAkunMahasiswa,this.m_DataPengajuanMOA);
             v_PembagianTugas v_PembagianTugas = new(this);
             v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this);
             v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new(this);
             v_ProfilTimMBKM v_ProfilTimMBKM = new(this,data_akun_pengguna);
             this.v_DashboardTimmbkm = v_DashboardTimmbkm;
             this.v_DaftarMitra = v_DaftarMitra;
-            this.v_PengajuanMOA = v_PengajuanMOA;
+            this.v_ValidasiMOA = v_ValidasiMOA;
             this.v_PembagianTugas = v_PembagianTugas;
             this.v_MemvalidasiKonversiSks = v_MemvalidasiKonversiSks;
             this.v_MemvalidasiKonversiNilai = v_MemvalidasiKonversiNilai;
@@ -147,11 +149,12 @@ namespace Baskom.Controller
         }
         public void setDaftarMitra()
         {
+            this.v_DaftarMitra.init();
             this.v_DaftarMitra.Show();
         }
         public void setPengajuanMOA()
         {
-            this.v_PengajuanMOA.Show();
+            this.v_ValidasiMOA.Show();
         }
         public void setPembagianTugas()
         {
@@ -171,10 +174,12 @@ namespace Baskom.Controller
         }
         public void setDataDosen()
         {
+            this.v_DataDosen.init();
             this.v_DataDosen.Show();
         }
         public void setDataMahasiswa()
         {
+            this.v_DataMahasiswa.init();
             this.v_DataMahasiswa.Show();
         }
         public void setPengajuanMitra()
@@ -203,14 +208,17 @@ namespace Baskom.Controller
         }
         public void setTambahMataKuliah()
         {
+            this.v_TambahMataKuliah.init();
             this.v_TambahMataKuliah.Show();
         }
         public void setTambahMitraProgram()
         {
+            this.v_TambahMitraProgram.init();
             this.v_TambahMitraProgram.Show();
         }
         public void setTambahProgramMataKuliah()
         {
+            this.v_TambahProgramMataKuliah.init();
             this.v_TambahProgramMataKuliah.Show();
         }
         public void setLogout()

@@ -10,7 +10,6 @@ namespace Baskom.Model
 {
     class m_DataAkunMahasiswa
     {
-        m_DataProdi m_DataProdi = new();
         private int id_mahasiswa;
         private string nim;
         private string nama_mahasiswa;
@@ -24,50 +23,51 @@ namespace Baskom.Model
 
         public bool cekLoginMahasiswa(string nim, string kata_sandi)
         {
-            string[] data_mahasiswa = getMahasiswaByNim(nim);
-            if (data_mahasiswa[1] == nim)
+            object[] result = getMahasiswaByNim(nim);
+            if ((string)result[1] == nim)
             {
-                if (data_mahasiswa[8] == kata_sandi)
+                if ((string)result[8] == kata_sandi)
                 {
-                    this.id_mahasiswa = int.Parse(data_mahasiswa[0]);
-                    this.nim = data_mahasiswa[1];
-                    this.nama_mahasiswa = data_mahasiswa[2];
-                    this.tahun_masuk = int.Parse(data_mahasiswa[3]);
-                    this.status_mahasiswa = int.Parse(data_mahasiswa[4]) == 1? true:false;
-                    this.no_wa = data_mahasiswa[5];
-                    this.batch_mbkm = int.Parse(data_mahasiswa[6]);
-                    this.email = data_mahasiswa[7];
-                    this.kata_sandi = data_mahasiswa[8];
-                    this.id_prodi = int.Parse(data_mahasiswa[9]);
+                    this.id_mahasiswa = (int)result[0];
+                    this.nim = (string)result[1];
+                    this.nama_mahasiswa = (string)result[2];
+                    this.tahun_masuk = (int)result[3];
+                    this.status_mahasiswa = (int)result[4] == 1? true:false;
+                    this.no_wa = (string)result[5];
+                    this.batch_mbkm = (int)result[6];
+                    this.email = (string)result[7];
+                    this.kata_sandi = (string)result[8];
+                    this.id_prodi = (int)result[9];
                     return true;
                 }
                 return false;
             }
             return false;
         }
-        public string[] getMahasiswaByNim(string nim)
+        public object[] getMahasiswaByNim(string nim)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Mahasiswa\" WHERE nim = '{nim}'");
-            string[] result = new string[10];
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result[0] = reader[0].ToString();
-                result[1] = reader[1].ToString();
-                result[2] = reader[2].ToString();
-                result[3] = reader[3].ToString();
-                result[4] = reader[4].ToString();
-                result[5] = reader[5].ToString();
-                result[6] = reader[6].ToString();
-                result[7] = reader[7].ToString();
-                result[8] = reader[8].ToString();
-                result[9] = reader[9].ToString();
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
+                result[4] = reader[4];
+                result[5] = reader[5];
+                result[6] = reader[6];
+                result[7] = reader[7];
+                result[8] = reader[8];
+                result[9] = reader[9];
             }
             reader.Close();
             return result;
         }
-        public List<object> getAllMahasiswa()
+        public List<object[]> getAllMahasiswa()
         {
-            List<object> result = new List<object>();
+            List<object[]> result = new List<object[]>();
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Mahasiswa\";");
             int field_count = reader.FieldCount;
             while (reader.Read())
@@ -90,7 +90,8 @@ namespace Baskom.Model
         }
         public object[] getAttributes()
         {
-            string nama_prodi = this.m_DataProdi.getNamaProdiById(id_prodi);
+            m_DataProdi m_DataProdi = new();
+            string nama_prodi = m_DataProdi.getNamaProdiById(id_prodi);
             object[] result = new object[10];
             result[0] = this.id_mahasiswa;
             result[1] = this.nim;

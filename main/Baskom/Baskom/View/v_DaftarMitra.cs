@@ -8,22 +8,34 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Baskom.Controller;
+using Baskom.Model;
 
 namespace Baskom.View
 {
     partial class v_DaftarMitra : Form
     {
         private c_Dashboard c_Dashboard;
-        public v_DaftarMitra(c_Dashboard c_Dashboard)
+        private c_DaftarMitra c_DaftarMitra;
+
+        public v_DaftarMitra(c_Dashboard c_Dashboard, m_DataMitra m_DataMitra, m_DataBkp m_DataBkp)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.c_DaftarMitra = new c_DaftarMitra(m_DataMitra, m_DataBkp);
+            this.init();
         }
-
+        public void init()
+        {
+            tbl_daftarmitra.Rows.Clear();
+            List<object[]> data = this.c_DaftarMitra.initDataGridView();
+            foreach (object[] item in data)
+            {
+                tbl_daftarmitra.Rows.Add(item[0], item[1], item[2]);
+            }
+        }
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setLogout();
+            //this
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,6 +88,11 @@ namespace Baskom.View
         {
             this.Close();
             c_Dashboard.setLogout();
+        }
+
+        private void tbl_daftarmitra_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

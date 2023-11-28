@@ -9,9 +9,9 @@ namespace Baskom.Model
 {
     class m_DataMataKuliah
     {
-        public List<object> getAllMataKuliah()
+        public List<object[]> getAllMataKuliah()
         {
-            List<object> result = new List<object>();
+            List<object[]> result = new List<object[]>();
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mata_Kuliah\";");
             int field_count = reader.FieldCount;
             while (reader.Read())
@@ -31,30 +31,32 @@ namespace Baskom.Model
             string query = $"INSERT INTO \"Data_Mata_Kuliah\" (kode_matkul, nama_matkul, sks) VALUES ('{matkul[0]}','{matkul[1]}',{matkul[2]});";
             Database.Database.sendData(query);
         }
-        public List<object> getMataKuliahById(int id_matkul)
+        public object[] getMataKuliahById(int id_matkul)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mata_Kuliah\" WHERE id_matkul = {id_matkul};");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
-                result.Add(reader[2]);
-                result.Add(reader[3]);
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
             }
             reader.Close();
             return result;
         }
-        public List<object> getMataKuliahByNama(string nama_matkul)
+        public object[] getMataKuliahByNama(string nama_matkul)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mata_Kuliah\" WHERE nama_matkul = '{nama_matkul}';");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
-                result.Add(reader[2]);
-                result.Add(reader[3]);
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
             }
             reader.Close();
             return result;

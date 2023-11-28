@@ -16,9 +16,8 @@ namespace Baskom.View
     {
         private c_Dashboard c_Dashboard;
         private c_TambahProgramMataKuliah c_TambahProgramMataKuliah;
-        private List<object> matkul = new List<object>();
-        private List<object> detail_program = new List<object>();
-        private List<object> dropdown_matkul = new List<object>();
+        private List<object> detail_program = new();
+        private List<object> dropdown_matkul = new();
         public v_TambahProgramMataKuliah(c_Dashboard c_Dashboard, m_DataMataKuliah m_DataMataKuliah, m_DataProgram m_DataProgram, m_DataDetailProgram m_DataDetailProgram)
         {
             InitializeComponent();
@@ -32,14 +31,14 @@ namespace Baskom.View
             cbx_matakuliah.DataSource = null;
             tbl_daftarprogram.Rows.Clear();
 
-            this.detail_program = c_TambahProgramMataKuliah.initDetailProgram();
-            this.matkul = c_TambahProgramMataKuliah.initMatkul();
+            List<object[]> detail_program = c_TambahProgramMataKuliah.initDetailProgram();
+            List<object[]> matkul = c_TambahProgramMataKuliah.initMatkul();
 
             foreach (object[] item in detail_program)
             {
                 tbl_daftarprogram.Rows.Add(item[0], item[1]);
             }
-            foreach (object[] item in this.matkul)
+            foreach (object[] item in matkul)
             {
                 dropdown_matkul.Add(item[2]);
             }

@@ -17,11 +17,8 @@ namespace Baskom.View
     {
         private c_Dashboard c_Dashboard;
         private c_TambahMitraProgam c_TambahMitraProgam;
-        private List<object> mitra = new List<object>();
-        private List<object> program = new List<object>();
-        private List<object> detail_mitra = new List<object>();
-        private List<object> dropdown_mitra = new List<object>();
-        private List<object> dropdown_program = new List<object>();
+        List<object> dropdown_mitra = new();
+        List<object> dropdown_program = new();
         public v_TambahMitraProgram(c_Dashboard c_Dashboard, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataDetailMitra m_DataDetailMitra)
         {
             InitializeComponent();
@@ -37,25 +34,25 @@ namespace Baskom.View
             cbx_program.DataSource = null;
             tbl_daftarprogrammitra.Rows.Clear();
 
-            this.detail_mitra = c_TambahMitraProgam.initDetailMitra();
-            this.mitra = c_TambahMitraProgam.initMitra();
-            this.program = c_TambahMitraProgam.initProgram();
+            List<object[]> detail_mitra = c_TambahMitraProgam.initDetailMitra();
+            List<object[]> mitra = c_TambahMitraProgam.initMitra();
+            List<object[]> program = c_TambahMitraProgam.initProgram();
 
             foreach (object[] item in detail_mitra)
             {
                 tbl_daftarprogrammitra.Rows.Add(item[1], item[0]);
             }
-            foreach (object[] item in this.mitra)
+            foreach (object[] item in mitra)
             {
                 dropdown_mitra.Add(item[1]);
             }
-            foreach (object[] item in this.program)
+            foreach (object[] item in program)
             {
                 dropdown_program.Add(item[1]);
             }
 
-            cbx_namamitra.DataSource = this.dropdown_mitra;
-            cbx_program.DataSource = this.dropdown_program;
+            cbx_namamitra.DataSource = dropdown_mitra;
+            cbx_program.DataSource = dropdown_program;
         }
         private void label4_Click(object sender, EventArgs e)
         {

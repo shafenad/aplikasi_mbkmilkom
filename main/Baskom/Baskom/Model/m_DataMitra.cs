@@ -9,9 +9,9 @@ namespace Baskom.Model
 {
     class m_DataMitra
     {
-        public List<object> getAllMitra()
+        public List<object[]> getAllMitra()
         {
-            List<object> result = new List<object>();
+            List<object[]> result = new List<object[]>();
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mitra\";");
             int field_count = reader.FieldCount;
             while (reader.Read())
@@ -25,26 +25,32 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
-        public List<object> getMitraById(int id_mitra)
+        public object[] getMitraById(int id_mitra)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mitra\" WHERE id_mitra = {id_mitra};");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
             }
             reader.Close();
             return result;
         }
-        public List<object> getMitraByNama(string nama_mitra)
+        public object[] getMitraByNama(string nama_mitra)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Mitra\" WHERE nama_mitra = '{nama_mitra}';");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
             }
             reader.Close();
             return result;

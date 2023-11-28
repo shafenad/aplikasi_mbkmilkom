@@ -12,7 +12,7 @@ using Baskom.Model;
 
 namespace Baskom.View
 {
-    
+
     partial class v_DashboardMahasiswa : Form
     {
         private c_Dashboard c_Dashboard;

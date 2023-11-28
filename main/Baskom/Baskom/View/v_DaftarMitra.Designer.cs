@@ -57,8 +57,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { berandaToolStripMenuItem, penerimaanMitraToolStripMenuItem, pembagianTugasToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(13, 5, 0, 5);
-            menuStrip1.Size = new Size(1824, 56);
+            menuStrip1.Padding = new Padding(10, 4, 0, 4);
+            menuStrip1.Size = new Size(1403, 43);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             // 
             berandaToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             berandaToolStripMenuItem.Name = "berandaToolStripMenuItem";
-            berandaToolStripMenuItem.Size = new Size(171, 46);
+            berandaToolStripMenuItem.Size = new Size(131, 35);
             berandaToolStripMenuItem.Text = "Dashboard";
             berandaToolStripMenuItem.Click += berandaToolStripMenuItem_Click;
             // 
@@ -75,21 +75,21 @@
             penerimaanMitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { daftarMitraToolStripMenuItem, mitraBaruToolStripMenuItem });
             penerimaanMitraToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             penerimaanMitraToolStripMenuItem.Name = "penerimaanMitraToolStripMenuItem";
-            penerimaanMitraToolStripMenuItem.Size = new Size(251, 46);
+            penerimaanMitraToolStripMenuItem.Size = new Size(191, 35);
             penerimaanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             penerimaanMitraToolStripMenuItem.Click += penerimaanMitraToolStripMenuItem_Click;
             // 
             // daftarMitraToolStripMenuItem
             // 
             daftarMitraToolStripMenuItem.Name = "daftarMitraToolStripMenuItem";
-            daftarMitraToolStripMenuItem.Size = new Size(312, 50);
+            daftarMitraToolStripMenuItem.Size = new Size(234, 40);
             daftarMitraToolStripMenuItem.Text = "Daftar Mitra";
             daftarMitraToolStripMenuItem.Click += daftarMitraToolStripMenuItem_Click;
             // 
             // mitraBaruToolStripMenuItem
             // 
             mitraBaruToolStripMenuItem.Name = "mitraBaruToolStripMenuItem";
-            mitraBaruToolStripMenuItem.Size = new Size(312, 50);
+            mitraBaruToolStripMenuItem.Size = new Size(234, 40);
             mitraBaruToolStripMenuItem.Text = "Validasi MOA";
             mitraBaruToolStripMenuItem.Click += mitraBaruToolStripMenuItem_Click;
             // 
@@ -97,7 +97,7 @@
             // 
             pembagianTugasToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pembagianTugasToolStripMenuItem.Name = "pembagianTugasToolStripMenuItem";
-            pembagianTugasToolStripMenuItem.Size = new Size(256, 46);
+            pembagianTugasToolStripMenuItem.Size = new Size(194, 35);
             pembagianTugasToolStripMenuItem.Text = "Pembagian Tugas";
             pembagianTugasToolStripMenuItem.Click += pembagianTugasToolStripMenuItem_Click;
             // 
@@ -105,7 +105,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(186, 46);
+            konversiSKSToolStripMenuItem.Size = new Size(144, 35);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -113,7 +113,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(195, 46);
+            konversiNilaiToolStripMenuItem.Size = new Size(148, 35);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -122,21 +122,21 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(96, 46);
+            profilToolStripMenuItem.Size = new Size(73, 35);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(270, 40);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(359, 50);
+            logOutToolStripMenuItem.Size = new Size(270, 40);
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
@@ -148,23 +148,23 @@
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 1.030928F));
             tableLayoutPanel1.Controls.Add(label1, 0, 0);
             tableLayoutPanel1.Controls.Add(tbl_daftarmitra, 0, 1);
-            tableLayoutPanel1.Location = new Point(26, 94);
-            tableLayoutPanel1.Margin = new Padding(6, 7, 6, 7);
+            tableLayoutPanel1.Location = new Point(20, 73);
+            tableLayoutPanel1.Margin = new Padding(5, 5, 5, 5);
             tableLayoutPanel1.Name = "tableLayoutPanel1";
             tableLayoutPanel1.RowCount = 2;
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 9.75F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 90.25F));
-            tableLayoutPanel1.Size = new Size(1775, 985);
+            tableLayoutPanel1.Size = new Size(1365, 770);
             tableLayoutPanel1.TabIndex = 1;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Poppins SemiBold", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(6, 0);
-            label1.Margin = new Padding(6, 0, 6, 0);
+            label1.Location = new Point(5, 0);
+            label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(328, 84);
+            label1.Size = new Size(246, 64);
             label1.TabIndex = 0;
             label1.Text = "Daftar Mitra";
             // 
@@ -174,12 +174,13 @@
             tbl_daftarmitra.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tbl_daftarmitra.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             tbl_daftarmitra.Columns.AddRange(new DataGridViewColumn[] { clm_mitra, clm_deskmitra, clm_bkp });
-            tbl_daftarmitra.Location = new Point(6, 103);
-            tbl_daftarmitra.Margin = new Padding(6, 7, 6, 7);
+            tbl_daftarmitra.Location = new Point(5, 80);
+            tbl_daftarmitra.Margin = new Padding(5, 5, 5, 5);
             tbl_daftarmitra.Name = "tbl_daftarmitra";
             tbl_daftarmitra.RowHeadersWidth = 82;
-            tbl_daftarmitra.Size = new Size(1744, 874);
+            tbl_daftarmitra.Size = new Size(1340, 683);
             tbl_daftarmitra.TabIndex = 1;
+            tbl_daftarmitra.CellContentClick += tbl_daftarmitra_CellContentClick;
             // 
             // clm_mitra
             // 
@@ -204,14 +205,14 @@
             // 
             // v_DaftarMitra
             // 
-            AutoScaleDimensions = new SizeF(13F, 32F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1824, 1108);
+            ClientSize = new Size(1403, 820);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(6, 7, 6, 7);
+            Margin = new Padding(5, 5, 5, 5);
             Name = "v_DaftarMitra";
             Text = "Baskom";
             WindowState = FormWindowState.Maximized;

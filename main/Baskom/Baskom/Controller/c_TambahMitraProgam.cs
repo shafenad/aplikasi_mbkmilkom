@@ -12,44 +12,41 @@ namespace Baskom.Controller
         m_DataMitra m_DataMitra;
         m_DataProgram m_DataProgram;
         m_DataDetailMitra m_DataDetailMitra;
-        List<object> mitra = new List<object>();
-        List<object> program = new List<object>();
-        List<object> detail_mitra = new List<object>();
         public c_TambahMitraProgam(m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataDetailMitra m_DataDetailMitra)
         {
             this.m_DataMitra = m_DataMitra;
             this.m_DataProgram = m_DataProgram;
             this.m_DataDetailMitra = m_DataDetailMitra;
         }
-        public List<object> initMitra()
+        public List<object[]> initMitra()
         {
-            this.mitra = this.m_DataMitra.getAllMitra();
-            return this.mitra;
+            List<object[]> mitra = this.m_DataMitra.getAllMitra();
+            return mitra;
         }
-        public List<object> initProgram()
+        public List<object[]> initProgram()
         {
-            this.program = this.m_DataProgram.getAllProgram();
-            return this.program;
+            List<object[]> program = this.m_DataProgram.getAllProgram();
+            return program;
         }
-        public List<object> initDetailMitra()
+        public List<object[]> initDetailMitra()
         {
-            this.detail_mitra = this.m_DataDetailMitra.getAllDetailMitra();
-            foreach (object[] item in this.detail_mitra)
+            List<object[]> detail_mitra = this.m_DataDetailMitra.getAllDetailMitra();
+            foreach (object[] item in detail_mitra)
             {
-                this.program = this.m_DataProgram.getProgramById((int)item[0]);
-                this.mitra = this.m_DataMitra.getMitraById((int)item[1]);
+                object[] program = this.m_DataProgram.getProgramById((int)item[0]);
+                object[] mitra = this.m_DataMitra.getMitraById((int)item[1]);
                 item[0] = program[1];
                 item[1] = mitra[1];
             }
-            return this.detail_mitra;
+            return detail_mitra;
         }
         public string tambahDetailMitraBaru(string nama_program, string nama_mitra)
         {
             string message = "";
-            this.program = this.m_DataProgram.getProgramByNama(nama_program);
-            this.mitra = this.m_DataMitra.getMitraByNama(nama_mitra);
-            this.detail_mitra = this.m_DataDetailMitra.getAllDetailMitra();
-            foreach (object[] item in this.detail_mitra)
+            object[] program = this.m_DataProgram.getProgramByNama(nama_program);
+            object[] mitra = this.m_DataMitra.getMitraByNama(nama_mitra);
+            List<object[]> detail_mitra = this.m_DataDetailMitra.getAllDetailMitra();
+            foreach (object[] item in detail_mitra)
             {
                 if (item[0].ToString() == program[0].ToString() && item[1].ToString() == mitra[0].ToString())
                 {

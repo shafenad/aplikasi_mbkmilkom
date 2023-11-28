@@ -9,7 +9,6 @@ namespace Baskom.Controller
 {
     internal class c_TambahDosenTimmbkm
     {
-        private List<object>? array_data;
         private m_DataAkunTimmbkm m_DataAkunTimmbkm;
         private m_DataAkunDosen m_DataAkunDosen;
         public c_TambahDosenTimmbkm(m_DataAkunTimmbkm m_DataAkunTimmbkm, m_DataAkunDosen m_DataAkunDosen)
@@ -19,9 +18,9 @@ namespace Baskom.Controller
         }
         public string tambahDosenBaru(object[] dosen)
         {
-            this.array_data = this.m_DataAkunDosen.getAllDosen();
+            List<object[]> data_dosen = this.m_DataAkunDosen.getAllDosen();
             string message = "";
-            foreach (object[] item in this.array_data)
+            foreach (object[] item in data_dosen)
             {
                 if (item[1].ToString() == dosen[0].ToString())
                 {
@@ -54,8 +53,8 @@ namespace Baskom.Controller
         }
         public void tambahTimmbkmBaru(object[] dosen)
         {
-            object[] dosen_lama = this.m_DataAkunDosen.getDosenByNidn(dosen[1].ToString());
-            this.m_DataAkunTimmbkm.sendTimmbkm(dosen[1].ToString(),dosen_lama[0].ToString());
+            object[] dosen_lama = this.m_DataAkunDosen.getDosenByNidn((string)dosen[1]);
+            this.m_DataAkunTimmbkm.sendTimmbkm((string)dosen[1],(string)dosen_lama[0]);
         }
     }
 }

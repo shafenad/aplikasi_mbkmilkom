@@ -9,9 +9,9 @@ namespace Baskom.Model
 {
     class m_DataProgram
     {
-        public List<object> getAllProgram()
+        public List<object[]> getAllProgram()
         {
-            List<object> result = new List<object>();
+            List<object[]> result = new List<object[]>();
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Program\";");
             int field_count = reader.FieldCount;
             while (reader.Read())
@@ -24,26 +24,28 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
-        public List<object> getProgramById(int id_program)
+        public object[] getProgramById(int id_program)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Program\" WHERE id_program = {id_program};");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
+                result[0] = reader[0];
+                result[1] = reader[1];
             }
             reader.Close();
             return result;
         }
-        public List<object> getProgramByNama(string nama_program)
+        public object[] getProgramByNama(string nama_program)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Program\" WHERE nama_program = '{nama_program}';");
-            List<object> result = new List<object>();
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result.Add(reader[0]);
-                result.Add(reader[1]);
+                result[0] = reader[0];
+                result[1] = reader[1];
             }
             reader.Close();
             return result;

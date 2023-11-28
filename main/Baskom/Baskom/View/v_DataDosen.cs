@@ -7,20 +7,19 @@ namespace Baskom.View
     {
         c_Dashboard c_Dashboard;
         c_DataDosen c_DataDosen;
-        private List<object> array_data;
 
         public v_DataDosen(c_Dashboard c_Dashboard, m_DataAkunDosen m_DataAkunDosen)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.c_DataDosen = new c_DataDosen(m_DataAkunDosen);
-            this.initDataGridView();
+            this.init();
         }
-        public void initDataGridView()
+        public void init()
         {
             tbl_daftardosenadmin.Rows.Clear();
-            array_data = this.c_DataDosen.initDataGridView();
-            foreach (object[] item in array_data)
+            List<object[]> data_dosen = this.c_DataDosen.initDataGridView();
+            foreach (object[] item in data_dosen)
             {
                 tbl_daftardosenadmin.Rows.Add(item[3], item[1]);
             }
@@ -54,7 +53,7 @@ namespace Baskom.View
         private void button1_Click(object sender, EventArgs e)
         {
             c_Dashboard.setTambahDosenTimmbkm();
-            this.initDataGridView();
+            this.init();
         }
 
         private void Form1_Load(object sender, EventArgs e)

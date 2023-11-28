@@ -10,22 +10,21 @@ namespace Baskom.Controller
 {
     internal class c_TambahMataKuliah
     {
-        private List<object> array_data;
         m_DataMataKuliah m_DataMataKuliah;
         public c_TambahMataKuliah(m_DataMataKuliah m_DataMataKuliah)
         {
             this.m_DataMataKuliah = m_DataMataKuliah;
         }
-        public List<object> initDataGridView()
+        public List<object[]> initDataGridView()
         {
-            List<object> result = this.m_DataMataKuliah.getAllMataKuliah();
+            List<object[]> result = this.m_DataMataKuliah.getAllMataKuliah();
             return result;
         }
         public string tambahMataKuliahBaru(object[] matkul)
         {
-            this.array_data = m_DataMataKuliah.getAllMataKuliah();
+            List<object[]> data_matkul = m_DataMataKuliah.getAllMataKuliah();
             string message = "";
-            foreach (object[] item in this.array_data)
+            foreach (object[] item in data_matkul)
             {
                 if (item[1].ToString() == matkul[0].ToString())
                 {

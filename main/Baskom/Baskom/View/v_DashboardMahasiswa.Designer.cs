@@ -83,7 +83,7 @@
             // 
             pengajuanMitraToolStripMenuItem.Name = "pengajuanMitraToolStripMenuItem";
             pengajuanMitraToolStripMenuItem.Size = new Size(270, 34);
-            pengajuanMitraToolStripMenuItem.Text = "Pengajuan Mitra";
+            pengajuanMitraToolStripMenuItem.Text = "Pengajuan MOA";
             pengajuanMitraToolStripMenuItem.Click += pengajuanMitraToolStripMenuItem_Click;
             // 
             // statusMOAToolStripMenuItem

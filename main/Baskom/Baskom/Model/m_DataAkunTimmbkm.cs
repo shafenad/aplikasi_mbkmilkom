@@ -12,19 +12,19 @@ namespace Baskom.Model
         private string id_timmbkm;
         private string nidn;
         private int timmbkm_id_dosen;
-        private m_DataAkunDosen m_DataAkunDosen = new m_DataAkunDosen();
 
         public bool cekLoginTimmbkm(string nidn, string kata_sandi)
         {
-            string[] timmbkm = getTimmbkmByNidn(nidn);
+            m_DataAkunDosen m_DataAkunDosen = new();
+            object[] result = getTimmbkmByNidn(nidn);
             try
             {
-                object[] dosen = this.m_DataAkunDosen.getDosenById(int.Parse(timmbkm[2]));
+                object[] dosen = m_DataAkunDosen.getDosenById((int)result[2]);
                 if (dosen[6].ToString() == kata_sandi)
                 {
-                    this.id_timmbkm = timmbkm[0];
+                    this.id_timmbkm = (string)result[0];
                     this.nidn = nidn;
-                    this.timmbkm_id_dosen = int.Parse(timmbkm[2]);
+                    this.timmbkm_id_dosen = (int)result[2];
                     return true;
                 }
             }
@@ -34,27 +34,28 @@ namespace Baskom.Model
             }
             return false;
         }
-        public string[] getTimmbkmByNidn(string nidn)
+        public object[] getTimmbkmByNidn(string nidn)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Timmbkm\" WHERE nidn = '{nidn}'");
-            string[] result = new string[3];
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
             while (reader.Read())
             {
-                result[0] = reader[0].ToString();
-                result[1] = reader[1].ToString();
-                result[2] = reader[2].ToString();
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
             }
             reader.Close();
             return result;
         }
         public object[] getDosenAttributes()
         {
+             m_DataAkunDosen m_DataAkunDosen = new();
             return m_DataAkunDosen.getAttributes(this.timmbkm_id_dosen);
         }
         public void sendTimmbkm(string nidn, string id_dosen)
         {
-            string query = $"INSERT INTO \"Data_Akun_Timmbkm\" (nidn,id_dosen) VALUES ('{nidn}',{id_dosen});";
-            Database.Database.sendData(query);
+            Database.Database.sendData($"INSERT INTO \"Data_Akun_Timmbkm\" (nidn,id_dosen) VALUES ('{nidn}',{id_dosen});");
         }
     }
 }
