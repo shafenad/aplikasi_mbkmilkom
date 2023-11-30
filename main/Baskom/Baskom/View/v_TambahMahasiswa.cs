@@ -67,5 +67,10 @@ namespace Baskom.View
         {
 
         }
+
+        private void tbx_katasandimahasiswatambahmhs_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -29,7 +29,7 @@ namespace Baskom.View
             List<object[]> data = this.c_PembagianTugas.initDataGridView();
             foreach (object[] item in data)
             {
-                dataGridView1.Rows.Add(item[0], item[1], item[2], item[3], item[4]);
+                dataGridView1.Rows.Add(item[0], item[1], item[2], item[3], item[4], item[5]);
             }
         }
 

@@ -34,9 +34,6 @@
     <Compile Update="View\v_DetailValidasiKonversiSks.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="View\v_PembagianTugasPIC.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="View\v_PembagianTugas.cs">
       <SubType>Form</SubType>
     </Compile>

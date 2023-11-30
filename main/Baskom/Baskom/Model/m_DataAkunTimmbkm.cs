@@ -48,6 +48,20 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
+        public object[] getTimmbkmById(int id_timmbkm)
+        {
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Akun_Timmbkm\" WHERE id_timmbkm = {id_timmbkm}");
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
+            while (reader.Read())
+            {
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+            }
+            reader.Close();
+            return result;
+        }
         public object[] getDosenAttributes()
         {
              m_DataAkunDosen m_DataAkunDosen = new();

@@ -16,20 +16,22 @@ namespace Baskom.View
     {
         private c_Dashboard c_Dashboard;
         private c_DataMahasiswa c_DataMahasiswa;
-        public v_DataMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa)
+        public v_DataMahasiswa(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm m_DataAkunTimmbkm, m_DataAkunDosen m_DataAkunDosen)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-            this.c_DataMahasiswa = new c_DataMahasiswa(m_DataAkunMahasiswa);
+            this.c_DataMahasiswa = new c_DataMahasiswa(m_DataAkunMahasiswa, m_DataPembagianTugas, m_DataAkunTimmbkm, m_DataAkunDosen);
             this.init();
         }
         public void init()
         {
             tbl_daftarmhsadmin.Rows.Clear();
-            List<object[]> data_mahasiswa = this.c_DataMahasiswa.initDataGridView();
-            foreach (object[] item in data_mahasiswa)
+            List<object[]> data = this.c_DataMahasiswa.initDataGridView();
+            List<string> nama_timmbkm = this.c_DataMahasiswa.getAllNamaTimmbkm();
+            PIC.DataSource = nama_timmbkm;
+            foreach (object[] item in data)
             {
-                tbl_daftarmhsadmin.Rows.Add(item[2], item[1]);
+                tbl_daftarmhsadmin.Rows.Add(item[0], item[1]);
             }
         }
 
