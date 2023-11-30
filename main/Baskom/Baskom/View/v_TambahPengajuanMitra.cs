@@ -19,11 +19,11 @@ namespace Baskom.View
         private c_TambahPengajuanMitra c_TambahPengajuanMitra;
         private object[] data_mahasiswa;
         private bool available = false;
-        public v_TambahPengajuanMitra(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna, m_DataPengajuanMitra m_DataPengajuanMitra)
+        public v_TambahPengajuanMitra(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna, m_DataPengajuanMitra m_DataPengajuanMitra, m_Data_Status_Validasi_Mitra m_Data_Status_Validasi_Mitra)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-            this.c_TambahPengajuanMitra = new c_TambahPengajuanMitra(m_DataPengajuanMitra);
+            this.c_TambahPengajuanMitra = new c_TambahPengajuanMitra(m_DataPengajuanMitra, m_Data_Status_Validasi_Mitra);
             this.data_akun_pengguna = data_akun_pengguna;
             this.data_mahasiswa = data_akun_pengguna.getAttributes();
             this.cekPernahMengajukanBelum();

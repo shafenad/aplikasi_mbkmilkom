@@ -29,6 +29,7 @@ namespace Baskom.Controller
         private m_DataKonversiSks m_DataKonversiSks = new();
         private m_DataKonversiNilai m_DataKonversiNilai = new();
         private m_DataMataKuliahTempuh m_DataMataKuliahTempuh = new();
+        private m_Data_Status_Validasi_Mitra m_Data_Status_Validasi_Mitra = new();
 
         public c_Dashboard(m_DataAkunMahasiswa data_akun_pengguna)
         {
@@ -62,7 +63,7 @@ namespace Baskom.Controller
         public void setStatusMOA()
         {
             v_DashboardMahasiswa v_DashboardMahasiswa = new(this);
-            v_PengajuanMOA v_PengajuanMOA = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra);
+            v_PengajuanMOA v_PengajuanMOA = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra,this.m_Data_Status_Validasi_Mitra);
             v_DashboardMahasiswa.Show();
             v_PengajuanMOA.Show();
         }
@@ -73,7 +74,7 @@ namespace Baskom.Controller
         }
         public void setTambahKonversiSks()
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna,  m_DataKonversiSks, m_DataPembagianTugas);
+            v_TambahKonversiSks v_TambahKonversiSks = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna);
             v_TambahKonversiSks.Show();
         }
         public void setTambahKonversiNilai()
@@ -131,7 +132,7 @@ namespace Baskom.Controller
         }
         public void setPenerimaanMitra()
         {
-            v_PenerimaanMitra v_PenerimaanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataBkp, this.m_DataAkunDosen, this.m_DataMitra, this.m_DataPenerimaanMitra);
+            v_PenerimaanMitra v_PenerimaanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataBkp, this.m_DataAkunDosen, this.m_DataMitra, this.m_DataPenerimaanMitra, this.m_DataProgram, this.m_DataDetailMitra);
             v_PenerimaanMitra.Show();
         }
         public void setProfilAdmin()
@@ -196,7 +197,7 @@ namespace Baskom.Controller
         }        
         public void setTambahPengajuanMitra()
         {
-            v_TambahPengajuanMitra v_TambahPengajuanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra);
+            v_TambahPengajuanMitra v_TambahPengajuanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra, this.m_Data_Status_Validasi_Mitra);
             v_TambahPengajuanMitra.Show();
         }
         public void setDetailValidasiKonversiNilai(string nama_mhs, string nim, string nama_mitra)

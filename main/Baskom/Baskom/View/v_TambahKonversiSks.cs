@@ -15,10 +15,43 @@ namespace Baskom.View
     partial class v_TambahKonversiSks : Form
     {
         private c_Dashboard c_Dashboard;
-        public v_TambahKonversiSks(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataKonversiSks m_DataKonversiSks, m_DataPembagianTugas m_DataPembagianTugas)
+        private m_DataAkunMahasiswa data_akun_pengguna;
+        private c_KonversiSks c_KonversiSks;
+        private object[] data_mahasiswa;
+        int jumlah_sks;
+
+        public v_TambahKonversiSks(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
+            this.c_KonversiSks = new c_KonversiSks();
+            this.data_akun_pengguna = data_akun_pengguna;
+            data_mahasiswa = data_akun_pengguna.getAttributes();
+
+            this.setDataAkun();
+        }
+
+        private void setDataAkun()
+        {
+            lbl_namakonversisks.Text = (string)data_mahasiswa[2];
+            lbl_nimkonversisks.Text = (string)data_mahasiswa[1];
+
+            string inisial = (string)data_mahasiswa[2];
+
+            string[] pisahkan = { " " };
+            Int32 count = 2;
+
+            String[] strlist = inisial.Split(pisahkan, count,
+               StringSplitOptions.RemoveEmptyEntries);
+
+            string inisialfiks = "";
+
+            foreach (String s in strlist)
+            {
+                inisialfiks += s[0];
+            }
+
+            lbl_AD.Text = inisialfiks;
         }
 
         private void label1_Click(object sender, EventArgs e)

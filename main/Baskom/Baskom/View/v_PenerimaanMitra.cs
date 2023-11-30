@@ -20,12 +20,11 @@ namespace Baskom.View
         private c_PenerimaanMitra c_PenerimaanMitra;
         private object[] data_mahasiswa;
         private bool available = false;
-        public v_PenerimaanMitra(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna, m_DataBkp m_DataBkp, m_DataAkunDosen m_DataAkunDosen, m_DataMitra m_DataMitra, m_DataPenerimaanMitra m_DataPenerimaanMitra)
+        public v_PenerimaanMitra(c_Dashboard c_Dashboard, m_DataAkunMahasiswa data_akun_pengguna, m_DataBkp m_DataBkp, m_DataAkunDosen m_DataAkunDosen, m_DataMitra m_DataMitra, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataProgram m_DataProgram, m_DataDetailMitra m_DataDetailMitra)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-            this.c_Dashboard = c_Dashboard;
-            this.c_PenerimaanMitra = new c_PenerimaanMitra(m_DataBkp, m_DataAkunDosen, m_DataMitra, m_DataPenerimaanMitra);
+            this.c_PenerimaanMitra = new c_PenerimaanMitra(m_DataBkp, m_DataAkunDosen, m_DataMitra, m_DataPenerimaanMitra, m_DataProgram, m_DataDetailMitra);
             this.data_akun_pengguna = data_akun_pengguna;
             data_mahasiswa = data_akun_pengguna.getAttributes();
             this.setDataAkun();
@@ -52,16 +51,19 @@ namespace Baskom.View
                 cbx_dpa.Enabled = false;
                 cbx_mitra.Enabled = false;
                 cbx_pkl.Enabled = false;
+                cmbprogrampengajuanmitra.Enabled = false;
                 tbx_nowa.Enabled = false;
                 tbx_bukti.Enabled = false;
                 tbx_sks.Enabled = false;
 
-                object[] data_bkp = c_PenerimaanMitra.getDataBKPbyId((int)mitra_mahasiswa[6]);
+                object[] data_bkp = c_PenerimaanMitra.getDataBKPbyId((int)mitra_mahasiswa[5]);
                 object[] data_mitra = c_PenerimaanMitra.getMitrabyId((int)mitra_mahasiswa[8]);
                 object[] data_dpa = c_PenerimaanMitra.getDPAbyId((int)mitra_mahasiswa[7]);
+                object[] data_program = c_PenerimaanMitra.getDataProgramById((int)mitra_mahasiswa[9]);
                 cbx_bkp.Text = (string)data_bkp[1];
                 cbx_dpa.Text = (string)data_dpa[3];
                 cbx_mitra.Text = (string)data_mitra[1];
+                cmbprogrampengajuanmitra.Text = (string)data_program[1];
 
                 if (Convert.ToInt32(mitra_mahasiswa[1]) == 0)
                 {
@@ -75,7 +77,6 @@ namespace Baskom.View
                 tbx_nowa.Text = (string)mitra_mahasiswa[2];
                 tbx_sks.Text = (string)mitra_mahasiswa[3];
                 tbx_bukti.Text = (string)mitra_mahasiswa[4];
-
             }
             else
             {
@@ -144,6 +145,31 @@ namespace Baskom.View
             }
         }
 
+        public void setComboBoxProgram()
+        {
+            object mitra = cbx_mitra.SelectedItem;
+            object mitraDipilih = cbx_bkp.GetItemText(mitra);
+
+            List<object[]> data_mitra = c_PenerimaanMitra.getAllDataMitra();
+
+            foreach (object[] item in data_mitra)
+            {
+                if ((string)item[1] == (string)mitraDipilih)
+                {
+                    List<int> list_id_program = c_PenerimaanMitra.getIdProgramByIdMitra((int)item[0]);
+
+                    List<object[]> data_program = c_PenerimaanMitra.getDataProgramByIdProgram(list_id_program);
+
+                    cmbprogrampengajuanmitra.Items.Clear();
+                    cmbprogrampengajuanmitra.ResetText();
+                    foreach (object[] item1 in data_program)
+                    {
+                        cmbprogrampengajuanmitra.Items.Add(item1[1]);
+                    }
+                }
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
 
@@ -182,15 +208,22 @@ namespace Baskom.View
             }
             else
             {
-                object[] penerimaan_mitra = new object[8];
+                object[] penerimaan_mitra = new object[9];
 
                 object bkp = cbx_bkp.SelectedItem;
                 object mitra = cbx_mitra.SelectedItem;
                 object dpa = cbx_dpa.SelectedItem;
+                object program = cmbprogrampengajuanmitra.SelectedItem;
 
                 object bkpDipilih = cbx_bkp.GetItemText(bkp);
                 object mitraDipilih = cbx_bkp.GetItemText(mitra);
                 object dpaDipilih = cbx_bkp.GetItemText(dpa);
+                object programDipilih = cmbprogrampengajuanmitra.GetItemText(program);
+
+                if (programDipilih == "")
+                {
+                    this.setComboBoxProgram();
+                }
 
                 if (bkpDipilih.ToString() == "")
                 {
@@ -205,6 +238,11 @@ namespace Baskom.View
                 else if (dpaDipilih.ToString() == "")
                 {
                     string message = "Pilih DPA Yang Tersedia!";
+                    MessageBox.Show(message);
+                }
+                else if (programDipilih.ToString() == "")
+                {
+                    string message = "Pilih Program Yang Tersedia!";
                     MessageBox.Show(message);
                 }
                 else if (tbx_sks.Text == "" || tbx_bukti.Text == "" || tbx_nowa.Text == "")
@@ -243,6 +281,8 @@ namespace Baskom.View
                     List<object[]> data_BKP = c_PenerimaanMitra.getAllDataBKP();
                     List<object[]> data_mitra = c_PenerimaanMitra.getAllDataMitra();
                     List<object[]> data_dosen = c_PenerimaanMitra.getAllDataDosen();
+                    List<object[]> data_program = c_PenerimaanMitra.getAllDataProgram();
+
                     foreach (object[] item in data_BKP)
                     {
                         if ((string)item[1] == (string)bkpDipilih)
@@ -269,6 +309,14 @@ namespace Baskom.View
 
                     penerimaan_mitra[7] = (int)data_mahasiswa[0];
 
+                    foreach (object[] item in data_program)
+                    {
+                        if ((string)item[1] == (string)programDipilih)
+                        {
+                            penerimaan_mitra[8] = item[0];
+                        }
+                    }
+
                     c_PenerimaanMitra.tambahPenerimaanMitra(penerimaan_mitra);
 
                     this.cekDiterimaBelum();
@@ -291,21 +339,6 @@ namespace Baskom.View
         {
 
         }
-
-
-        private void lbl_tambahmitra_Click_1(object sender, EventArgs e)
-        {
-            if (available)
-            {
-                MessageBox.Show("Datamu sudah terdaftar!");
-            }
-            else
-            {
-                this.Hide();
-                c_Dashboard.setTambahPengajuanMitra();
-            }
-        }
-
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -377,6 +410,24 @@ namespace Baskom.View
         private void mitraToolStripMenuItem_Click_2(object sender, EventArgs e)
         {
 
+        }
+
+        private void cmbprogrampengajuanmitra_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (available)
+            {
+                MessageBox.Show("Datamu sudah terdaftar!");
+            }
+            else
+            {
+                this.Hide();
+                c_Dashboard.setTambahPengajuanMitra();
+            }
         }
     }
 }

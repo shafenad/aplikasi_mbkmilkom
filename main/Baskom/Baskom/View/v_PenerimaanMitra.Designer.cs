@@ -323,6 +323,7 @@
             linkLabel1.TabIndex = 17;
             linkLabel1.TabStop = true;
             linkLabel1.Text = "Tambahkan Mitra Yang Belum Ada";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
             // 
             // panel1
             // 
@@ -363,6 +364,7 @@
             cmbprogrampengajuanmitra.Name = "cmbprogrampengajuanmitra";
             cmbprogrampengajuanmitra.Size = new Size(611, 33);
             cmbprogrampengajuanmitra.TabIndex = 0;
+            cmbprogrampengajuanmitra.SelectedIndexChanged += cmbprogrampengajuanmitra_SelectedIndexChanged;
             // 
             // pictureBox1
             // 

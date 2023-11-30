@@ -92,7 +92,7 @@
             // 
             statusMitraToolStripMenuItem.Name = "statusMitraToolStripMenuItem";
             statusMitraToolStripMenuItem.Size = new Size(270, 34);
-            statusMitraToolStripMenuItem.Text = "Pengajuan MOA";
+            statusMitraToolStripMenuItem.Text = "Penerimaan MOA";
             statusMitraToolStripMenuItem.Click += statusMitraToolStripMenuItem_Click;
             // 
             // statusMitraToolStripMenuItem1

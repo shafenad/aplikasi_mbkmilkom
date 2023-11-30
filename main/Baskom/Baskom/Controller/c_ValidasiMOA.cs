@@ -48,7 +48,7 @@ namespace Baskom.Controller
                     false_id.Add((int)data_id[i]);
                 }
             }
-            m_DataPengajuanMitra.updateStatusPengajuanMitra(true_id, false_id);
+            // m_DataPengajuanMitra.updateStatusPengajuanMitra(true_id, false_id);
             return "Data Berhasil Disimpan!";
         }
     }

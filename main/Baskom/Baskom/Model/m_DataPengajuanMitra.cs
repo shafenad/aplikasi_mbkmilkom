@@ -43,10 +43,10 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
-        public void updateStatusPengajuanMitra(List<int> true_id, List<int> false_id)
+        public void updateStatusPengajuanMitra(int id_status, int id_dataPengajuan)
         {
-            Database.Database.sendBindData(true_id, "UPDATE \"Data_Pengajuan_Mitra\" SET status_validasi = 1 WHERE id_pengajuan = ANY(ARRAY [:data])");
-            Database.Database.sendBindData(false_id, "UPDATE \"Data_Pengajuan_Mitra\" SET status_validasi = 0 WHERE id_pengajuan = ANY(ARRAY [:data])");
+            string query = $"UPDATE \"Data_Pengajuan_Mitra\" SET id_status_validasi = {id_status} WHERE id_pengajuan = {id_dataPengajuan}";
+            Database.Database.sendData(query);
         }
         public void sendPengajuan(object[] pengajuan_mitra)
         {
