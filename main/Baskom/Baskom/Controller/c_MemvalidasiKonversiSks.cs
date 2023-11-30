@@ -17,7 +17,7 @@ namespace Baskom.Controller
         m_DataProgram m_DataProgram;
         m_DataPembagianTugas m_DataPembagianTugas;
         object[] data_akun_pengguna;
-        public c_MemvalidasiKonversiSks(m_DataKonversiSks m_DataKonversiSks, m_DataAkunDosen m_DataAkunDosen, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm data_akun_pengguna)
+        public c_MemvalidasiKonversiSks(m_DataKonversiSks m_DataKonversiSks, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm data_akun_pengguna)
         {
             this.m_DataKonversiSks = m_DataKonversiSks;
             this.m_DataAkunMahasiswa = m_DataAkunMahasiswa;

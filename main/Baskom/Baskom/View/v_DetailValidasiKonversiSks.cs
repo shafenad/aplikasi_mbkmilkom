@@ -15,7 +15,7 @@ namespace Baskom.View
     partial class v_DetailValidasiKonversiSks : Form
     {
         c_DetailValidasiKonversiSKS c_DetailValidasiKonversiSKS;
-        public v_DetailValidasiKonversiSks(string nama_mhs, string nim, string nama_mitra,m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataKonversiSks m_DataKonversiSks, m_DataMataKuliah m_DataMataKuliah)
+        public v_DetailValidasiKonversiSks(string nama_mhs, string nim, string nama_mitra, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataKonversiSks m_DataKonversiSks, m_DataMataKuliah m_DataMataKuliah)
         {
             InitializeComponent();
             lbl_NamaOrang.Text = nama_mhs;
@@ -31,7 +31,7 @@ namespace Baskom.View
             foreach (object[] item in data)
             {
                 bool status_validasi = (Convert.ToInt32(item[4])) == 1 ? true : false;
-                dataGridView1.Rows.Add(item[0], item[1], item[2], item[3], status_validasi);
+                dataGridView1.Rows.Add(item[0], item[1], item[2], item[3], true);
             }
         }
         private void btn_simpan_Click(object sender, EventArgs e)

@@ -104,7 +104,7 @@ namespace Baskom.Controller
         }
         public void setMemvalidasiKonversiSks()
         {
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this, this.m_DataKonversiSks, this.m_DataAkunDosen, this.m_DataAkunMahasiswa, this.m_DataProdi, this.m_DataPenerimaanMitra, this.m_DataMitra, this.m_DataProgram, this.m_DataPembagianTugas, (m_DataAkunTimmbkm)this.data_akun_pengguna);
+            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this, this.m_DataKonversiSks, this.m_DataAkunMahasiswa, this.m_DataProdi, this.m_DataPenerimaanMitra, this.m_DataMitra, this.m_DataProgram, this.m_DataPembagianTugas, (m_DataAkunTimmbkm)this.data_akun_pengguna);
             v_MemvalidasiKonversiSks.Show();
         }
         public void setMemvalidasiKonversiNilai()
@@ -199,9 +199,9 @@ namespace Baskom.Controller
             v_TambahPengajuanMitra v_TambahPengajuanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra);
             v_TambahPengajuanMitra.Show();
         }
-        public void setDetailValidasiKonversiNilai(string nama_mhs, string nim, string nama_mitra)
+        public void setDetailValidasiKonversiNilai(string nama_mhs, string nim, string nama_mitra, string prodi,string program)
         {
-            v_DetailValidasiKonversiNilai v_DetailValidasiKonversiNilai = new(nama_mhs, nim, nama_mitra);
+            v_DetailValidasiKonversiNilai v_DetailValidasiKonversiNilai = new(nama_mhs, nim, nama_mitra,prodi,program,m_DataAkunMahasiswa,m_DataKonversiNilai,m_DataMataKuliah);
             v_DetailValidasiKonversiNilai.Show();
         }
     }

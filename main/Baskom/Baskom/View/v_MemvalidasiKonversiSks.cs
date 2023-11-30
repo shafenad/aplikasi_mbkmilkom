@@ -16,11 +16,11 @@ namespace Baskom.View
     {
         private c_Dashboard c_Dashboard;
         private c_MemvalidasiKonversiSks c_MemvalidasiKonversiSks;
-        public v_MemvalidasiKonversiSks(c_Dashboard c_Dashboard, m_DataKonversiSks m_DataKonversiSks, m_DataAkunDosen m_DataAkunDosen, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm data_akun_pengguna)
+        public v_MemvalidasiKonversiSks(c_Dashboard c_Dashboard, m_DataKonversiSks m_DataKonversiSks, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm data_akun_pengguna)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
-            this.c_MemvalidasiKonversiSks = new c_MemvalidasiKonversiSks(m_DataKonversiSks, m_DataAkunDosen, m_DataAkunMahasiswa, m_DataProdi, m_DataPenerimaanMitra, m_DataMitra, m_DataProgram, m_DataPembagianTugas, data_akun_pengguna);
+            this.c_MemvalidasiKonversiSks = new c_MemvalidasiKonversiSks(m_DataKonversiSks, m_DataAkunMahasiswa, m_DataProdi, m_DataPenerimaanMitra, m_DataMitra, m_DataProgram, m_DataPembagianTugas, data_akun_pengguna);
             this.init();
         }
         public void init()
@@ -76,7 +76,7 @@ namespace Baskom.View
             int index = e.RowIndex;
             string nama_mhs = (string)dataGridView1.Rows[index].Cells[0].Value;
             string nim = (string)dataGridView1.Rows[index].Cells[1].Value;
-            string nama_mitra = (string)dataGridView1.Rows[index].Cells[2].Value;
+            string nama_mitra = (string)dataGridView1.Rows[index].Cells[3].Value;
             if (e.ColumnIndex == 5) 
             {
                 c_Dashboard.setDetailValidasiKonversiSks(nama_mhs,nim,nama_mitra);

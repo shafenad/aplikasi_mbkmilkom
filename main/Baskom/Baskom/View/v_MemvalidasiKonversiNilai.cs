@@ -52,10 +52,12 @@ namespace Baskom.View
             int index = e.RowIndex;
             string nama_mhs = (string)tbl_konversinilai1.Rows[index].Cells[0].Value;
             string nim = (string)tbl_konversinilai1.Rows[index].Cells[1].Value;
-            string nama_mitra = (string)tbl_konversinilai1.Rows[index].Cells[2].Value;
+            string nama_mitra = (string)tbl_konversinilai1.Rows[index].Cells[3].Value;
+            string prodi = (string)tbl_konversinilai1.Rows[index].Cells[2].Value;
+            string program = (string)tbl_konversinilai1.Rows[index].Cells[4].Value;
             if (e.ColumnIndex == 5)
             {
-                c_Dashboard.setDetailValidasiKonversiNilai(nama_mhs, nim, nama_mitra);
+                c_Dashboard.setDetailValidasiKonversiNilai(nama_mhs, nim, nama_mitra,prodi,program);
             }
         }
 

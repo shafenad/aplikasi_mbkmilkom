@@ -31,7 +31,7 @@ namespace Baskom.Controller
                 items[1] = konversi_sks[2];
                 items[2] = matkul[2];
                 items[3] = matkul[3];
-                items[4] = (bool)konversi_sks[3];
+                items[4] = konversi_sks[3];
                 result.Add(items);
             }
             return result;
