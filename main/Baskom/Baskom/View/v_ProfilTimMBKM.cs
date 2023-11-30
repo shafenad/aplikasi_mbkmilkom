@@ -22,11 +22,11 @@ namespace Baskom.View
             this.c_Dashboard = c_Dashboard;
             this.data_akun_pengguna = data_akun_pengguna;
             object[] data_dosen = data_akun_pengguna.getDosenAttributes();
-            label3.Text = (string)data_dosen[2];
-            label4.Text = (string)data_dosen[0];
-            label6.Text = (string)data_dosen[1];
-            label8.Text = (string)data_dosen[3];
-            label10.Text = (string)data_dosen[4];
+            label3.Text = (string)data_dosen[3];
+            label4.Text = (string)data_dosen[1];
+            label6.Text = (string)data_dosen[2];
+            label8.Text = (string)data_dosen[4];
+            label10.Text = (string)data_dosen[5];
         }
 
         private void lnk_ubahsandi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

@@ -21,6 +21,8 @@ namespace Baskom.Model
                 field_values[1] = reader[1];
                 field_values[2] = reader[2];
                 field_values[3] = reader[3];
+                field_values[4] = reader[4];
+                field_values[5] = reader[5];
                 result.Add(field_values);
             }
             reader.Close();

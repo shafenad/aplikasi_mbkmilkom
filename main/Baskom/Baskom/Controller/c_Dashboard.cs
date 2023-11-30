@@ -125,7 +125,7 @@ namespace Baskom.Controller
         }
         public void setDataMahasiswa()
         {
-            v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa);
+            v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa, this.m_DataPembagianTugas, this.m_DataAkunTimmbkm, this.m_DataAkunDosen);
             v_DataMahasiswa.init();
             v_DataMahasiswa.Show();
         }
@@ -191,7 +191,7 @@ namespace Baskom.Controller
         }
         public void setDetailValidasiKonversiSks(string nama_mhs, string nim, string nama_mitra)
         {
-            v_DetailValidasiKonversiSks v_DetailValidasiKonversiSks = new(nama_mhs, nim, nama_mitra);
+            v_DetailValidasiKonversiSks v_DetailValidasiKonversiSks = new(nama_mhs, nim, nama_mitra,this.m_DataAkunMahasiswa,this.m_DataKonversiSks,this.m_DataMataKuliah);
             v_DetailValidasiKonversiSks.Show();
         }        
         public void setTambahPengajuanMitra()

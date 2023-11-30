@@ -9,7 +9,6 @@ namespace Baskom.Controller
 {
     internal class c_MemvalidasiKonversiSks
     {
-        m_DataAkunDosen m_DataAkunDosen;
         m_DataAkunMahasiswa m_DataAkunMahasiswa;
         m_DataKonversiSks m_DataKonversiSks;
         m_DataProdi m_DataProdi;
@@ -21,7 +20,6 @@ namespace Baskom.Controller
         public c_MemvalidasiKonversiSks(m_DataKonversiSks m_DataKonversiSks, m_DataAkunDosen m_DataAkunDosen, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataPenerimaanMitra m_DataPenerimaanMitra, m_DataMitra m_DataMitra, m_DataProgram m_DataProgram, m_DataPembagianTugas m_DataPembagianTugas, m_DataAkunTimmbkm data_akun_pengguna)
         {
             this.m_DataKonversiSks = m_DataKonversiSks;
-            this.m_DataAkunDosen = m_DataAkunDosen;
             this.m_DataAkunMahasiswa = m_DataAkunMahasiswa;
             this.m_DataProdi = m_DataProdi;
             this.m_DataPenerimaanMitra = m_DataPenerimaanMitra;
@@ -36,13 +34,12 @@ namespace Baskom.Controller
             List<object[]> data_konversi_sks = m_DataKonversiSks.getAllKonversiSks();
             foreach (object[] konversi_sks in data_konversi_sks)
             {
-                object[] pembagian_tugas = m_DataPembagianTugas.getPembagianTugasByIdSks((int)konversi_sks[0]);
-                if ((int)pembagian_tugas[4] == (int)this.data_akun_pengguna[0])
+                object[] mahasiswa = m_DataAkunMahasiswa.getMahasiswaById((int)konversi_sks[5]);
+                object[] pembagian_tugas = m_DataPembagianTugas.getPembagianTugasByIdMhs((int)mahasiswa[0]);
+                if ((int)pembagian_tugas[2] == (int)this.data_akun_pengguna[0])
                 {
                     object[] items = new object[5];
-                    object[] dosen = m_DataAkunDosen.getDosenById((int)konversi_sks[3]);
-                    object[] penerimaan_mitra = m_DataPenerimaanMitra.getPenerimaanMitraByIdMhs((int)konversi_sks[3]);
-                    object[] mahasiswa = m_DataAkunMahasiswa.getMahasiswaById((int)konversi_sks[3]);
+                    object[] penerimaan_mitra = m_DataPenerimaanMitra.getPenerimaanMitraByIdMhs((int)mahasiswa[0]);
                     object[] mitra = m_DataMitra.getMitraById((int)penerimaan_mitra[6]);
                     object[] program = m_DataProgram.getProgramById((int)penerimaan_mitra[9]);
                     string nama_prodi = m_DataProdi.getNamaProdiById((int)mahasiswa[9]);

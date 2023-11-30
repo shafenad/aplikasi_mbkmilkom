@@ -37,13 +37,12 @@ namespace Baskom.Controller
             List<object[]> data_konversi_nilai = m_DataKonversiNilai.getAllKonversiNilai();
             foreach (object[] konversi_nilai in data_konversi_nilai)
             {
-                object[] pembagian_tugas = m_DataPembagianTugas.getPembagianTugasByIdNilai((int)konversi_nilai[0]);
-                if ((int)pembagian_tugas[4] == (int)this.data_akun_pengguna[0])
+                object[] mahasiswa = m_DataAkunMahasiswa.getMahasiswaById((int)konversi_nilai[4]);
+                object[] pembagian_tugas = m_DataPembagianTugas.getPembagianTugasByIdMhs((int)mahasiswa[0]);
+                if ((int)pembagian_tugas[2] == (int)this.data_akun_pengguna[0])
                 {
                     object[] items = new object[5];
-                    object[] dosen = m_DataAkunDosen.getDosenById((int)konversi_nilai[3]);
-                    object[] penerimaan_mitra = m_DataPenerimaanMitra.getPenerimaanMitraByIdMhs((int)konversi_nilai[4]);
-                    object[] mahasiswa = m_DataAkunMahasiswa.getMahasiswaById((int)konversi_nilai[4]);
+                    object[] penerimaan_mitra = m_DataPenerimaanMitra.getPenerimaanMitraByIdMhs((int)mahasiswa[0]);
                     object[] mitra = m_DataMitra.getMitraById((int)penerimaan_mitra[6]);
                     object[] program = m_DataProgram.getProgramById((int)penerimaan_mitra[9]);
                     string nama_prodi = m_DataProdi.getNamaProdiById((int)mahasiswa[9]);
