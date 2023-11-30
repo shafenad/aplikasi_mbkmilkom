@@ -40,7 +40,7 @@ namespace Baskom.View
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setMemvalidasiKonversiNilai();
         }
 
@@ -51,8 +51,8 @@ namespace Baskom.View
 
         private void mitraBaruToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setPengajuanMOA();
+            this.Close();
+            c_Dashboard.setValidasiMOA();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)
@@ -62,32 +62,31 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setProfilTimMBKM();
         }
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardTimmbkm();
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void tbl_daftarmitra_CellContentClick(object sender, DataGridViewCellEventArgs e)

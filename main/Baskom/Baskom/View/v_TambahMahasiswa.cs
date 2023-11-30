@@ -15,10 +15,10 @@ namespace Baskom.View
     partial class v_TambahMahasiswa : Form
     {
         c_TambahMahasiswa c_TambahMahasiswa;
-        public v_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi)
+        public v_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataProdi m_DataProdi, m_DataAkunTimmbkm m_DataAkunTimmbkm)
         {
             InitializeComponent();
-            this.c_TambahMahasiswa = new c_TambahMahasiswa(m_DataAkunMahasiswa, m_DataProdi);
+            this.c_TambahMahasiswa = new c_TambahMahasiswa(m_DataAkunMahasiswa, m_DataProdi, m_DataAkunTimmbkm);
         }
 
         private void label9_Click(object sender, EventArgs e)

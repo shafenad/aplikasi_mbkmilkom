@@ -1,4 +1,5 @@
 ﻿using Baskom.Controller;
+using Baskom.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,7 +15,7 @@ namespace Baskom.View
     partial class v_TambahKonversiSks : Form
     {
         private c_Dashboard c_Dashboard;
-        public v_TambahKonversiSks(c_Dashboard c_Dashboard)
+        public v_TambahKonversiSks(c_Dashboard c_Dashboard, m_DataAkunMahasiswa m_DataAkunMahasiswa, m_DataKonversiSks m_DataKonversiSks, m_DataPembagianTugas m_DataPembagianTugas)
         {
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
@@ -57,7 +58,7 @@ namespace Baskom.View
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliahTempuh();
         }
 
@@ -73,7 +74,7 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardMahasiswa();
         }
 
@@ -104,37 +105,41 @@ namespace Baskom.View
 
         private void pengajuanMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setPengajuanMitra();
+            this.Close();
+            c_Dashboard.setPenerimaanMitra();
         }
 
         private void statusMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setStatusMOA();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahKonversiNilai();
         }
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setProfilMahasiswa();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //this
+        }
+
+        private void lbl_namakonversisks_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

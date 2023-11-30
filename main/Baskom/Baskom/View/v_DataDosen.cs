@@ -63,26 +63,25 @@ namespace Baskom.View
 
         private void akunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDataMahasiswa();
         }
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardAdmin();
         }
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setProfilAdmin();
         }
 
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void profileToolStripMenuItem_Click(object sender, EventArgs e)
@@ -92,7 +91,7 @@ namespace Baskom.View
 
         private void tambagToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliah();
         }
 
@@ -103,25 +102,25 @@ namespace Baskom.View
 
         private void tambahProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahProgram();
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliah();
         }
 
         private void tambahMitraProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMitraProgram();
         }
 
         private void tambahProgramMataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahProgramMataKuliah();
         }
     }

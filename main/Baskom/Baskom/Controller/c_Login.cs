@@ -15,25 +15,25 @@ namespace Baskom.Controller
         private v_LoginMahasiswa v_LoginMahasiswa;
         private v_LoginTimmbkm v_LoginTimmbkm;
 
-        public c_Login (v_Login v_Login)
+        public c_Login ()
         {
-            this.c_Akun = new c_Akun(v_Login);
-            this.v_LoginAdmin = new v_LoginAdmin(v_Login, c_Akun);
-            this.v_LoginTimmbkm = new v_LoginTimmbkm(v_Login, c_Akun);
-            this.v_LoginMahasiswa = new v_LoginMahasiswa(v_Login, c_Akun);
+            this.c_Akun = new c_Akun();
         }
-        public void setLoginAdmin()
+        public void setLoginAdmin(v_Login login)
         {
+            this.v_LoginAdmin = new v_LoginAdmin(c_Akun);
             v_LoginAdmin.Show();
         }
 
-        public void setLoginMahasiswa()
+        public void setLoginMahasiswa(v_Login login)
         {
+            this.v_LoginMahasiswa = new v_LoginMahasiswa(c_Akun);
             v_LoginMahasiswa.Show();
         }
 
-        public void setLoginTimmbkm()
+        public void setLoginTimmbkm(v_Login login)
         {
+            this.v_LoginTimmbkm = new v_LoginTimmbkm(c_Akun);
             v_LoginTimmbkm.Show();
         }
     }

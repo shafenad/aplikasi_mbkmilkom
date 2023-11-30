@@ -11,10 +11,12 @@ namespace Baskom.Controller
     {
         private m_DataAkunMahasiswa m_DataAkunMahasiswa;
         private m_DataProdi m_DataProdi;
-        public c_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa,m_DataProdi m_DataProdi)
+        private m_DataAkunTimmbkm m_DataAkunTimmbkm;
+        public c_TambahMahasiswa(m_DataAkunMahasiswa m_DataAkunMahasiswa,m_DataProdi m_DataProdi, m_DataAkunTimmbkm m_DataAkunTimmbkm)
         {
             this.m_DataAkunMahasiswa = m_DataAkunMahasiswa;
             this.m_DataProdi = m_DataProdi;
+            this.m_DataAkunTimmbkm = m_DataAkunTimmbkm;
         }
 
         public string tambahMahasiswaBaru(object[] mahasiswa)
@@ -41,7 +43,8 @@ namespace Baskom.Controller
             }
             int id_prodi = m_DataProdi.getIdProdiByNama((string)mahasiswa[8]);
             mahasiswa[8] = id_prodi;
-            m_DataAkunMahasiswa.sendMahasiswa(mahasiswa);
+            List<object[]> data_timmbkm = m_DataAkunTimmbkm.getAllTimmbkm();
+            m_DataAkunMahasiswa.sendMahasiswa(mahasiswa,data_timmbkm);
             return message;
         }
     }

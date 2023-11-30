@@ -72,8 +72,8 @@ namespace Baskom.View
 
         private void statusMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setPengajuanMitra();
+            this.Close();
+            c_Dashboard.setPenerimaanMitra();
         }
 
         private void btn_simpannilai_Click(object sender, EventArgs e)
@@ -88,7 +88,7 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setProfilMahasiswa();
         }
 
@@ -99,32 +99,31 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardMahasiswa();
         }
 
         private void statusMitraToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setStatusMOA();
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliahTempuh();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahKonversiSks();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)

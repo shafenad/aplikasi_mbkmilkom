@@ -67,7 +67,7 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardAdmin();
         }
 
@@ -83,13 +83,13 @@ namespace Baskom.View
 
         private void informasiAkunToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setProfilAdmin();
         }
 
         private void tambahMitraProgramToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMitraProgram();
         }
 
@@ -100,26 +100,25 @@ namespace Baskom.View
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliah();
         }
 
         private void akunToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDataDosen();
         }
 
         private void akunMahasiswaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDataMahasiswa();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void btn_tambah_Click(object sender, EventArgs e)

@@ -43,11 +43,11 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             label1 = new Label();
             tbl_statuspengajuanmoa = new DataGridView();
-            btn_simpan = new Button();
             clm_nama = new DataGridViewTextBoxColumn();
             clm_mitra = new DataGridViewTextBoxColumn();
             clm_deskripsi = new DataGridViewTextBoxColumn();
             clm_status = new DataGridViewCheckBoxColumn();
+            btn_simpan = new Button();
             menuStrip1.SuspendLayout();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbl_statuspengajuanmoa).BeginInit();
@@ -167,9 +167,9 @@
             label1.Location = new Point(5, 0);
             label1.Margin = new Padding(5, 0, 5, 0);
             label1.Name = "label1";
-            label1.Size = new Size(217, 40);
+            label1.Size = new Size(409, 40);
             label1.TabIndex = 0;
-            label1.Text = "Daftar Mitra";
+            label1.Text = "Daftar Pengajuan Mitra";
             // 
             // tbl_statuspengajuanmoa
             // 
@@ -185,24 +185,9 @@
             tbl_statuspengajuanmoa.TabIndex = 1;
             tbl_statuspengajuanmoa.CellContentClick += dataGridView1_CellContentClick;
             // 
-            // btn_simpan
-            // 
-            btn_simpan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            btn_simpan.BackColor = SystemColors.MenuHighlight;
-            btn_simpan.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
-            btn_simpan.ForeColor = Color.White;
-            btn_simpan.Location = new Point(968, 744);
-            btn_simpan.Margin = new Padding(5, 6, 5, 6);
-            btn_simpan.Name = "btn_simpan";
-            btn_simpan.Size = new Size(162, 44);
-            btn_simpan.TabIndex = 2;
-            btn_simpan.Text = "Simpan";
-            btn_simpan.UseVisualStyleBackColor = false;
-            btn_simpan.Click += btn_simpan_Click;
-            // 
             // clm_nama
             // 
-            clm_nama.HeaderText = "Nama";
+            clm_nama.HeaderText = "Nama Mahasiswa";
             clm_nama.MinimumWidth = 8;
             clm_nama.Name = "clm_nama";
             clm_nama.ReadOnly = true;
@@ -226,8 +211,22 @@
             clm_status.HeaderText = "Status";
             clm_status.MinimumWidth = 8;
             clm_status.Name = "clm_status";
-            clm_status.ReadOnly = true;
             clm_status.Resizable = DataGridViewTriState.True;
+            // 
+            // btn_simpan
+            // 
+            btn_simpan.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            btn_simpan.BackColor = SystemColors.MenuHighlight;
+            btn_simpan.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_simpan.ForeColor = Color.White;
+            btn_simpan.Location = new Point(968, 744);
+            btn_simpan.Margin = new Padding(5, 6, 5, 6);
+            btn_simpan.Name = "btn_simpan";
+            btn_simpan.Size = new Size(162, 44);
+            btn_simpan.TabIndex = 2;
+            btn_simpan.Text = "Simpan";
+            btn_simpan.UseVisualStyleBackColor = false;
+            btn_simpan.Click += btn_simpan_Click;
             // 
             // v_ValidasiMOA
             // 

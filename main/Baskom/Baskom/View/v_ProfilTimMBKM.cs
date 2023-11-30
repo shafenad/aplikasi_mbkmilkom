@@ -21,12 +21,12 @@ namespace Baskom.View
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.data_akun_pengguna = data_akun_pengguna;
-            object[] array_data = data_akun_pengguna.getDosenAttributes();
-            label3.Text = array_data[2].ToString();
-            label4.Text = array_data[0].ToString();
-            label6.Text = array_data[1].ToString();
-            label8.Text = array_data[3].ToString();
-            label10.Text = array_data[4].ToString();
+            object[] data_dosen = data_akun_pengguna.getDosenAttributes();
+            label3.Text = (string)data_dosen[2];
+            label4.Text = (string)data_dosen[0];
+            label6.Text = (string)data_dosen[1];
+            label8.Text = (string)data_dosen[3];
+            label10.Text = (string)data_dosen[4];
         }
 
         private void lnk_ubahsandi_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -36,43 +36,42 @@ namespace Baskom.View
 
         private void berandaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardTimmbkm();
         }
 
         private void statusPengajuanMOAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setPengajuanMOA();
+            this.Close();
+            c_Dashboard.setValidasiMOA();
         }
 
         private void pembagianTugasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setPembagianTugas();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setMemvalidasiKonversiSks();
         }
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setMemvalidasiKonversiNilai();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void daftarMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDaftarMitra();
         }
 

@@ -44,15 +44,12 @@
             panel3 = new Panel();
             pic_logo = new PictureBox();
             panel2 = new Panel();
-            btn_lihat = new Button();
-            label12 = new Label();
             label10 = new Label();
             label8 = new Label();
             label6 = new Label();
             label4 = new Label();
             label3 = new Label();
             lnk_ubahsandi = new LinkLabel();
-            label13 = new Label();
             label11 = new Label();
             label9 = new Label();
             label7 = new Label();
@@ -190,15 +187,12 @@
             // panel2
             // 
             panel2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            panel2.Controls.Add(btn_lihat);
-            panel2.Controls.Add(label12);
             panel2.Controls.Add(label10);
             panel2.Controls.Add(label8);
             panel2.Controls.Add(label6);
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
             panel2.Controls.Add(lnk_ubahsandi);
-            panel2.Controls.Add(label13);
             panel2.Controls.Add(label11);
             panel2.Controls.Add(label9);
             panel2.Controls.Add(label7);
@@ -210,28 +204,6 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(765, 695);
             panel2.TabIndex = 0;
-            // 
-            // btn_lihat
-            // 
-            btn_lihat.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            btn_lihat.Location = new Point(153, 669);
-            btn_lihat.Margin = new Padding(5, 6, 5, 6);
-            btn_lihat.Name = "btn_lihat";
-            btn_lihat.Size = new Size(125, 46);
-            btn_lihat.TabIndex = 41;
-            btn_lihat.Text = "Lihat";
-            btn_lihat.UseVisualStyleBackColor = true;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            label12.Location = new Point(10, 673);
-            label12.Margin = new Padding(5, 0, 5, 0);
-            label12.Name = "label12";
-            label12.Size = new Size(52, 22);
-            label12.TabIndex = 40;
-            label12.Text = "******";
             // 
             // label10
             // 
@@ -301,18 +273,6 @@
             lnk_ubahsandi.TabStop = true;
             lnk_ubahsandi.Text = "Ubah Kata Sandi";
             lnk_ubahsandi.LinkClicked += lnk_ubahsandi_LinkClicked;
-            // 
-            // label13
-            // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            label13.AutoSize = true;
-            label13.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            label13.Location = new Point(3, 629);
-            label13.Margin = new Padding(5, 0, 5, 0);
-            label13.Name = "label13";
-            label13.Size = new Size(119, 25);
-            label13.TabIndex = 33;
-            label13.Text = "Kata Sandi";
             // 
             // label11
             // 
@@ -425,14 +385,12 @@
         private Panel panel1;
         private Panel panel3;
         private Panel panel2;
-        private Label label12;
         private Label label10;
         private Label label8;
         private Label label6;
         private Label label4;
         private Label label3;
         private LinkLabel lnk_ubahsandi;
-        private Label label13;
         private Label label11;
         private Label label9;
         private Label label7;
@@ -440,6 +398,5 @@
         private Label label2;
         private Label label1;
         private PictureBox pic_logo;
-        private Button btn_lihat;
     }
 }

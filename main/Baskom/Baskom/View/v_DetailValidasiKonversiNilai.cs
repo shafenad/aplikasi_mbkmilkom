@@ -12,9 +12,12 @@ namespace Baskom.View
 {
     public partial class v_DetailValidasiKonversiNilai : Form
     {
-        public v_DetailValidasiKonversiNilai()
+        public v_DetailValidasiKonversiNilai(string nama_mhs, string nim, string nama_mitra)
         {
             InitializeComponent();
+            lbl_nama.Text = nama_mhs;
+            lbl_nim.Text = nim;
+            lbl_mitra.Text = nama_mitra;
         }
 
         private void Form2_Load(object sender, EventArgs e)

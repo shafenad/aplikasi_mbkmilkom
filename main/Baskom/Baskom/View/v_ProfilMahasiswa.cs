@@ -21,14 +21,14 @@ namespace Baskom.View
             InitializeComponent();
             this.c_Dashboard = c_Dashboard;
             this.atribut_data_akun = data_akun_pengguna.getAttributes();
-            lbl_namamahasiswa.Text = atribut_data_akun[2].ToString();
-            lbl_nimmahasiswa.Text = atribut_data_akun[1].ToString();
-            lbl_prodi.Text = atribut_data_akun[9].ToString();
+            lbl_namamahasiswa.Text = (string)atribut_data_akun[2];
+            lbl_nimmahasiswa.Text = (string)atribut_data_akun[1];
+            lbl_prodi.Text = (string)atribut_data_akun[9];
             lbl_thnmasuk.Text = atribut_data_akun[3].ToString();
             lbl_status.Text = (bool)atribut_data_akun[4] ? "Aktif" : "Tidak Aktif";
-            lbl_nowa.Text = atribut_data_akun[5].ToString();
+            lbl_nowa.Text = (string)atribut_data_akun[5];
             lbl_batch.Text = atribut_data_akun[6].ToString();
-            lbl_email.Text = atribut_data_akun[7].ToString();
+            lbl_email.Text = (string)atribut_data_akun[7];
         }
 
         private void label12_Click(object sender, EventArgs e)
@@ -43,7 +43,7 @@ namespace Baskom.View
 
         private void konversiNilaiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahKonversiNilai();
         }
 
@@ -79,38 +79,37 @@ namespace Baskom.View
 
         private void dashboardToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setDashboardMahasiswa();
         }
 
         private void pengajuanMitraToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-            this.Hide();
-            c_Dashboard.setPengajuanMitra();
+            this.Close();
+            c_Dashboard.setPenerimaanMitra();
         }
 
         private void statusMitraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setStatusMOA();
         }
 
         private void mataKuliahToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahMataKuliahTempuh();
         }
 
         private void konversiSKSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             c_Dashboard.setTambahKonversiSks();
         }
 
         private void logOutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void profilToolStripMenuItem_Click(object sender, EventArgs e)

@@ -23,207 +23,186 @@ namespace Baskom.Controller
         private m_DataDetailMitra m_DataDetailMitra = new();
         private m_DataDetailProgram m_DataDetailProgram = new();
         private m_DataBkp m_DataBkp = new();
-        private m_DataPengajuanMOA m_DataPengajuanMOA = new();
-        private v_DashboardMahasiswa v_DashboardMahasiswa;
-        private v_DashboardAdmin v_DashboardAdmin;
-        private v_DashboardTimmbkm v_DashboardTimmbkm;
-        private v_DataDosen v_DataDosen;
-        private v_DataMahasiswa v_DataMahasiswa;
-        private v_DaftarMitra v_DaftarMitra;
-        private v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks;
-        private v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai;
-        private v_PembagianTugas v_PembagianTugas;
-        private v_ValidasiMOA v_ValidasiMOA;
-        private v_ProfilMahasiswa v_ProfilMahasiswa;
-        private v_ProfilTimMBKM v_ProfilTimMBKM;
-        private v_ProfilAdmin v_ProfilAdmin;
-        private v_StatusMOA v_StatusMOA;
-        private v_TambahKonversiNilai v_TambahKonversiNilai;
-        private v_TambahKonversiSks v_TambahKonversiSks;
-        private v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh;
-        private v_PengajuanMitra v_PengajuanMitra;
-        private v_TambahPengajuanMitra v_TambahPengajuanMitra;
-        private v_TambahDosenTimmbkm v_TambahDosenTimmbkm;
-        private v_TambahMahasiswa v_TambahMahasiswa;
-        private v_UbahKataSandiProfil v_UbahKataSandiProfil;
-        private v_TambahProgramMataKuliah v_TambahProgramMataKuliah;
-        private v_TambahMataKuliah v_TambahMataKuliah;
-        private v_TambahMitraProgram v_TambahMitraProgram;
-        public c_Dashboard(v_Login v_Login, m_DataAkunMahasiswa data_akun_pengguna)
+        private m_DataPengajuanMitra m_DataPengajuanMitra = new();
+        private m_DataPembagianTugas m_DataPembagianTugas = new();
+        private m_DataPenerimaanMitra m_DataPenerimaanMitra = new();
+        private m_DataKonversiSks m_DataKonversiSks = new();
+        private m_DataKonversiNilai m_DataKonversiNilai = new();
+        private m_DataMataKuliahTempuh m_DataMataKuliahTempuh = new();
+
+        public c_Dashboard(m_DataAkunMahasiswa data_akun_pengguna)
         {
-            this.v_Login = v_Login;
             this.data_akun_pengguna = data_akun_pengguna;
-            this.v_UbahKataSandiProfil = new v_UbahKataSandiProfil(data_akun_pengguna);
-            v_DashboardMahasiswa v_DashboardMahasiswa = new(this);
-            v_PengajuanMitra v_PengajuanMitra = new(this);
-            v_StatusMOA v_StatusMOA = new(this);
-            v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh = new(this);
-            v_TambahKonversiSks v_TambahKonversiSks = new(this);
-            v_TambahKonversiNilai v_TambahKonversiNilai = new(this);
-            v_ProfilMahasiswa v_ProfilMahasiswa = new(this,data_akun_pengguna);
-            this.v_DashboardMahasiswa = v_DashboardMahasiswa;
-            this.v_PengajuanMitra = v_PengajuanMitra;
-            this.v_StatusMOA = v_StatusMOA;
-            this.v_TambahMataKuliahTempuh = v_TambahMataKuliahTempuh;
-            this.v_TambahKonversiSks = v_TambahKonversiSks;
-            this.v_TambahKonversiNilai = v_TambahKonversiNilai;
-            this.v_ProfilMahasiswa = v_ProfilMahasiswa;
         }
-        public c_Dashboard(v_Login v_Login, m_DataAkunTimmbkm data_akun_pengguna)
+        public c_Dashboard(m_DataAkunTimmbkm data_akun_pengguna)
         {
-            this.v_Login = v_Login;
             this.data_akun_pengguna = data_akun_pengguna;
-            this.v_UbahKataSandiProfil = new v_UbahKataSandiProfil(data_akun_pengguna);
-            v_DashboardTimmbkm v_DashboardTimmbkm = new(this);
-            v_DaftarMitra v_DaftarMitra = new(this,this.m_DataMitra,this.m_DataBkp);
-            v_ValidasiMOA v_ValidasiMOA = new(this,m_DataAkunMahasiswa,this.m_DataPengajuanMOA);
-            v_PembagianTugas v_PembagianTugas = new(this);
-            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this);
-            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new(this);
-            v_ProfilTimMBKM v_ProfilTimMBKM = new(this,data_akun_pengguna);
-            this.v_DashboardTimmbkm = v_DashboardTimmbkm;
-            this.v_DaftarMitra = v_DaftarMitra;
-            this.v_ValidasiMOA = v_ValidasiMOA;
-            this.v_PembagianTugas = v_PembagianTugas;
-            this.v_MemvalidasiKonversiSks = v_MemvalidasiKonversiSks;
-            this.v_MemvalidasiKonversiNilai = v_MemvalidasiKonversiNilai;
-            this.v_ProfilTimMBKM = v_ProfilTimMBKM;
         }
-        public c_Dashboard(v_Login v_Login, m_DataAkunAdmin data_akun_pengguna)
+        public c_Dashboard(m_DataAkunAdmin data_akun_pengguna)
         {
-            this.v_Login = v_Login;
             this.data_akun_pengguna = data_akun_pengguna;
-            this.v_UbahKataSandiProfil = new v_UbahKataSandiProfil(data_akun_pengguna);
-            v_DashboardAdmin v_DashboardAdmin = new(this);
-            v_ProfilAdmin v_ProfilAdmin = new(this,data_akun_pengguna);
-            v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa);
-            v_DataDosen v_DataDosen = new(this, this.m_DataAkunDosen);
-            v_TambahProgramMataKuliah v_TambahProgramMataKuliah = new(this, this.m_DataMataKuliah, this.m_DataProgram, this.m_DataDetailProgram);
-            v_TambahMataKuliah v_TambahMataKuliah = new(this, this.m_DataMataKuliah);
-            v_TambahMitraProgram v_TambahMitraProgram = new(this, this.m_DataMitra, this.m_DataProgram, this.m_DataDetailMitra);
-            v_TambahDosenTimmbkm v_TambahDosenTimmbkm = new(this.m_DataAkunTimmbkm, this.m_DataAkunDosen);
-            v_TambahMahasiswa v_TambahMahasiswa = new(this.m_DataAkunMahasiswa, this.m_DataProdi);
-            this.v_DashboardAdmin = v_DashboardAdmin;
-            this.v_ProfilAdmin = v_ProfilAdmin;
-            this.v_DataMahasiswa = v_DataMahasiswa;
-            this.v_DataDosen = v_DataDosen;
-            this.v_TambahProgramMataKuliah = v_TambahProgramMataKuliah;
-            this.v_TambahMataKuliah = v_TambahMataKuliah;
-            this.v_TambahDosenTimmbkm = v_TambahDosenTimmbkm;
-            this.v_TambahMahasiswa = v_TambahMahasiswa;
-            this.v_TambahMitraProgram = v_TambahMitraProgram;
         }
         public void logout() { }
         public void setProfil(object data_akun_pengguna) { }
         public void setDashboardMahasiswa()
         {
-            this.v_DashboardMahasiswa.Show();
+            v_DashboardMahasiswa v_DashboardMahasiswa = new(this);
+            v_DashboardMahasiswa.Show();
         }
         public void setDashboardAdmin()
         {
-            this.v_DashboardAdmin.Show();
+            v_DashboardAdmin v_DashboardAdmin = new(this);
+            v_DashboardAdmin.Show();
         }
         public void setDashboardTimmbkm()
         {
-            this.v_DashboardTimmbkm.Show();
+            v_DashboardTimmbkm v_DashboardTimmbkm = new(this);
+            v_DashboardTimmbkm.Show();
         }
         public void setStatusMOA()
         {
-            this.v_StatusMOA.Show();
+            v_DashboardMahasiswa v_DashboardMahasiswa = new(this);
+            v_PengajuanMOA v_PengajuanMOA = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra);
+            v_DashboardMahasiswa.Show();
+            v_PengajuanMOA.Show();
         }
         public void setTambahMataKuliahTempuh()
         {
-            this.v_TambahMataKuliahTempuh.Show();
+            v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataMataKuliah, this.m_DataMataKuliahTempuh);
+            v_TambahMataKuliahTempuh.Show();
         }
         public void setTambahKonversiSks()
         {
-            this.v_TambahKonversiSks.Show();
+            v_TambahKonversiSks v_TambahKonversiSks = new(this);
+            v_TambahKonversiSks.Show();
         }
         public void setTambahKonversiNilai()
         {
-            this.v_TambahKonversiNilai.Show();
-        }
+            v_TambahKonversiNilai v_TambahKonversiNilai = new(this);
+            v_TambahKonversiNilai.Show();
+        } 
         public void setProfilMahasiswa()
         {
-            this.v_ProfilMahasiswa.Show();
+            v_ProfilMahasiswa v_ProfilMahasiswa = new(this,(m_DataAkunMahasiswa) data_akun_pengguna);
+            v_ProfilMahasiswa.Show();
         }
         public void setDaftarMitra()
         {
-            this.v_DaftarMitra.init();
-            this.v_DaftarMitra.Show();
+            v_DaftarMitra v_DaftarMitra = new(this, this.m_DataMitra, this.m_DataBkp);
+            v_DaftarMitra.init();
+            v_DaftarMitra.Show();
         }
-        public void setPengajuanMOA()
+        public void setValidasiMOA()
         {
-            this.v_ValidasiMOA.Show();
+            v_ValidasiMOA v_ValidasiMOA = new(this, m_DataAkunMahasiswa, this.m_DataPengajuanMitra);
+            v_ValidasiMOA.Show();
         }
         public void setPembagianTugas()
         {
-            this.v_PembagianTugas.Show();
+            v_PembagianTugas v_PembagianTugas = new(this, this.m_DataPembagianTugas, this.m_DataPenerimaanMitra, this.m_DataAkunMahasiswa, this.m_DataAkunDosen, this.m_DataMitra, this.m_DataProgram, this.m_DataProdi, this.data_akun_pengguna);
+            v_PembagianTugas.Show();
         }
         public void setMemvalidasiKonversiSks()
         {
-            this.v_MemvalidasiKonversiSks.Show();
+            v_MemvalidasiKonversiSks v_MemvalidasiKonversiSks = new(this, this.m_DataKonversiSks, this.m_DataAkunDosen, this.m_DataAkunMahasiswa, this.m_DataProdi, this.m_DataPenerimaanMitra, this.m_DataMitra, this.m_DataProgram, this.m_DataPembagianTugas, (m_DataAkunTimmbkm)this.data_akun_pengguna);
+            v_MemvalidasiKonversiSks.Show();
         }
         public void setMemvalidasiKonversiNilai()
         {
-            this.v_MemvalidasiKonversiNilai.Show();
+            v_MemvalidasiKonversiNilai v_MemvalidasiKonversiNilai = new(this, this.m_DataKonversiNilai, this.m_DataAkunDosen, this.m_DataAkunMahasiswa, this.m_DataProdi, this.m_DataPenerimaanMitra, this.m_DataMitra, this.m_DataProgram, this.m_DataPembagianTugas, (m_DataAkunTimmbkm)this.data_akun_pengguna);
+            v_MemvalidasiKonversiNilai.Show();
         }
         public void setProfilTimMBKM()
         {
-            this.v_ProfilTimMBKM.Show();
+            v_ProfilTimMBKM v_ProfilTimMBKM = new(this, (m_DataAkunTimmbkm)data_akun_pengguna);
+            v_ProfilTimMBKM.Show();
         }
         public void setDataDosen()
         {
-            this.v_DataDosen.init();
-            this.v_DataDosen.Show();
+            v_DataDosen v_DataDosen = new(this, this.m_DataAkunDosen);
+            v_DataDosen.init();
+            v_DataDosen.Show();
         }
         public void setDataMahasiswa()
         {
-            this.v_DataMahasiswa.init();
-            this.v_DataMahasiswa.Show();
+            v_DataMahasiswa v_DataMahasiswa = new(this, this.m_DataAkunMahasiswa);
+            v_DataMahasiswa.init();
+            v_DataMahasiswa.Show();
         }
-        public void setPengajuanMitra()
+        public void setPenerimaanMitra()
         {
-            this.v_PengajuanMitra.Show();
+            v_PenerimaanMitra v_PenerimaanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataBkp, this.m_DataAkunDosen, this.m_DataMitra, this.m_DataPenerimaanMitra);
+            v_PenerimaanMitra.Show();
         }
         public void setProfilAdmin()
         {
-            this.v_ProfilAdmin.Show();
+            v_ProfilAdmin v_ProfilAdmin = new(this, (m_DataAkunAdmin)data_akun_pengguna);
+            v_ProfilAdmin.Show();
         }
         public void setUbahKataSandiProfil()
         {
-            this.v_UbahKataSandiProfil.ShowDialog();
+            v_UbahKataSandiProfil v_UbahKataSandiProfil;
+            if (this.data_akun_pengguna.GetType() == typeof(m_DataAkunMahasiswa))
+            {
+                v_UbahKataSandiProfil = new v_UbahKataSandiProfil((m_DataAkunMahasiswa)this.data_akun_pengguna);
+            }            
+            else if (this.data_akun_pengguna.GetType() == typeof(m_DataAkunTimmbkm))
+            {
+                v_UbahKataSandiProfil = new v_UbahKataSandiProfil((m_DataAkunTimmbkm)this.data_akun_pengguna);
+            }            
+            else
+            {
+                v_UbahKataSandiProfil = new v_UbahKataSandiProfil((m_DataAkunAdmin)this.data_akun_pengguna);
+            }
+            v_UbahKataSandiProfil.Show();
         }
         public void setTambahDosenTimmbkm()
         {
-            this.v_TambahDosenTimmbkm.ShowDialog();
+            v_TambahDosenTimmbkm v_TambahDosenTimmbkm = new(this.m_DataAkunTimmbkm, this.m_DataAkunDosen);
+            v_TambahDosenTimmbkm.Show();
         }
         public void setTambahMahasiswa()
         {
-            this.v_TambahMahasiswa.ShowDialog();
+            v_TambahMahasiswa v_TambahMahasiswa = new(this.m_DataAkunMahasiswa, this.m_DataProdi, this.m_DataAkunTimmbkm);
+            v_TambahMahasiswa.Show();
         }
         public void setTambahProgram()
         {
-            this.v_TambahProgramMataKuliah.Show();
+            v_TambahProgramMataKuliah v_TambahProgramMataKuliah = new(this, this.m_DataMataKuliah, this.m_DataProgram, this.m_DataDetailProgram);
+            v_TambahProgramMataKuliah.Show();
         }
         public void setTambahMataKuliah()
         {
-            this.v_TambahMataKuliah.init();
-            this.v_TambahMataKuliah.Show();
+            v_TambahMataKuliah v_TambahMataKuliah = new(this, this.m_DataMataKuliah);
+            v_TambahMataKuliah.init();
+            v_TambahMataKuliah.Show();
         }
         public void setTambahMitraProgram()
         {
-            this.v_TambahMitraProgram.init();
-            this.v_TambahMitraProgram.Show();
+            v_TambahMitraProgram v_TambahMitraProgram = new(this, this.m_DataMitra, this.m_DataProgram, this.m_DataDetailMitra);
+            v_TambahMitraProgram.init();
+            v_TambahMitraProgram.Show();
         }
         public void setTambahProgramMataKuliah()
         {
-            this.v_TambahProgramMataKuliah.init();
-            this.v_TambahProgramMataKuliah.Show();
+            v_TambahProgramMataKuliah v_TambahProgramMataKuliah = new(this, this.m_DataMataKuliah, this.m_DataProgram, this.m_DataDetailProgram);
+            v_TambahProgramMataKuliah.init();
+            v_TambahProgramMataKuliah.Show();
         }
-        public void setLogout()
+        public void setDetailValidasiKonversiSks(string nama_mhs, string nim, string nama_mitra)
         {
-            this.v_Login.Show();
+            v_DetailValidasiKonversiSks v_DetailValidasiKonversiSks = new(nama_mhs, nim, nama_mitra);
+            v_DetailValidasiKonversiSks.Show();
+        }        
+        public void setTambahPengajuanMitra()
+        {
+            v_TambahPengajuanMitra v_TambahPengajuanMitra = new(this,(m_DataAkunMahasiswa)this.data_akun_pengguna,this.m_DataPengajuanMitra);
+            v_TambahPengajuanMitra.Show();
+        }
+        public void setDetailValidasiKonversiNilai(string nama_mhs, string nim, string nama_mitra)
+        {
+            v_DetailValidasiKonversiNilai v_DetailValidasiKonversiNilai = new(nama_mhs, nim, nama_mitra);
+            v_DetailValidasiKonversiNilai.Show();
         }
     }
 }

@@ -11,6 +11,21 @@ namespace Baskom.Model
     {
         private int id_prodi;
         private string nama_prodi;
+        public List<object[]> getAllProdi()
+        {
+            List<object[]> result = new List<object[]>();
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Prodi\";");
+            int field_count = reader.FieldCount;
+            while (reader.Read())
+            {
+                object[] field_values = new object[field_count];
+                field_values[0] = reader[0];
+                field_values[1] = reader[1];
+                result.Add(field_values);
+            }
+            reader.Close();
+            return result;
+        }
         public string getNamaProdiById(int id_prodi)
         {
             NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Prodi\" WHERE id_prodi = '{id_prodi}'");
@@ -31,5 +46,6 @@ namespace Baskom.Model
             reader.Close();
             return this.id_prodi;
         }
+
     }
 }

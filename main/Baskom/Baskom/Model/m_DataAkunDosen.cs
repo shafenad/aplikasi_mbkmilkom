@@ -23,7 +23,6 @@ namespace Baskom.Model
                 result[4] = reader[4];
                 result[5] = reader[5];
                 result[6] = reader[6];
-                result[7] = reader[7];
             }
             reader.Close();
             return result;
@@ -69,7 +68,7 @@ namespace Baskom.Model
         {
             object[] result = new object[7];
             object[] dosen = getDosenById(id_dosen);
-            result[0] = dosen[0];
+            result[0] = (int)dosen[0];
             result[1] = dosen[1];
             result[2] = dosen[2];
             result[3] = dosen[3];

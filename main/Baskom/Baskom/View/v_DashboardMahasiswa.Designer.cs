@@ -58,7 +58,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1104, 32);
+            menuStrip1.Size = new Size(1104, 42);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -66,7 +66,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(114, 28);
+            dashboardToolStripMenuItem.Size = new Size(151, 38);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -75,29 +75,29 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pengajuanMitraToolStripMenuItem, statusMOAToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(65, 28);
+            mitraToolStripMenuItem.Size = new Size(86, 38);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
             // pengajuanMitraToolStripMenuItem
             // 
             pengajuanMitraToolStripMenuItem.Name = "pengajuanMitraToolStripMenuItem";
-            pengajuanMitraToolStripMenuItem.Size = new Size(270, 34);
-            pengajuanMitraToolStripMenuItem.Text = "Pengajuan MOA";
+            pengajuanMitraToolStripMenuItem.Size = new Size(359, 44);
+            pengajuanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             pengajuanMitraToolStripMenuItem.Click += pengajuanMitraToolStripMenuItem_Click;
             // 
             // statusMOAToolStripMenuItem
             // 
             statusMOAToolStripMenuItem.Name = "statusMOAToolStripMenuItem";
-            statusMOAToolStripMenuItem.Size = new Size(270, 34);
-            statusMOAToolStripMenuItem.Text = "Status MOA";
+            statusMOAToolStripMenuItem.Size = new Size(359, 44);
+            statusMOAToolStripMenuItem.Text = "Pengajuan MOA";
             statusMOAToolStripMenuItem.Click += statusMOAToolStripMenuItem_Click;
             // 
             // mataKuliahToolStripMenuItem
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(120, 28);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -105,7 +105,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(137, 28);
+            konversiSKSToolStripMenuItem.Size = new Size(181, 38);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -113,7 +113,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(136, 28);
+            konversiNilaiToolStripMenuItem.Size = new Size(182, 38);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -122,20 +122,20 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(67, 28);
+            profilToolStripMenuItem.Size = new Size(89, 38);
             profilToolStripMenuItem.Text = "Profil";
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(228, 34);
+            informasiAkunToolStripMenuItem.Size = new Size(302, 44);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(228, 34);
+            logOutToolStripMenuItem.Size = new Size(302, 44);
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click;
             // 
@@ -187,16 +187,16 @@
             lbl_deskripsidashboard.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             lbl_deskripsidashboard.AutoSize = true;
             lbl_deskripsidashboard.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            lbl_deskripsidashboard.Location = new Point(555, 0);
+            lbl_deskripsidashboard.Location = new Point(558, 0);
             lbl_deskripsidashboard.Name = "lbl_deskripsidashboard";
-            lbl_deskripsidashboard.Size = new Size(544, 524);
+            lbl_deskripsidashboard.Size = new Size(537, 524);
             lbl_deskripsidashboard.TabIndex = 2;
             lbl_deskripsidashboard.Text = resources.GetString("lbl_deskripsidashboard.Text");
             lbl_deskripsidashboard.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // v_DashboardMahasiswa
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(12F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             ClientSize = new Size(1104, 577);

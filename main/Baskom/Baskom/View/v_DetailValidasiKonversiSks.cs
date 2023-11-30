@@ -12,11 +12,13 @@ namespace Baskom.View
 {
     public partial class v_DetailValidasiKonversiSks : Form
     {
-        public v_DetailValidasiKonversiSks()
+        public v_DetailValidasiKonversiSks(string nama_mhs, string nim, string nama_mitra)
         {
             InitializeComponent();
+            lbl_NamaOrang.Text = nama_mhs;
+            lbl_NIM.Text = nim;
+            lbl_namamitra.Text = nama_mitra;
         }
-
         private void btn_simpan_Click(object sender, EventArgs e)
         {
 

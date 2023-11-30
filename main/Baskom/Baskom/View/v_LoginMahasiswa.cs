@@ -15,14 +15,12 @@ namespace Baskom.View
     partial class v_LoginMahasiswa : Form
     {
         private c_Akun c_Akun;
-        private v_Login v_Login;
         private m_DataAkunMahasiswa m_DataAkunMahasiswa = new();
 
-        public v_LoginMahasiswa(v_Login v_Login, c_Akun c_Akun)
+        public v_LoginMahasiswa(c_Akun c_Akun)
         {
             InitializeComponent();
             this.c_Akun = c_Akun;
-            this.v_Login = v_Login;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -34,13 +32,15 @@ namespace Baskom.View
         {
             string nim = tbx_nimlogin.Text;
             string kata_sandi = tbx_katasandilogin.Text;
+            this.Close();
             c_Akun.loginMahasiswa(nim,kata_sandi,this);
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v_Login.Show();
             this.Close();
+            v_Login v_Login = new();
+            v_Login.Show();
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)

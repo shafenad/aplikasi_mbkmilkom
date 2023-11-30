@@ -72,6 +72,7 @@
             profilToolStripMenuItem = new ToolStripMenuItem();
             informasiAkunToolStripMenuItem = new ToolStripMenuItem();
             logOutToolStripMenuItem = new ToolStripMenuItem();
+            toolStripSeparator1 = new ToolStripSeparator();
             lyt_mitra.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
@@ -133,7 +134,7 @@
             cbx_matakuliah.FormattingEnabled = true;
             cbx_matakuliah.Location = new Point(3, 250);
             cbx_matakuliah.Name = "cbx_matakuliah";
-            cbx_matakuliah.Size = new Size(273, 50);
+            cbx_matakuliah.Size = new Size(273, 39);
             cbx_matakuliah.TabIndex = 5;
             // 
             // lbl_matakuliah
@@ -142,7 +143,7 @@
             lbl_matakuliah.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_matakuliah.Location = new Point(5, 214);
             lbl_matakuliah.Name = "lbl_matakuliah";
-            lbl_matakuliah.Size = new Size(184, 48);
+            lbl_matakuliah.Size = new Size(139, 36);
             lbl_matakuliah.TabIndex = 4;
             lbl_matakuliah.Text = "Mata Kuliah";
             // 
@@ -153,7 +154,7 @@
             cbx_program.FormattingEnabled = true;
             cbx_program.Location = new Point(3, 143);
             cbx_program.Name = "cbx_program";
-            cbx_program.Size = new Size(270, 50);
+            cbx_program.Size = new Size(270, 39);
             cbx_program.TabIndex = 3;
             // 
             // lbl_program
@@ -162,7 +163,7 @@
             lbl_program.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_program.Location = new Point(3, 107);
             lbl_program.Name = "lbl_program";
-            lbl_program.Size = new Size(139, 48);
+            lbl_program.Size = new Size(105, 36);
             lbl_program.TabIndex = 2;
             lbl_program.Text = "Program";
             // 
@@ -173,7 +174,7 @@
             cbx_namamitra.FormattingEnabled = true;
             cbx_namamitra.Location = new Point(3, 44);
             cbx_namamitra.Name = "cbx_namamitra";
-            cbx_namamitra.Size = new Size(270, 50);
+            cbx_namamitra.Size = new Size(270, 39);
             cbx_namamitra.TabIndex = 1;
             // 
             // lbl_namamitra
@@ -183,7 +184,7 @@
             lbl_namamitra.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_namamitra.Location = new Point(5, 5);
             lbl_namamitra.Name = "lbl_namamitra";
-            lbl_namamitra.Size = new Size(181, 48);
+            lbl_namamitra.Size = new Size(138, 36);
             lbl_namamitra.TabIndex = 0;
             lbl_namamitra.Text = "Nama Mitra";
             // 
@@ -234,7 +235,7 @@
             lbl_daftarprogrammitra.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_daftarprogrammitra.Location = new Point(3, 3);
             lbl_daftarprogrammitra.Name = "lbl_daftarprogrammitra";
-            lbl_daftarprogrammitra.Size = new Size(307, 48);
+            lbl_daftarprogrammitra.Size = new Size(234, 36);
             lbl_daftarprogrammitra.TabIndex = 0;
             lbl_daftarprogrammitra.Text = "Daftar Program Mitra";
             // 
@@ -286,7 +287,7 @@
             tbx_jumlahsks.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_jumlahsks.Location = new Point(5, 231);
             tbx_jumlahsks.Name = "tbx_jumlahsks";
-            tbx_jumlahsks.Size = new Size(414, 43);
+            tbx_jumlahsks.Size = new Size(414, 34);
             tbx_jumlahsks.TabIndex = 15;
             // 
             // lbl_jumlahsks
@@ -296,7 +297,7 @@
             lbl_jumlahsks.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_jumlahsks.Location = new Point(5, 192);
             lbl_jumlahsks.Name = "lbl_jumlahsks";
-            lbl_jumlahsks.Size = new Size(181, 48);
+            lbl_jumlahsks.Size = new Size(135, 36);
             lbl_jumlahsks.TabIndex = 14;
             lbl_jumlahsks.Text = "Jumlah SKS";
             // 
@@ -305,7 +306,7 @@
             tbx_namamatakuliah.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_namamatakuliah.Location = new Point(5, 136);
             tbx_namamatakuliah.Name = "tbx_namamatakuliah";
-            tbx_namamatakuliah.Size = new Size(414, 43);
+            tbx_namamatakuliah.Size = new Size(414, 34);
             tbx_namamatakuliah.TabIndex = 13;
             // 
             // tbx_kodematakuliah
@@ -313,7 +314,7 @@
             tbx_kodematakuliah.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             tbx_kodematakuliah.Location = new Point(5, 45);
             tbx_kodematakuliah.Name = "tbx_kodematakuliah";
-            tbx_kodematakuliah.Size = new Size(414, 43);
+            tbx_kodematakuliah.Size = new Size(414, 34);
             tbx_kodematakuliah.TabIndex = 12;
             // 
             // lbl_namamatakuliah
@@ -323,7 +324,7 @@
             lbl_namamatakuliah.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_namamatakuliah.Location = new Point(5, 97);
             lbl_namamatakuliah.Name = "lbl_namamatakuliah";
-            lbl_namamatakuliah.Size = new Size(274, 48);
+            lbl_namamatakuliah.Size = new Size(208, 36);
             lbl_namamatakuliah.TabIndex = 9;
             lbl_namamatakuliah.Text = "Nama Mata Kuliah";
             // 
@@ -334,7 +335,7 @@
             lbl_kodematakuliah.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_kodematakuliah.Location = new Point(5, 5);
             lbl_kodematakuliah.Name = "lbl_kodematakuliah";
-            lbl_kodematakuliah.Size = new Size(260, 48);
+            lbl_kodematakuliah.Size = new Size(196, 36);
             lbl_kodematakuliah.TabIndex = 7;
             lbl_kodematakuliah.Text = "Kode Mata Kuliah";
             // 
@@ -387,7 +388,7 @@
             lbl_daftarmatkul.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_daftarmatkul.Location = new Point(3, 5);
             lbl_daftarmatkul.Name = "lbl_daftarmatkul";
-            lbl_daftarmatkul.Size = new Size(275, 48);
+            lbl_daftarmatkul.Size = new Size(209, 36);
             lbl_daftarmatkul.TabIndex = 0;
             lbl_daftarmatkul.Text = "Daftar Mata Kuliah";
             // 
@@ -411,7 +412,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem1, manajemenAkunToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, profilToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(880, 50);
+            menuStrip2.Size = new Size(880, 39);
             menuStrip2.TabIndex = 9;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -419,7 +420,7 @@
             // 
             dashboardToolStripMenuItem1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            dashboardToolStripMenuItem1.Size = new Size(171, 46);
+            dashboardToolStripMenuItem1.Size = new Size(131, 35);
             dashboardToolStripMenuItem1.Text = "Dashboard";
             dashboardToolStripMenuItem1.Click += dashboardToolStripMenuItem1_Click;
             // 
@@ -428,20 +429,20 @@
             manajemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunToolStripMenuItem, akunMahasiswaToolStripMenuItem });
             manajemenAkunToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             manajemenAkunToolStripMenuItem.Name = "manajemenAkunToolStripMenuItem";
-            manajemenAkunToolStripMenuItem.Size = new Size(246, 46);
+            manajemenAkunToolStripMenuItem.Size = new Size(189, 35);
             manajemenAkunToolStripMenuItem.Text = "Manajemen Akun";
             // 
             // akunToolStripMenuItem
             // 
             akunToolStripMenuItem.Name = "akunToolStripMenuItem";
-            akunToolStripMenuItem.Size = new Size(355, 50);
+            akunToolStripMenuItem.Size = new Size(269, 40);
             akunToolStripMenuItem.Text = "Akun Dosen";
             akunToolStripMenuItem.Click += akunToolStripMenuItem_Click;
             // 
             // akunMahasiswaToolStripMenuItem
             // 
             akunMahasiswaToolStripMenuItem.Name = "akunMahasiswaToolStripMenuItem";
-            akunMahasiswaToolStripMenuItem.Size = new Size(355, 50);
+            akunMahasiswaToolStripMenuItem.Size = new Size(269, 40);
             akunMahasiswaToolStripMenuItem.Text = "Akun Mahasiswa";
             akunMahasiswaToolStripMenuItem.Click += akunMahasiswaToolStripMenuItem_Click;
             // 
@@ -450,21 +451,21 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahMitraProgramToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(99, 46);
+            mitraToolStripMenuItem.Size = new Size(76, 35);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click_1;
             // 
             // tambahMitraProgramToolStripMenuItem
             // 
             tambahMitraProgramToolStripMenuItem.Name = "tambahMitraProgramToolStripMenuItem";
-            tambahMitraProgramToolStripMenuItem.Size = new Size(512, 50);
+            tambahMitraProgramToolStripMenuItem.Size = new Size(391, 40);
             tambahMitraProgramToolStripMenuItem.Text = "Tambah Mitra Program";
             tambahMitraProgramToolStripMenuItem.Click += tambahMitraProgramToolStripMenuItem_Click;
             // 
             // tambahProgramMataKuliahToolStripMenuItem
             // 
             tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
-            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(512, 50);
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(391, 40);
             tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
             tambahProgramMataKuliahToolStripMenuItem.Click += tambahProgramMataKuliahToolStripMenuItem_Click;
             // 
@@ -472,7 +473,7 @@
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(178, 46);
+            mataKuliahToolStripMenuItem.Size = new Size(137, 35);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -481,26 +482,32 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(96, 46);
+            profilToolStripMenuItem.Size = new Size(73, 35);
             profilToolStripMenuItem.Text = "Profil";
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(270, 40);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click_1;
             // 
             // logOutToolStripMenuItem
             // 
+            logOutToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { toolStripSeparator1 });
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(359, 50);
+            logOutToolStripMenuItem.Size = new Size(270, 40);
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click_1;
             // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(267, 6);
+            // 
             // v_TambahMataKuliah
             // 
-            AutoScaleDimensions = new SizeF(14F, 42F);
+            AutoScaleDimensions = new SizeF(11F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(880, 558);
             Controls.Add(menuStrip2);
@@ -574,5 +581,6 @@
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
         private DataGridViewTextBoxColumn Column6;
+        private ToolStripSeparator toolStripSeparator1;
     }
 }

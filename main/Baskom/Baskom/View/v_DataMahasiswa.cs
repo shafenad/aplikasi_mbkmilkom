@@ -51,12 +51,7 @@ namespace Baskom.View
 
         private void tbl_daftarmhsadmin_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            //int i = e.RowIndex;
-            //if (e.ColumnIndex ==  2 )
-            //{
-            //    string nim = tbl_daftarmhsadmin.Rows[i].Cells[1].Value.ToString();
 
-            //}
         }
 
         private void akunDosenToolStripMenuItem_Click(object sender, EventArgs e)
@@ -80,7 +75,6 @@ namespace Baskom.View
         private void logoutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
-            c_Dashboard.setLogout();
         }
 
         private void mitraToolStripMenuItem_Click(object sender, EventArgs e)

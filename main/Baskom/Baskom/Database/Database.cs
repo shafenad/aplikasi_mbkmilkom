@@ -31,16 +31,22 @@ namespace Baskom.Database
             NpgsqlDataReader reader = cmd.ExecuteReader();
             return reader;
         }
-        public static void send2BindData(List<object> data_status, List<object> data_id, string query)
+        public static void sendBindData(List<int> data, string query)
         {
-            NpgsqlCommand cmd = new NpgsqlCommand(query);
-            NpgsqlParameter p = new NpgsqlParameter("data_status", NpgsqlDbType.Array | NpgsqlDbType.Text);
-            NpgsqlParameter q = new NpgsqlParameter("data_id", NpgsqlDbType.Array | NpgsqlDbType.Text);
-            p.Value = data_status;
-            q.Value = data_id;
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+            NpgsqlParameter p = new NpgsqlParameter("data", NpgsqlDbType.Array | NpgsqlDbType.Integer);
+            p.Value = data;
             cmd.Parameters.Add(p);
-            cmd.Parameters.Add(q);
             cmd.ExecuteNonQuery();
+        }        
+        public static NpgsqlDataReader getBindData(List<int> data, string query)
+        {
+            NpgsqlCommand cmd = new NpgsqlCommand(query, conn);
+            NpgsqlParameter p = new NpgsqlParameter("data", NpgsqlDbType.Array | NpgsqlDbType.Integer);
+            p.Value = data;
+            cmd.Parameters.Add(p);
+            NpgsqlDataReader reader = cmd.ExecuteReader();
+            return reader;
         }
     }
 }

@@ -15,14 +15,12 @@ namespace Baskom.View
     partial class v_LoginTimmbkm : Form
     {
         private c_Akun c_Akun;
-        private v_Login v_Login;
         private m_DataAkunTimmbkm m_DataAkunTimmbkm = new();
 
-        public v_LoginTimmbkm(v_Login v_Login, c_Akun c_Akun)
+        public v_LoginTimmbkm(c_Akun c_Akun)
         {
             InitializeComponent();
             this.c_Akun = c_Akun;
-            this.v_Login = v_Login;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -34,6 +32,7 @@ namespace Baskom.View
         {
             string nidn = tbx_NIDN.Text;
             string kata_sandi = tbx_katasandi.Text;
+            this.Close();
             c_Akun.loginTimmbkm(nidn, kata_sandi, this);
         }
 
@@ -54,8 +53,9 @@ namespace Baskom.View
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            v_Login.Show();
             this.Close();
+            v_Login v_Login = new();
+            v_Login.Show();
         }
 
         private void pic_logobaskom_Click(object sender, EventArgs e)

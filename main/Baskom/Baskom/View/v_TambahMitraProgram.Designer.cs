@@ -97,7 +97,7 @@
             cbx_namamitra.FormattingEnabled = true;
             cbx_namamitra.Location = new Point(0, 45);
             cbx_namamitra.Name = "cbx_namamitra";
-            cbx_namamitra.Size = new Size(376, 50);
+            cbx_namamitra.Size = new Size(376, 39);
             cbx_namamitra.TabIndex = 8;
             cbx_namamitra.SelectedIndexChanged += cbx_namamitra_SelectedIndexChanged;
             // 
@@ -123,7 +123,7 @@
             cbx_program.FormattingEnabled = true;
             cbx_program.Location = new Point(0, 148);
             cbx_program.Name = "cbx_program";
-            cbx_program.Size = new Size(376, 50);
+            cbx_program.Size = new Size(376, 39);
             cbx_program.TabIndex = 3;
             // 
             // lbl_program
@@ -132,7 +132,7 @@
             lbl_program.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_program.Location = new Point(4, 103);
             lbl_program.Name = "lbl_program";
-            lbl_program.Size = new Size(139, 48);
+            lbl_program.Size = new Size(105, 36);
             lbl_program.TabIndex = 2;
             lbl_program.Text = "Program";
             // 
@@ -143,7 +143,7 @@
             lbl_namamitra.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_namamitra.Location = new Point(5, 5);
             lbl_namamitra.Name = "lbl_namamitra";
-            lbl_namamitra.Size = new Size(181, 48);
+            lbl_namamitra.Size = new Size(138, 36);
             lbl_namamitra.TabIndex = 0;
             lbl_namamitra.Text = "Nama Mitra";
             // 
@@ -188,7 +188,7 @@
             lbl_daftarprogrammitra.Font = new Font("Poppins SemiBold", 10F, FontStyle.Bold, GraphicsUnit.Point);
             lbl_daftarprogrammitra.Location = new Point(3, 3);
             lbl_daftarprogrammitra.Name = "lbl_daftarprogrammitra";
-            lbl_daftarprogrammitra.Size = new Size(307, 48);
+            lbl_daftarprogrammitra.Size = new Size(234, 36);
             lbl_daftarprogrammitra.TabIndex = 0;
             lbl_daftarprogrammitra.Text = "Daftar Program Mitra";
             lbl_daftarprogrammitra.Click += label4_Click;
@@ -213,7 +213,7 @@
             menuStrip2.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem1, manajemenAkunToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, profilToolStripMenuItem });
             menuStrip2.Location = new Point(0, 0);
             menuStrip2.Name = "menuStrip2";
-            menuStrip2.Size = new Size(800, 50);
+            menuStrip2.Size = new Size(800, 39);
             menuStrip2.TabIndex = 8;
             menuStrip2.Text = "menuStrip2";
             // 
@@ -221,7 +221,7 @@
             // 
             dashboardToolStripMenuItem1.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem1.Name = "dashboardToolStripMenuItem1";
-            dashboardToolStripMenuItem1.Size = new Size(171, 46);
+            dashboardToolStripMenuItem1.Size = new Size(131, 35);
             dashboardToolStripMenuItem1.Text = "Dashboard";
             dashboardToolStripMenuItem1.Click += dashboardToolStripMenuItem1_Click;
             // 
@@ -230,20 +230,20 @@
             manajemenAkunToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { akunToolStripMenuItem, akunMahasiswaToolStripMenuItem });
             manajemenAkunToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             manajemenAkunToolStripMenuItem.Name = "manajemenAkunToolStripMenuItem";
-            manajemenAkunToolStripMenuItem.Size = new Size(246, 46);
+            manajemenAkunToolStripMenuItem.Size = new Size(189, 35);
             manajemenAkunToolStripMenuItem.Text = "Manajemen Akun";
             // 
             // akunToolStripMenuItem
             // 
             akunToolStripMenuItem.Name = "akunToolStripMenuItem";
-            akunToolStripMenuItem.Size = new Size(355, 50);
+            akunToolStripMenuItem.Size = new Size(269, 40);
             akunToolStripMenuItem.Text = "Akun Dosen";
             akunToolStripMenuItem.Click += akunToolStripMenuItem_Click;
             // 
             // akunMahasiswaToolStripMenuItem
             // 
             akunMahasiswaToolStripMenuItem.Name = "akunMahasiswaToolStripMenuItem";
-            akunMahasiswaToolStripMenuItem.Size = new Size(355, 50);
+            akunMahasiswaToolStripMenuItem.Size = new Size(269, 40);
             akunMahasiswaToolStripMenuItem.Text = "Akun Mahasiswa";
             akunMahasiswaToolStripMenuItem.Click += akunMahasiswaToolStripMenuItem_Click;
             // 
@@ -252,21 +252,21 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { tambahProgramMitraToolStripMenuItem, tambahProgramMataKuliahToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(99, 46);
+            mitraToolStripMenuItem.Size = new Size(76, 35);
             mitraToolStripMenuItem.Text = "Mitra";
             mitraToolStripMenuItem.Click += mitraToolStripMenuItem_Click;
             // 
             // tambahProgramMitraToolStripMenuItem
             // 
             tambahProgramMitraToolStripMenuItem.Name = "tambahProgramMitraToolStripMenuItem";
-            tambahProgramMitraToolStripMenuItem.Size = new Size(512, 50);
+            tambahProgramMitraToolStripMenuItem.Size = new Size(391, 40);
             tambahProgramMitraToolStripMenuItem.Text = "Tambah Mitra Program";
             tambahProgramMitraToolStripMenuItem.Click += tambahProgramMitraToolStripMenuItem_Click;
             // 
             // tambahProgramMataKuliahToolStripMenuItem
             // 
             tambahProgramMataKuliahToolStripMenuItem.Name = "tambahProgramMataKuliahToolStripMenuItem";
-            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(512, 50);
+            tambahProgramMataKuliahToolStripMenuItem.Size = new Size(391, 40);
             tambahProgramMataKuliahToolStripMenuItem.Text = "Tambah Program Mata Kuliah";
             tambahProgramMataKuliahToolStripMenuItem.Click += tambahProgramMataKuliahToolStripMenuItem_Click;
             // 
@@ -274,7 +274,7 @@
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(178, 46);
+            mataKuliahToolStripMenuItem.Size = new Size(137, 35);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -283,26 +283,27 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Poppins", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(96, 46);
+            profilToolStripMenuItem.Size = new Size(73, 35);
             profilToolStripMenuItem.Text = "Profil";
+            profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
             // informasiAkunToolStripMenuItem
             // 
             informasiAkunToolStripMenuItem.Name = "informasiAkunToolStripMenuItem";
-            informasiAkunToolStripMenuItem.Size = new Size(359, 50);
+            informasiAkunToolStripMenuItem.Size = new Size(270, 40);
             informasiAkunToolStripMenuItem.Text = "Informasi Akun";
             informasiAkunToolStripMenuItem.Click += informasiAkunToolStripMenuItem_Click_1;
             // 
             // logOutToolStripMenuItem
             // 
             logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            logOutToolStripMenuItem.Size = new Size(359, 50);
+            logOutToolStripMenuItem.Size = new Size(270, 40);
             logOutToolStripMenuItem.Text = "Log Out";
             logOutToolStripMenuItem.Click += logOutToolStripMenuItem_Click_1;
             // 
             // v_TambahMitraProgram
             // 
-            AutoScaleDimensions = new SizeF(14F, 42F);
+            AutoScaleDimensions = new SizeF(11F, 31F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 660);
             Controls.Add(menuStrip2);

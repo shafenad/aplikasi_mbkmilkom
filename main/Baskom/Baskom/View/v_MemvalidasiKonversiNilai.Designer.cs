@@ -32,12 +32,6 @@
             tableLayoutPanel1 = new TableLayoutPanel();
             lbl_DftrMahasiswa = new Label();
             tbl_konversinilai1 = new DataGridView();
-            clm_NamaMhs = new DataGridViewTextBoxColumn();
-            clm_nim = new DataGridViewTextBoxColumn();
-            clm_prodi = new DataGridViewTextBoxColumn();
-            clm_mitra = new DataGridViewTextBoxColumn();
-            clm_posisi = new DataGridViewTextBoxColumn();
-            btn_detail = new DataGridViewButtonColumn();
             newToolStripMenuItem = new ToolStripMenuItem();
             openToolStripMenuItem = new ToolStripMenuItem();
             toolStripSeparator = new ToolStripSeparator();
@@ -74,6 +68,12 @@
             profilToolStripMenuItem = new ToolStripMenuItem();
             lihatProfilToolStripMenuItem = new ToolStripMenuItem();
             logoutToolStripMenuItem = new ToolStripMenuItem();
+            clm_NamaMhs = new DataGridViewTextBoxColumn();
+            clm_nim = new DataGridViewTextBoxColumn();
+            clm_prodi = new DataGridViewTextBoxColumn();
+            clm_mitra = new DataGridViewTextBoxColumn();
+            clm_posisi = new DataGridViewTextBoxColumn();
+            btn_detail = new DataGridViewButtonColumn();
             tableLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)tbl_konversinilai1).BeginInit();
             menuStrip1.SuspendLayout();
@@ -123,47 +123,6 @@
             tbl_konversinilai1.Size = new Size(1625, 888);
             tbl_konversinilai1.TabIndex = 1;
             tbl_konversinilai1.CellContentClick += dataGridView1_CellContentClick_1;
-            // 
-            // clm_NamaMhs
-            // 
-            clm_NamaMhs.HeaderText = "Nama";
-            clm_NamaMhs.MinimumWidth = 8;
-            clm_NamaMhs.Name = "clm_NamaMhs";
-            clm_NamaMhs.ReadOnly = true;
-            // 
-            // clm_nim
-            // 
-            clm_nim.HeaderText = "NIM";
-            clm_nim.MinimumWidth = 8;
-            clm_nim.Name = "clm_nim";
-            clm_nim.ReadOnly = true;
-            // 
-            // clm_prodi
-            // 
-            clm_prodi.HeaderText = "Program Studi";
-            clm_prodi.MinimumWidth = 8;
-            clm_prodi.Name = "clm_prodi";
-            clm_prodi.ReadOnly = true;
-            // 
-            // clm_mitra
-            // 
-            clm_mitra.HeaderText = "Nama Mitra";
-            clm_mitra.MinimumWidth = 8;
-            clm_mitra.Name = "clm_mitra";
-            clm_mitra.ReadOnly = true;
-            // 
-            // clm_posisi
-            // 
-            clm_posisi.HeaderText = "Posisi Kegiatan/Tema";
-            clm_posisi.MinimumWidth = 8;
-            clm_posisi.Name = "clm_posisi";
-            clm_posisi.ReadOnly = true;
-            // 
-            // btn_detail
-            // 
-            btn_detail.HeaderText = "Detail";
-            btn_detail.MinimumWidth = 8;
-            btn_detail.Name = "btn_detail";
             // 
             // newToolStripMenuItem
             // 
@@ -341,7 +300,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(13, 5, 0, 5);
-            menuStrip1.Size = new Size(1733, 48);
+            menuStrip1.Size = new Size(1733, 43);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -349,7 +308,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(138, 38);
+            dashboardToolStripMenuItem.Size = new Size(138, 33);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -358,20 +317,20 @@
             penerimaanMitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { daftarMitraToolStripMenuItem, statusPengajuanMOAToolStripMenuItem });
             penerimaanMitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             penerimaanMitraToolStripMenuItem.Name = "penerimaanMitraToolStripMenuItem";
-            penerimaanMitraToolStripMenuItem.Size = new Size(222, 38);
+            penerimaanMitraToolStripMenuItem.Size = new Size(222, 33);
             penerimaanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             // 
             // daftarMitraToolStripMenuItem
             // 
             daftarMitraToolStripMenuItem.Name = "daftarMitraToolStripMenuItem";
-            daftarMitraToolStripMenuItem.Size = new Size(359, 44);
+            daftarMitraToolStripMenuItem.Size = new Size(290, 44);
             daftarMitraToolStripMenuItem.Text = "Daftar Mitra";
             daftarMitraToolStripMenuItem.Click += daftarMitraToolStripMenuItem_Click_1;
             // 
             // statusPengajuanMOAToolStripMenuItem
             // 
             statusPengajuanMOAToolStripMenuItem.Name = "statusPengajuanMOAToolStripMenuItem";
-            statusPengajuanMOAToolStripMenuItem.Size = new Size(359, 44);
+            statusPengajuanMOAToolStripMenuItem.Size = new Size(290, 44);
             statusPengajuanMOAToolStripMenuItem.Text = "Validasi MOA";
             statusPengajuanMOAToolStripMenuItem.Click += statusPengajuanMOAToolStripMenuItem_Click;
             // 
@@ -379,7 +338,7 @@
             // 
             pembagianTugasToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             pembagianTugasToolStripMenuItem.Name = "pembagianTugasToolStripMenuItem";
-            pembagianTugasToolStripMenuItem.Size = new Size(230, 38);
+            pembagianTugasToolStripMenuItem.Size = new Size(230, 33);
             pembagianTugasToolStripMenuItem.Text = "Pembagian Tugas";
             pembagianTugasToolStripMenuItem.Click += pembagianTugasToolStripMenuItem_Click;
             // 
@@ -387,7 +346,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(181, 38);
+            konversiSKSToolStripMenuItem.Size = new Size(181, 33);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -395,7 +354,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(182, 38);
+            konversiNilaiToolStripMenuItem.Size = new Size(182, 33);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -404,7 +363,7 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { lihatProfilToolStripMenuItem, logoutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(89, 38);
+            profilToolStripMenuItem.Size = new Size(89, 33);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
@@ -422,11 +381,52 @@
             logoutToolStripMenuItem.Text = "Logout";
             logoutToolStripMenuItem.Click += logoutToolStripMenuItem_Click;
             // 
+            // clm_NamaMhs
+            // 
+            clm_NamaMhs.HeaderText = "Nama";
+            clm_NamaMhs.MinimumWidth = 8;
+            clm_NamaMhs.Name = "clm_NamaMhs";
+            clm_NamaMhs.ReadOnly = true;
+            // 
+            // clm_nim
+            // 
+            clm_nim.HeaderText = "NIM";
+            clm_nim.MinimumWidth = 8;
+            clm_nim.Name = "clm_nim";
+            clm_nim.ReadOnly = true;
+            // 
+            // clm_prodi
+            // 
+            clm_prodi.HeaderText = "Program Studi";
+            clm_prodi.MinimumWidth = 8;
+            clm_prodi.Name = "clm_prodi";
+            clm_prodi.ReadOnly = true;
+            // 
+            // clm_mitra
+            // 
+            clm_mitra.HeaderText = "Nama Mitra";
+            clm_mitra.MinimumWidth = 8;
+            clm_mitra.Name = "clm_mitra";
+            clm_mitra.ReadOnly = true;
+            // 
+            // clm_posisi
+            // 
+            clm_posisi.HeaderText = "Program";
+            clm_posisi.MinimumWidth = 8;
+            clm_posisi.Name = "clm_posisi";
+            clm_posisi.ReadOnly = true;
+            // 
+            // btn_detail
+            // 
+            btn_detail.HeaderText = "Detail";
+            btn_detail.MinimumWidth = 8;
+            btn_detail.Name = "btn_detail";
+            // 
             // v_MemvalidasiKonversiNilai
             // 
             AutoScaleDimensions = new SizeF(13F, 32F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1733, 1224);
+            ClientSize = new Size(1733, 1050);
             Controls.Add(tableLayoutPanel1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -447,12 +447,6 @@
         private TableLayoutPanel tableLayoutPanel1;
         private Label lbl_DftrMahasiswa;
         private DataGridView tbl_konversinilai1;
-        private DataGridViewTextBoxColumn clm_NamaMhs;
-        private DataGridViewTextBoxColumn clm_nim;
-        private DataGridViewTextBoxColumn clm_prodi;
-        private DataGridViewTextBoxColumn clm_mitra;
-        private DataGridViewTextBoxColumn clm_posisi;
-        private DataGridViewButtonColumn btn_detail;
         private ToolStripMenuItem newToolStripMenuItem;
         private ToolStripMenuItem openToolStripMenuItem;
         private ToolStripSeparator toolStripSeparator;
@@ -489,6 +483,12 @@
         private ToolStripMenuItem profilToolStripMenuItem;
         private ToolStripMenuItem lihatProfilToolStripMenuItem;
         private ToolStripMenuItem logoutToolStripMenuItem;
+        private DataGridViewTextBoxColumn clm_NamaMhs;
+        private DataGridViewTextBoxColumn clm_nim;
+        private DataGridViewTextBoxColumn clm_prodi;
+        private DataGridViewTextBoxColumn clm_mitra;
+        private DataGridViewTextBoxColumn clm_posisi;
+        private DataGridViewButtonColumn btn_detail;
     }
 }
 

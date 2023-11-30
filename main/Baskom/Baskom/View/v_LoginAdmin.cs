@@ -6,14 +6,12 @@ namespace Baskom.View
     partial class v_LoginAdmin : Form
     {
         private c_Akun c_Akun;
-        private v_Login v_Login;
         private m_DataAkunAdmin m_DataAkunAdmin = new();
 
-        public v_LoginAdmin(v_Login v_Login, c_Akun c_Akun)
+        public v_LoginAdmin(c_Akun c_Akun)
         {
             InitializeComponent();
             this.c_Akun = c_Akun;
-            this.v_Login = v_Login;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -36,10 +34,12 @@ namespace Baskom.View
             string nidn = tbx_email.Text;
             string kata_sandi = tbx_katasandi.Text;
             c_Akun.loginAdmin(nidn, kata_sandi,this);
+            this.Close();
         }
 
         private void lnk_loginsebagaiyanglain_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            v_Login v_Login = new();
             v_Login.Show();
             this.Close();
         }

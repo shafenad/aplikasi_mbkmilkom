@@ -65,7 +65,6 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_ProfilAdmin.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_ProfilMahasiswa.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_ProfilTimMBKM.resources
-D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_StatusMOA.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahKonversiNilai.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahKonversiSks.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMataKuliahTempuh.resources
@@ -85,9 +84,10 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DaftarMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMahasiswa.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMataKuliah.resources
-D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PengajuanMitra.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahMitraProgram.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahProgramMataKuliah.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_TambahDosenTimmbkm.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_UbahKataSandiProfil.resources
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_ValidasiMOA.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PengajuanMOA.resources
+D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PenerimaanMitra.resources

@@ -20,13 +20,13 @@ namespace Baskom.Controller
         {
             List<object[]> result = new List<object[]>();
             List<object[]> data_mitra = m_DataMitra.getAllMitra();
-            List<object[]> data_bkp = m_DataBkp.getAllBkp();
-            object[] item = new object[3];
             foreach (object[] mitra in data_mitra)
             {
+                object[] item = new object[3];
+                object[] bkp = m_DataBkp.getBkpById((int)mitra[3]);
                 item[0] = mitra[1];
                 item[1] = mitra[2];
-                item[2] = data_bkp[(int)mitra[3]][1];
+                item[2] = bkp[1];
                 result.Add(item);
             }
             return result;

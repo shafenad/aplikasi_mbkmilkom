@@ -57,14 +57,14 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(9, 3, 0, 3);
-            menuStrip1.Size = new Size(1456, 44);
+            menuStrip1.Size = new Size(1456, 42);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
             // dashboardToolStripMenuItem
             // 
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(149, 38);
+            dashboardToolStripMenuItem.Size = new Size(149, 36);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -72,7 +72,7 @@
             // 
             penerimaanMitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { daftarMitraToolStripMenuItem, pengajuanMOAToolStripMenuItem });
             penerimaanMitraToolStripMenuItem.Name = "penerimaanMitraToolStripMenuItem";
-            penerimaanMitraToolStripMenuItem.Size = new Size(222, 38);
+            penerimaanMitraToolStripMenuItem.Size = new Size(222, 36);
             penerimaanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             penerimaanMitraToolStripMenuItem.Click += penerimaanMitraToolStripMenuItem_Click;
             // 
@@ -93,21 +93,21 @@
             // pembagianTugasToolStripMenuItem
             // 
             pembagianTugasToolStripMenuItem.Name = "pembagianTugasToolStripMenuItem";
-            pembagianTugasToolStripMenuItem.Size = new Size(222, 38);
+            pembagianTugasToolStripMenuItem.Size = new Size(222, 36);
             pembagianTugasToolStripMenuItem.Text = "Pembagian Tugas";
             pembagianTugasToolStripMenuItem.Click += pembagianTugasToolStripMenuItem_Click;
             // 
             // konversiSKSToolStripMenuItem
             // 
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(171, 38);
+            konversiSKSToolStripMenuItem.Size = new Size(171, 36);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
             // konversiNilaiToolStripMenuItem
             // 
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(179, 38);
+            konversiNilaiToolStripMenuItem.Size = new Size(179, 36);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -115,7 +115,7 @@
             // 
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(89, 38);
+            profilToolStripMenuItem.Size = new Size(89, 36);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 

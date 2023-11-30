@@ -68,7 +68,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1137, 42);
+            menuStrip1.Size = new Size(1137, 37);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -76,7 +76,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(151, 38);
+            dashboardToolStripMenuItem.Size = new Size(151, 33);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -85,20 +85,20 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pengajuanMitraToolStripMenuItem, statusMOAToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(86, 38);
+            mitraToolStripMenuItem.Size = new Size(86, 33);
             mitraToolStripMenuItem.Text = "Mitra";
             // 
             // pengajuanMitraToolStripMenuItem
             // 
             pengajuanMitraToolStripMenuItem.Name = "pengajuanMitraToolStripMenuItem";
-            pengajuanMitraToolStripMenuItem.Size = new Size(359, 44);
+            pengajuanMitraToolStripMenuItem.Size = new Size(319, 44);
             pengajuanMitraToolStripMenuItem.Text = "Pengajuan Mitra";
             pengajuanMitraToolStripMenuItem.Click += pengajuanMitraToolStripMenuItem_Click;
             // 
             // statusMOAToolStripMenuItem
             // 
             statusMOAToolStripMenuItem.Name = "statusMOAToolStripMenuItem";
-            statusMOAToolStripMenuItem.Size = new Size(359, 44);
+            statusMOAToolStripMenuItem.Size = new Size(319, 44);
             statusMOAToolStripMenuItem.Text = "Status MOA";
             statusMOAToolStripMenuItem.Click += statusMOAToolStripMenuItem_Click;
             // 
@@ -106,7 +106,7 @@
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(158, 38);
+            mataKuliahToolStripMenuItem.Size = new Size(158, 33);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -114,7 +114,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(181, 38);
+            konversiSKSToolStripMenuItem.Size = new Size(181, 33);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -122,7 +122,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(182, 38);
+            konversiNilaiToolStripMenuItem.Size = new Size(182, 33);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -131,7 +131,7 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(89, 38);
+            profilToolStripMenuItem.Size = new Size(89, 33);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
@@ -183,6 +183,7 @@
             btn_tambah.TabIndex = 2;
             btn_tambah.Text = "Tambah";
             btn_tambah.UseVisualStyleBackColor = true;
+            btn_tambah.Click += btn_tambah_Click;
             // 
             // lbl_matkulygtlhditmph
             // 
