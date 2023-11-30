@@ -20,7 +20,6 @@ namespace Baskom.Model
         private string email;
         private string kata_sandi;
         private int id_prodi;
-        private int id_timmbkm;
 
         public bool cekLoginMahasiswa(string nim, string kata_sandi)
         {
@@ -39,7 +38,6 @@ namespace Baskom.Model
                     this.email = (string)result[7];
                     this.kata_sandi = (string)result[8];
                     this.id_prodi = (int)result[9];
-                    this.id_timmbkm = (int)result[10];
                     return true;
                 }
                 return false;
@@ -63,7 +61,6 @@ namespace Baskom.Model
                 result[7] = reader[7];
                 result[8] = reader[8];
                 result[9] = reader[9];
-                result[10] = reader[10];
             }
             reader.Close();
             return result;
@@ -85,7 +82,6 @@ namespace Baskom.Model
                 result[7] = reader[7];
                 result[8] = reader[8];
                 result[9] = reader[9];
-                result[10] = reader[10];
             }
             reader.Close();
             return result;
@@ -108,7 +104,6 @@ namespace Baskom.Model
                 field_values[7] = reader[7];
                 field_values[8] = reader[8];
                 field_values[9] = reader[9];
-                field_values[10] = reader[10];
                 result.Add(field_values);
             }
             reader.Close();
@@ -129,7 +124,6 @@ namespace Baskom.Model
             result[7] = this.email;
             result[8] = this.kata_sandi;
             result[9] = nama_prodi;
-            result[10] = this.id_timmbkm;
             return result;
         }
         public void sendMahasiswa(object[] mahasiswa, List<object[]> data_timmbkm)

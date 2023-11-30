@@ -29,193 +29,197 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(v_DetailValidasiKonversiSks));
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.lbl_nama = new System.Windows.Forms.Label();
-            this.lbl_NIM = new System.Windows.Forms.Label();
-            this.lbl_Mitra = new System.Windows.Forms.Label();
-            this.lbl_NamaOrang = new System.Windows.Forms.Label();
-            this.lbl_nimmahasiswa = new System.Windows.Forms.Label();
-            this.lbl_namamitra = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Kompetensi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TargetPengembangan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DetailPembelajaran = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SKS = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btn_simpan = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.SuspendLayout();
+            tableLayoutPanel1 = new TableLayoutPanel();
+            lbl_nama = new Label();
+            lbl_NIM = new Label();
+            lbl_Mitra = new Label();
+            lbl_nimmahasiswa = new Label();
+            lbl_namamitra = new Label();
+            lbl_NamaOrang = new Label();
+            panel1 = new Panel();
+            dataGridView1 = new DataGridView();
+            btn_simpan = new Button();
+            Kompetensi = new DataGridViewTextBoxColumn();
+            TargetPengembangan = new DataGridViewTextBoxColumn();
+            DetailPembelajaran = new DataGridViewTextBoxColumn();
+            SKS = new DataGridViewTextBoxColumn();
+            disetujui = new DataGridViewCheckBoxColumn();
+            tableLayoutPanel1.SuspendLayout();
+            panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            SuspendLayout();
             // 
             // tableLayoutPanel1
             // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.56051F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 83.43949F));
-            this.tableLayoutPanel1.Controls.Add(this.lbl_nama, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_NIM, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_Mitra, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_nimmahasiswa, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_namamitra, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.lbl_NamaOrang, 1, 0);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(28, 29);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 3;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 49.12281F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50.87719F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 31F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(740, 109);
-            this.tableLayoutPanel1.TabIndex = 0;
+            tableLayoutPanel1.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tableLayoutPanel1.ColumnCount = 2;
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 16.56051F));
+            tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 83.43949F));
+            tableLayoutPanel1.Controls.Add(lbl_nama, 0, 0);
+            tableLayoutPanel1.Controls.Add(lbl_NIM, 0, 1);
+            tableLayoutPanel1.Controls.Add(lbl_Mitra, 0, 2);
+            tableLayoutPanel1.Controls.Add(lbl_nimmahasiswa, 1, 1);
+            tableLayoutPanel1.Controls.Add(lbl_namamitra, 1, 2);
+            tableLayoutPanel1.Controls.Add(lbl_NamaOrang, 1, 0);
+            tableLayoutPanel1.Location = new Point(31, 36);
+            tableLayoutPanel1.Margin = new Padding(3, 4, 3, 4);
+            tableLayoutPanel1.Name = "tableLayoutPanel1";
+            tableLayoutPanel1.RowCount = 3;
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 49.12281F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 50.87719F));
+            tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 39F));
+            tableLayoutPanel1.Size = new Size(822, 136);
+            tableLayoutPanel1.TabIndex = 0;
             // 
             // lbl_nama
             // 
-            this.lbl_nama.AutoSize = true;
-            this.lbl_nama.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nama.Location = new System.Drawing.Point(3, 0);
-            this.lbl_nama.Name = "lbl_nama";
-            this.lbl_nama.Size = new System.Drawing.Size(88, 36);
-            this.lbl_nama.TabIndex = 0;
-            this.lbl_nama.Text = "Nama ";
+            lbl_nama.AutoSize = true;
+            lbl_nama.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_nama.Location = new Point(3, 0);
+            lbl_nama.Name = "lbl_nama";
+            lbl_nama.Size = new Size(74, 25);
+            lbl_nama.TabIndex = 0;
+            lbl_nama.Text = "Nama ";
             // 
             // lbl_NIM
             // 
-            this.lbl_NIM.AutoSize = true;
-            this.lbl_NIM.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NIM.Location = new System.Drawing.Point(3, 38);
-            this.lbl_NIM.Name = "lbl_NIM";
-            this.lbl_NIM.Size = new System.Drawing.Size(55, 36);
-            this.lbl_NIM.TabIndex = 1;
-            this.lbl_NIM.Text = "NIM";
+            lbl_NIM.AutoSize = true;
+            lbl_NIM.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_NIM.Location = new Point(3, 47);
+            lbl_NIM.Name = "lbl_NIM";
+            lbl_NIM.Size = new Size(51, 25);
+            lbl_NIM.TabIndex = 1;
+            lbl_NIM.Text = "NIM";
             // 
             // lbl_Mitra
             // 
-            this.lbl_Mitra.AutoSize = true;
-            this.lbl_Mitra.Font = new System.Drawing.Font("Poppins Medium", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Mitra.Location = new System.Drawing.Point(3, 77);
-            this.lbl_Mitra.Name = "lbl_Mitra";
-            this.lbl_Mitra.Size = new System.Drawing.Size(72, 32);
-            this.lbl_Mitra.TabIndex = 2;
-            this.lbl_Mitra.Text = "Mitra";
-            // 
-            // lbl_NamaOrang
-            // 
-            this.lbl_NamaOrang.AutoSize = true;
-            this.lbl_NamaOrang.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_NamaOrang.Location = new System.Drawing.Point(125, 0);
-            this.lbl_NamaOrang.Name = "lbl_NamaOrang";
-            this.lbl_NamaOrang.Size = new System.Drawing.Size(173, 31);
-            this.lbl_NamaOrang.TabIndex = 3;
-            this.lbl_NamaOrang.Text = "Auryn Devi Sagita";
+            lbl_Mitra.AutoSize = true;
+            lbl_Mitra.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_Mitra.Location = new Point(3, 96);
+            lbl_Mitra.Name = "lbl_Mitra";
+            lbl_Mitra.Size = new Size(60, 25);
+            lbl_Mitra.TabIndex = 2;
+            lbl_Mitra.Text = "Mitra";
             // 
             // lbl_nimmahasiswa
             // 
-            this.lbl_nimmahasiswa.AutoSize = true;
-            this.lbl_nimmahasiswa.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_nimmahasiswa.Location = new System.Drawing.Point(125, 38);
-            this.lbl_nimmahasiswa.Name = "lbl_nimmahasiswa";
-            this.lbl_nimmahasiswa.Size = new System.Drawing.Size(128, 31);
-            this.lbl_nimmahasiswa.TabIndex = 4;
-            this.lbl_nimmahasiswa.Text = "222410101086";
+            lbl_nimmahasiswa.AutoSize = true;
+            lbl_nimmahasiswa.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_nimmahasiswa.Location = new Point(139, 47);
+            lbl_nimmahasiswa.Name = "lbl_nimmahasiswa";
+            lbl_nimmahasiswa.Size = new Size(130, 22);
+            lbl_nimmahasiswa.TabIndex = 4;
+            lbl_nimmahasiswa.Text = "222410101086";
             // 
             // lbl_namamitra
             // 
-            this.lbl_namamitra.AutoSize = true;
-            this.lbl_namamitra.Font = new System.Drawing.Font("Poppins", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_namamitra.Location = new System.Drawing.Point(125, 77);
-            this.lbl_namamitra.Name = "lbl_namamitra";
-            this.lbl_namamitra.Size = new System.Drawing.Size(122, 31);
-            this.lbl_namamitra.TabIndex = 5;
-            this.lbl_namamitra.Text = "PT. Benakno";
+            lbl_namamitra.AutoSize = true;
+            lbl_namamitra.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_namamitra.Location = new Point(139, 96);
+            lbl_namamitra.Name = "lbl_namamitra";
+            lbl_namamitra.Size = new Size(115, 22);
+            lbl_namamitra.TabIndex = 5;
+            lbl_namamitra.Text = "PT. Benakno";
+            // 
+            // lbl_NamaOrang
+            // 
+            lbl_NamaOrang.AutoSize = true;
+            lbl_NamaOrang.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            lbl_NamaOrang.Location = new Point(139, 0);
+            lbl_NamaOrang.Name = "lbl_NamaOrang";
+            lbl_NamaOrang.Size = new Size(154, 22);
+            lbl_NamaOrang.TabIndex = 3;
+            lbl_NamaOrang.Text = "Auryn Devi Sagita";
             // 
             // panel1
             // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.dataGridView1);
-            this.panel1.Location = new System.Drawing.Point(2, 192);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(796, 199);
-            this.panel1.TabIndex = 1;
+            panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(dataGridView1);
+            panel1.Location = new Point(2, 240);
+            panel1.Margin = new Padding(3, 4, 3, 4);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(884, 249);
+            panel1.TabIndex = 1;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Kompetensi,
-            this.TargetPengembangan,
-            this.DetailPembelajaran,
-            this.SKS});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(793, 196);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // Kompetensi
-            // 
-            this.Kompetensi.HeaderText = "Kompetensi yang dikembangkan";
-            this.Kompetensi.MinimumWidth = 8;
-            this.Kompetensi.Name = "Kompetensi";
-            // 
-            // TargetPengembangan
-            // 
-            this.TargetPengembangan.HeaderText = "Target pengembangan keterampilan";
-            this.TargetPengembangan.MinimumWidth = 8;
-            this.TargetPengembangan.Name = "TargetPengembangan";
-            // 
-            // DetailPembelajaran
-            // 
-            this.DetailPembelajaran.HeaderText = "Detail Pembelajaran";
-            this.DetailPembelajaran.MinimumWidth = 8;
-            this.DetailPembelajaran.Name = "DetailPembelajaran";
-            // 
-            // SKS
-            // 
-            this.SKS.HeaderText = "SKS";
-            this.SKS.MinimumWidth = 8;
-            this.SKS.Name = "SKS";
+            dataGridView1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Kompetensi, TargetPengembangan, DetailPembelajaran, SKS, disetujui });
+            dataGridView1.Location = new Point(0, 0);
+            dataGridView1.Margin = new Padding(3, 4, 3, 4);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowHeadersWidth = 62;
+            dataGridView1.RowTemplate.Height = 28;
+            dataGridView1.Size = new Size(881, 245);
+            dataGridView1.TabIndex = 0;
+            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
             // 
             // btn_simpan
             // 
-            this.btn_simpan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_simpan.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btn_simpan.Font = new System.Drawing.Font("Poppins", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_simpan.ForeColor = System.Drawing.Color.White;
-            this.btn_simpan.Location = new System.Drawing.Point(689, 397);
-            this.btn_simpan.Name = "btn_simpan";
-            this.btn_simpan.Size = new System.Drawing.Size(99, 41);
-            this.btn_simpan.TabIndex = 2;
-            this.btn_simpan.Text = "Simpan";
-            this.btn_simpan.UseVisualStyleBackColor = false;
-            this.btn_simpan.Click += new System.EventHandler(this.btn_simpan_Click);
+            btn_simpan.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            btn_simpan.BackColor = SystemColors.MenuHighlight;
+            btn_simpan.Font = new Font("Microsoft Sans Serif", 8F, FontStyle.Bold, GraphicsUnit.Point);
+            btn_simpan.ForeColor = Color.White;
+            btn_simpan.Location = new Point(766, 496);
+            btn_simpan.Margin = new Padding(3, 4, 3, 4);
+            btn_simpan.Name = "btn_simpan";
+            btn_simpan.Size = new Size(110, 51);
+            btn_simpan.TabIndex = 2;
+            btn_simpan.Text = "Simpan";
+            btn_simpan.UseVisualStyleBackColor = false;
+            btn_simpan.Click += btn_simpan_Click;
             // 
-            // KonversiSKS2
+            // Kompetensi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btn_simpan);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "KonversiSKS2";
-            this.Text = "Baskom";
-            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.ResumeLayout(false);
-
+            Kompetensi.HeaderText = "Kompetensi";
+            Kompetensi.MinimumWidth = 8;
+            Kompetensi.Name = "Kompetensi";
+            // 
+            // TargetPengembangan
+            // 
+            TargetPengembangan.HeaderText = "Deskripsi Kompetensi";
+            TargetPengembangan.MinimumWidth = 8;
+            TargetPengembangan.Name = "TargetPengembangan";
+            // 
+            // DetailPembelajaran
+            // 
+            DetailPembelajaran.HeaderText = "Mata Kuliah";
+            DetailPembelajaran.MinimumWidth = 8;
+            DetailPembelajaran.Name = "DetailPembelajaran";
+            // 
+            // SKS
+            // 
+            SKS.HeaderText = "SKS";
+            SKS.MinimumWidth = 8;
+            SKS.Name = "SKS";
+            SKS.ReadOnly = true;
+            // 
+            // disetujui
+            // 
+            disetujui.HeaderText = "Disetujui";
+            disetujui.MinimumWidth = 8;
+            disetujui.Name = "disetujui";
+            // 
+            // v_DetailValidasiKonversiSks
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(889, 562);
+            Controls.Add(btn_simpan);
+            Controls.Add(panel1);
+            Controls.Add(tableLayoutPanel1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "v_DetailValidasiKonversiSks";
+            Text = "Baskom";
+            WindowState = FormWindowState.Maximized;
+            tableLayoutPanel1.ResumeLayout(false);
+            tableLayoutPanel1.PerformLayout();
+            panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ResumeLayout(false);
         }
 
         #endregion
@@ -226,13 +230,14 @@
         private System.Windows.Forms.Label lbl_Mitra;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Kompetensi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TargetPengembangan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DetailPembelajaran;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn SKS;
         private System.Windows.Forms.Button btn_simpan;
         private System.Windows.Forms.Label lbl_NamaOrang;
         private System.Windows.Forms.Label lbl_nimmahasiswa;
         private System.Windows.Forms.Label lbl_namamitra;
+        private DataGridViewTextBoxColumn Kompetensi;
+        private DataGridViewTextBoxColumn TargetPengembangan;
+        private DataGridViewTextBoxColumn DetailPembelajaran;
+        private DataGridViewTextBoxColumn SKS;
+        private DataGridViewCheckBoxColumn disetujui;
     }
 }

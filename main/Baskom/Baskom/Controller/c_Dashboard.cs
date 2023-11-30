@@ -73,7 +73,7 @@ namespace Baskom.Controller
         }
         public void setTambahKonversiSks()
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new(this);
+            v_TambahKonversiSks v_TambahKonversiSks = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna,  m_DataKonversiSks, m_DataPembagianTugas);
             v_TambahKonversiSks.Show();
         }
         public void setTambahKonversiNilai()

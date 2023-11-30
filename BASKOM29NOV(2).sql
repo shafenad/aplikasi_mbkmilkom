@@ -73,11 +73,16 @@ CREATE TABLE "Data_Mata_Kuliah_Tempuh"(
     id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL
 );
 
+CREATE TABLE "Data_Status_Validasi_Mitra"(
+	id_status_validasi serial primary key NOT NULL,
+	status_validasi varchar(24) NOT NULL
+);
+
 CREATE TABLE "Data_Pengajuan_Mitra"(
 	id_pengajuan serial primary key NOT NULL,
 	nama_mitra varchar(64) UNIQUE NOT NULL,
 	deskripsi_mitra text NOT NULL,
-	status_validasi smallint NOT NULL,
+	id_status_validasi int NOT NULL,
 	id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL
 );
 
@@ -92,16 +97,18 @@ CREATE TABLE "Data_Konversi_SKS"(
 	id_konversi_sks serial primary key NOT NULL,
 	kompetensi text NOT NULL,
     deskripsi_kompetensi text NOT NULL,
-    id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL
+	status_validasi smallint NOT NULL,
+    id_matkul int REFERENCES "Data_Mata_Kuliah"(id_matkul) NOT NULL,
+	id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL
 );
 
 
 CREATE TABLE "Data_Konversi_Nilai" (
 	id_konversi_nilai serial primary key NOT NULL,
+	nilai int NOT NULL,
 	file_laporan_akhir varchar(100) NOT NULL,
 	status_validasi smallint NOT NULL,
-	id_matkul int REFERENCES "Data_Mata_Kuliah"(id_matkul) NOT NULL,
-	id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL
+	id_konversi_sks int REFERENCES "Data_Konversi_SKS"(id_konversi_sks) NOT NULL
 );
 
 CREATE TABLE "Data_Penerimaan_Mitra"(
@@ -119,11 +126,11 @@ CREATE TABLE "Data_Penerimaan_Mitra"(
 
 CREATE TABLE "Data_Pembagian_Tugas"(
 	id_tugas serial primary key NOT NULL,
-	id_penerimaan int REFERENCES "Data_Penerimaan_Mitra"(id_penerimaan) NULL,
-	id_konversi_sks int REFERENCES "Data_Konversi_SKS"(id_konversi_sks) NULL,
-	id_konversi_nilai int REFERENCES "Data_Konversi_Nilai"(id_konversi_nilai) NULL,
+	id_mahasiswa int REFERENCES "Data_Akun_Mahasiswa"(id_mahasiswa) NOT NULL UNIQUE,
 	id_timmbkm int REFERENCES "Data_Akun_Timmbkm"(id_timmbkm) NULL
 );
+
+INSERT INTO "Data_Status_Validasi_Mitra" (status_validasi) VALUES ('Belum Dibuat'),('Sudah Dibuat'),('Telah Diajukan'),('Telah Disetujui Mitra'),('Selesai');
 
 INSERT INTO "Data_BKP" (bkp, deskripsi_bkp) 
 VALUES ('Pertukaran Mahasiswa Merdeka', 'Program Pertukaran Mahasiswa Merdeka merupakan sebuah program mobilitas mahasiswa selama satu semester untuk mendapatkan pengalaman belajar di perguruan tinggi di Indonesia sekaligus memperkuat persatuan dalam keberagaman.'),
@@ -245,17 +252,17 @@ INSERT INTO "Data_Akun_Timmbkm" (nidn, id_dosen) VALUES
 ('003108305', 19);
 SELECT * FROM "Data_Akun_Timmbkm";
 
-INSERT INTO "Data_Akun_Mahasiswa" (nim,nama_mahasiswa,tahun_masuk,status_mahasiswa,no_wa,batch_mbkm,email,kata_sandi,id_prodi,id_timmbkm)
-VALUES ('222410101005','Ayu Qomariya Putri Edyta',2022,1,'085853850540',1,'222410101005@mail.unej.ac.id','Ayu_1005',1,1),
-('222410101012','Rinda Indriyani Shindi Shantika',2022,1,'087756252568',1,'222410101012@mail.unej.ac.id','Rinda_1012',1,1),
-('222410101020','Shavira Febynadia',2022,1,'08113068789',1,'222410101020@mail.unej.ac.id','Shavira_1020',1,1),
-('222410101035','Fatimatuz Zahra',2022,1,'082302526002',1,'222410101035@mail.unej.ac.id','Fatimatuz_1035',1,2),
-('222410101037','Muhammad Faqih',2022,1,'083156922092',1,'222410101037@mail.unej.ac.id','Muhammad_1037',1,2),
-('222410101042','Millatul Azizah',2022,1,'081231978858',1,'222410101042@mail.unej.ac.id','Millatul_1042',1,3),
-('222410101043','Vaneca Raditya Fendyani',2022,1,'083143158444',1,'222410101043@mail.unej.ac.id','Vaneca_1043',1,3),
-('222410101044','Abd. Muiz Samsul Arifin',2022,1,'0895606158031',1,'222410101044@mail.unej.ac.id','Abdul_1044',1,4),
-('222410101050','Raka Febrian Syahputra',2022,1,'081233405169',1,'222410101050@mail.unej.ac.id','Raka_1050',1,4),
-('222410101051','Nadilia Dwi Oktavia',2022,1,'082236685213',1,'222410101051@mail.unej.ac.id','Nadilia_1051',1,4);
+INSERT INTO "Data_Akun_Mahasiswa" (nim,nama_mahasiswa,tahun_masuk,status_mahasiswa,no_wa,batch_mbkm,email,kata_sandi,id_prodi)
+VALUES ('222410101005','Ayu Qomariya Putri Edyta',2022,1,'085853850540',1,'222410101005@mail.unej.ac.id','Ayu_1005',1),
+('222410101012','Rinda Indriyani Shindi Shantika',2022,1,'087756252568',1,'222410101012@mail.unej.ac.id','Rinda_1012',1),
+('222410101020','Shavira Febynadia',2022,1,'08113068789',1,'222410101020@mail.unej.ac.id','Shavira_1020',1),
+('222410101035','Fatimatuz Zahra',2022,1,'082302526002',1,'222410101035@mail.unej.ac.id','Fatimatuz_1035',1),
+('222410101037','Muhammad Faqih',2022,1,'083156922092',1,'222410101037@mail.unej.ac.id','Muhammad_1037',1),
+('222410101042','Millatul Azizah',2022,1,'081231978858',1,'222410101042@mail.unej.ac.id','Millatul_1042',3),
+('222410101043','Vaneca Raditya Fendyani',2022,1,'083143158444',1,'222410101043@mail.unej.ac.id','Vaneca_1043',3),
+('222410101044','Abd. Muiz Samsul Arifin',2022,1,'0895606158031',1,'222410101044@mail.unej.ac.id','Abdul_1044',1),
+('222410101050','Raka Febrian Syahputra',2022,1,'081233405169',1,'222410101050@mail.unej.ac.id','Raka_1050',1),
+('222410101051','Nadilia Dwi Oktavia',2022,1,'082236685213',1,'222410101051@mail.unej.ac.id','Nadilia_1051',1);
 SELECT * FROM "Data_Akun_Mahasiswa";
 
 INSERT INTO "Data_Mata_Kuliah_Tempuh"(id_matkul, id_mahasiswa)
@@ -272,45 +279,45 @@ VALUES (3, 4),
 SELECT * FROM "Data_Mata_Kuliah_Tempuh";
 
 
-INSERT INTO "Data_Konversi_SKS"(kompetensi, deskripsi_kompetensi, id_mahasiswa)
-VALUES ('Proyek Kolaborasi', 'Mampu mengelola proyek yang ditugaskan kepada pemagang secara kelompok',10 ),
-('Perencanaan Proyek Riset', 'Mampu membuat rancangan proyek riset yang sesuai dengan permasalahan yang dialami di Bukit Vista', 9),
-('Programming', 'Menguasai programming menggunakan Python, mySQL', 7),
-('Pengelolaan Klien', 'Mampu memenuhi permintaan klien atas proyek yang dipegang', 6),
-('Realisasi dan Pengelolaan Proyek', 'Mampu mengeksekusikan rencana proyek yang sebelumnya direncanakan dengan baik', 5),
-('UI/UX', 'Mampu menerapkan UI/UX pada project rill industri yang dibuuktikan dengan Sertifikasi Internasional', 4),
-('Digital Marketing', 'Mengenal pemasaran digital, mampu membuat pemasaran digital dengan tools digital yang dibuktikan dengan Sertifikasi Internasional', 3),
-('Design Principle', 'Mampu membuat desain menarik sesuai dengan prinsip desain yang dibuktikan dengan Sertifikasi Internasional', 2),
-('Content Creator', 'Mampu membuat Content dan writer untuk berbagai media dan produk yang dibuktikan dengan Sertifikasi Internasional', 1),
-('Bisnis Digital', 'Mengenal bisnis digital atau industri startup yang eksis di Indonesia, Mengenal trend bisnis startup dunia Mampu menganalisa bisnis startup yang dibuktikan dengan Sertifikasi Internasional', 2);
+INSERT INTO "Data_Konversi_SKS"(kompetensi, deskripsi_kompetensi, status_validasi, id_matkul, id_mahasiswa)
+VALUES ('Proyek Kolaborasi', 'Mampu mengelola proyek yang ditugaskan kepada pemagang secara kelompok', 0, 7,10),
+('Perencanaan Proyek Riset', 'Mampu membuat rancangan proyek riset yang sesuai dengan permasalahan yang dialami di Bukit Vista', 0, 6, 9),
+('Programming', 'Menguasai programming menggunakan Python, mySQL', 0,2, 7),
+('Pengelolaan Klien', 'Mampu memenuhi permintaan klien atas proyek yang dipegang', 0,4, 6),
+('Realisasi dan Pengelolaan Proyek', 'Mampu mengeksekusikan rencana proyek yang sebelumnya direncanakan dengan baik', 0,3, 5),
+('UI/UX', 'Mampu menerapkan UI/UX pada project rill industri yang dibuuktikan dengan Sertifikasi Internasional', 0,1, 4),
+('Digital Marketing', 'Mengenal pemasaran digital, mampu membuat pemasaran digital dengan tools digital yang dibuktikan dengan Sertifikasi Internasional', 0,9, 3),
+('Design Principle', 'Mampu membuat desain menarik sesuai dengan prinsip desain yang dibuktikan dengan Sertifikasi Internasional', 0,5, 2),
+('Content Creator', 'Mampu membuat Content dan writer untuk berbagai media dan produk yang dibuktikan dengan Sertifikasi Internasional', 0,8, 1),
+('Bisnis Digital', 'Mengenal bisnis digital atau industri startup yang eksis di Indonesia, Mengenal trend bisnis startup dunia Mampu menganalisa bisnis startup yang dibuktikan dengan Sertifikasi Internasional', 0,4, 2);
 SELECT * FROM "Data_Konversi_SKS";
 
 
-INSERT INTO "Data_Konversi_Nilai"(file_laporan_akhir, status_validasi, id_matkul, id_mahasiswa)
-VALUES ('https://kampusmerdeka.kemdikbud.go.id/','0',1,5),
-('https://pusatinformasi.kampusmerdeka.kemdikbud.go.id','1',2,3),
-('https://grow.google/intl/id_id/bangkit/?tab=machine-learning','1',3,7),
-('https://kampusmerdeka.kemdikbud.go.id/program','0',4,5),
-('https://kampusmerdeka.kemdikbud.go.id/program/mengajar','1',6,8),
-('https://kampusmerdeka.kemdikbud.go.id/program/magang/detail','1',7,9),
-('https://kampusmerdeka.kemdikbud.go.id/program/studi-independen/detail','1',8,2),
-('https://pmm.kampusmerdeka.kemdikbud.go.id/pages/info/program/pmm_4/','1',9,10),
-('https://wirausahamerdeka.kampusmerdeka.kemdikbud.go.id/info/','1',10,4),
-('https://praktisimengajar.id/','0',5,7);
+INSERT INTO "Data_Konversi_Nilai"(nilai, file_laporan_akhir, status_validasi,id_konversi_sks)
+VALUES (20,'https://kampusmerdeka.kemdikbud.go.id/',0,1),
+(30,'https://pusatinformasi.kampusmerdeka.kemdikbud.go.id',1,2),
+(18,'https://grow.google/intl/id_id/bangkit/?tab=machine-learning',1,3),
+(87,'https://kampusmerdeka.kemdikbud.go.id/program',0,4),
+(76,'https://kampusmerdeka.kemdikbud.go.id/program/mengajar',1,5),
+(33,'https://kampusmerdeka.kemdikbud.go.id/program/magang/detail',1,6),
+(90,'https://kampusmerdeka.kemdikbud.go.id/program/studi-independen/detail',1,7),
+(67,'https://pmm.kampusmerdeka.kemdikbud.go.id/pages/info/program/pmm_4/',1,8),
+(56,'https://wirausahamerdeka.kampusmerdeka.kemdikbud.go.id/info/',1,9),
+(82,'https://praktisimengajar.id/',0,9);
 SELECT * FROM "Data_Konversi_Nilai";
 
 
-INSERT INTO "Data_Pengajuan_Mitra" (nama_mitra,deskripsi_mitra,status_validasi,id_mahasiswa)
+INSERT INTO "Data_Pengajuan_Mitra" (nama_mitra,deskripsi_mitra,id_status_validasi,id_mahasiswa)
 VALUES ('PT Hacktivate Teknologi Indonesia (Hacktiv8)','PT Hacktivate Teknologi Indonesia (Hacktiv8) adalah sebuah Lembaga Pendidikan dan Pelatihan bidang teknologi yang telah berdiri sejak tahun 2016, yang dibangun oleh Ronald Ishak dan Riza Fahmi',1,1),
-('PT BISA ARTIFISIAL INDONESIA','PT. Bisa Artifisial Indonesia (BISA AI) merupakan perusahaan yang bergerak dibidang IT khususnya pada pengembangan Artificial Intelligence',0,2),
-('Binakarir (PT Care Indonesia Solusi)','Binakarir (PT Care Indonesia Solusi) adalah perusahaan yang bergerak di bidang konsultan HRD, yang berlokasi di Bandung. Kami unggul dalam mengembangkan asesmen online dan inovasi layanan lainnya dalam asesmen psikologis dan sumber daya manusia',0,3),
+('PT BISA ARTIFISIAL INDONESIA','PT. Bisa Artifisial Indonesia (BISA AI) merupakan perusahaan yang bergerak dibidang IT khususnya pada pengembangan Artificial Intelligence',1,2),
+('Binakarir (PT Care Indonesia Solusi)','Binakarir (PT Care Indonesia Solusi) adalah perusahaan yang bergerak di bidang konsultan HRD, yang berlokasi di Bandung. Kami unggul dalam mengembangkan asesmen online dan inovasi layanan lainnya dalam asesmen psikologis dan sumber daya manusia',1,3),
 ('PT Mitra Integrasi Informatika (Metrodata Academy)','PT Mitra Integrasi Informatika (Metrodata Academy) adalah  perusahaan Teknologi Informasi terbesar di Indonesia berkomitmen ikut serta dalam mencerdaskan kehidupan bangsa, khususnya pengembangan potensi talenta digital, baik untuk IT Professional maupun mahasiswa',1,4),
-('PT. Trisakti Pilar Persada','PT. Trisakti Pilar Persada adalah perusahaan yang bergerak pada bidang Kajian Kebijakan, Perancangan Pembangunan, Media Literasi, Pengembangan SDM dan Jasa survey',0,5),
+('PT. Trisakti Pilar Persada','PT. Trisakti Pilar Persada adalah perusahaan yang bergerak pada bidang Kajian Kebijakan, Perancangan Pembangunan, Media Literasi, Pengembangan SDM dan Jasa survey',1,5),
 ('PT GITS Indonesia','PT GITS Indonesia adalah perusahan yang bergerak dalam bidang pengembangan aplikasi android',1,6),
-('PT Orbit Ventura Indonesia','PT Orbit Ventura Indonesia (OVI) telah didirikan pada tahun 2015 untuk memfasilitasi pemahaman yang lebih baik tentang bagaimana ilmu pengetahuan dan teknologi dapat meningkatkan kehidupan negara berkembang',0,7),
+('PT Orbit Ventura Indonesia','PT Orbit Ventura Indonesia (OVI) telah didirikan pada tahun 2015 untuk memfasilitasi pemahaman yang lebih baik tentang bagaimana ilmu pengetahuan dan teknologi dapat meningkatkan kehidupan negara berkembang',1,7),
 ('PT Widya Inovasi Indonesia','PT Widya Inovasi Indonesia adalah perusahaan Informasi dan Teknologi yang fokus menghadirkan teknologi masa depan',1,8),
 ('PT Ruang Raya Indonesia (Ruang Guru)','PT Ruang Raya Indonesia (Ruang Guru) adalah sebuah perusahaan rintisan digital asal Indonesia yang bergerak di bidang pendidikan nonformal',1,9),
-('PT Zona Edukasi Nusantara (Zenius)','PT Zona Edukasi Nusantara (Zenius Education) adalah perusahaan pendidikan berbasis teknologi asal Indonesia',0,10);
+('PT Zona Edukasi Nusantara (Zenius)','PT Zona Edukasi Nusantara (Zenius Education) adalah perusahaan pendidikan berbasis teknologi asal Indonesia',1,10);
 SELECT * FROM "Data_Pengajuan_Mitra";
 
 
@@ -328,6 +335,6 @@ VALUES (1, '085854606084', '20', 'linkbukti', 1, 2, 4, 3, 1),
 SELECT * FROM "Data_Penerimaan_Mitra";
 
 
-INSERT INTO "Data_Pembagian_Tugas"(id_tugas, id_penerimaan, id_konversi_sks, id_konversi_nilai id_timmbkm)
-VALUES (1,2,1,1,3),(2,3,2,2,4),(3,4,3,3,1),(4,5,4,4,2),(5,6,5,5,3),(6,7,6,6,4),(7,8,7,7,1),(8,9,8,8,2),(9,10,9,9,3),(10,1,10,10,4);
+INSERT INTO "Data_Pembagian_Tugas"(id_mahasiswa, id_timmbkm)
+VALUES (1,1),(2,2),(3,1),(4,1),(5,2),(6,1),(7,2),(8,1),(9,1),(10,2);
 SELECT * FROM "Data_Pembagian_Tugas";
