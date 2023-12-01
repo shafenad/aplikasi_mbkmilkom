@@ -74,6 +74,29 @@ namespace Baskom.Model
             reader.Close();
             return result;
         }
+
+        public int getJumlahSKSByIdMhs(int id_mahasiswa)
+        {
+            NpgsqlDataReader reader = Database.Database.getData($"SELECT * FROM \"Data_Penerimaan_Mitra\" WHERE id_mahasiswa = {id_mahasiswa}");
+            int field_count = reader.FieldCount;
+            object[] result = new object[field_count];
+            while (reader.Read())
+            {
+                result[0] = reader[0];
+                result[1] = reader[1];
+                result[2] = reader[2];
+                result[3] = reader[3];
+                result[4] = reader[4];
+                result[5] = reader[5];
+                result[6] = reader[6];
+                result[7] = reader[7];
+                result[8] = reader[8];
+                result[9] = reader[9];
+            }
+            reader.Close();
+            return int.Parse(result[3].ToString());
+        }
+
         public void sendPenerimaan(object[] penerimaan_mitra)
         {
             int status_pkl;

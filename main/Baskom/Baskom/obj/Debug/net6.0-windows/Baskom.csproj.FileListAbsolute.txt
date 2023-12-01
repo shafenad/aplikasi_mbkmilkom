@@ -92,7 +92,6 @@ D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v
 D:\CINTA CODING\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PenerimaanMitra.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj.AssemblyReference.cache
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.Properties.Resources.resources
-C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_CariMataKuliah.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DaftarMitra.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DashboardAdmin.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_DashboardMahasiswa.resources
@@ -108,7 +107,6 @@ C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_MemvalidasiKonversiNilai.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_MemvalidasiKonversiSks.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PembagianTugas.resources
-C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PembagianTugasPIC.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PenerimaanMitra.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_PengajuanMOA.resources
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_ProfilAdmin.resources
@@ -142,3 +140,4 @@ C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\bin\Debug\net6.0-windows\
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.csproj.CopyComplete
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.genruntimeconfig.cache
 C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\ref\Baskom.dll
+C:\Users\HP\Documents\GitHub\baskom\main\Baskom\Baskom\obj\Debug\net6.0-windows\Baskom.View.v_LihatMataKuliahProgram.resources

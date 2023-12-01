@@ -69,17 +69,22 @@ namespace Baskom.Controller
         }
         public void setTambahMataKuliahTempuh()
         {
-            v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataMataKuliah, this.m_DataMataKuliahTempuh);
+            v_TambahMataKuliahTempuh v_TambahMataKuliahTempuh = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataMataKuliah, this.m_DataMataKuliahTempuh, this.m_DataKonversiSks);
             v_TambahMataKuliahTempuh.Show();
         }
         public void setTambahKonversiSks()
         {
-            v_TambahKonversiSks v_TambahKonversiSks = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna);
+            v_TambahKonversiSks v_TambahKonversiSks = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataKonversiSks, this.m_DataMataKuliah, this.m_DataMataKuliahTempuh, this.m_DataPenerimaanMitra);
             v_TambahKonversiSks.Show();
+        }
+        public void setLihatMataKuliahProgram()
+        {
+            v_LihatMataKuliahProgram v_LihatMataKuliahProgram = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataPenerimaanMitra, this.m_DataDetailProgram, this.m_DataMataKuliah);
+            v_LihatMataKuliahProgram.Show();
         }
         public void setTambahKonversiNilai()
         {
-            v_TambahKonversiNilai v_TambahKonversiNilai = new(this);
+            v_TambahKonversiNilai v_TambahKonversiNilai = new(this, (m_DataAkunMahasiswa)this.data_akun_pengguna, this.m_DataKonversiSks, this.m_DataKonversiNilai, this.m_DataMataKuliah);
             v_TambahKonversiNilai.Show();
         } 
         public void setProfilMahasiswa()

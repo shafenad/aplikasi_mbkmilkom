@@ -48,14 +48,10 @@
             lbl_matkulygtlhditmph = new Label();
             pnl_matakuliahkanan = new Panel();
             tbl_matkul = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
+            lbl_daftarmatkul = new Label();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            lbl_daftarmatkul = new Label();
             menuStrip1.SuspendLayout();
             pnl_matakuliahkiri.SuspendLayout();
             pnl_matakuliahkanan.SuspendLayout();
@@ -68,7 +64,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { dashboardToolStripMenuItem, mitraToolStripMenuItem, mataKuliahToolStripMenuItem, konversiSKSToolStripMenuItem, konversiNilaiToolStripMenuItem, profilToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(1137, 32);
+            menuStrip1.Size = new Size(1137, 30);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -76,7 +72,7 @@
             // 
             dashboardToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             dashboardToolStripMenuItem.Name = "dashboardToolStripMenuItem";
-            dashboardToolStripMenuItem.Size = new Size(114, 28);
+            dashboardToolStripMenuItem.Size = new Size(114, 26);
             dashboardToolStripMenuItem.Text = "Dashboard";
             dashboardToolStripMenuItem.Click += dashboardToolStripMenuItem_Click;
             // 
@@ -85,20 +81,20 @@
             mitraToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { pengajuanMitraToolStripMenuItem, statusMOAToolStripMenuItem });
             mitraToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mitraToolStripMenuItem.Name = "mitraToolStripMenuItem";
-            mitraToolStripMenuItem.Size = new Size(65, 28);
+            mitraToolStripMenuItem.Size = new Size(65, 26);
             mitraToolStripMenuItem.Text = "Mitra";
             // 
             // pengajuanMitraToolStripMenuItem
             // 
             pengajuanMitraToolStripMenuItem.Name = "pengajuanMitraToolStripMenuItem";
-            pengajuanMitraToolStripMenuItem.Size = new Size(270, 34);
+            pengajuanMitraToolStripMenuItem.Size = new Size(250, 34);
             pengajuanMitraToolStripMenuItem.Text = "Penerimaan Mitra";
             pengajuanMitraToolStripMenuItem.Click += pengajuanMitraToolStripMenuItem_Click;
             // 
             // statusMOAToolStripMenuItem
             // 
             statusMOAToolStripMenuItem.Name = "statusMOAToolStripMenuItem";
-            statusMOAToolStripMenuItem.Size = new Size(270, 34);
+            statusMOAToolStripMenuItem.Size = new Size(250, 34);
             statusMOAToolStripMenuItem.Text = "Status MOA";
             statusMOAToolStripMenuItem.Click += statusMOAToolStripMenuItem_Click;
             // 
@@ -106,7 +102,7 @@
             // 
             mataKuliahToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             mataKuliahToolStripMenuItem.Name = "mataKuliahToolStripMenuItem";
-            mataKuliahToolStripMenuItem.Size = new Size(120, 28);
+            mataKuliahToolStripMenuItem.Size = new Size(120, 26);
             mataKuliahToolStripMenuItem.Text = "Mata Kuliah";
             mataKuliahToolStripMenuItem.Click += mataKuliahToolStripMenuItem_Click;
             // 
@@ -114,7 +110,7 @@
             // 
             konversiSKSToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiSKSToolStripMenuItem.Name = "konversiSKSToolStripMenuItem";
-            konversiSKSToolStripMenuItem.Size = new Size(137, 28);
+            konversiSKSToolStripMenuItem.Size = new Size(137, 26);
             konversiSKSToolStripMenuItem.Text = "Konversi SKS";
             konversiSKSToolStripMenuItem.Click += konversiSKSToolStripMenuItem_Click;
             // 
@@ -122,7 +118,7 @@
             // 
             konversiNilaiToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             konversiNilaiToolStripMenuItem.Name = "konversiNilaiToolStripMenuItem";
-            konversiNilaiToolStripMenuItem.Size = new Size(136, 28);
+            konversiNilaiToolStripMenuItem.Size = new Size(136, 26);
             konversiNilaiToolStripMenuItem.Text = "Konversi Nilai";
             konversiNilaiToolStripMenuItem.Click += konversiNilaiToolStripMenuItem_Click;
             // 
@@ -131,7 +127,7 @@
             profilToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { informasiAkunToolStripMenuItem, logOutToolStripMenuItem });
             profilToolStripMenuItem.Font = new Font("Microsoft Sans Serif", 9F, FontStyle.Regular, GraphicsUnit.Point);
             profilToolStripMenuItem.Name = "profilToolStripMenuItem";
-            profilToolStripMenuItem.Size = new Size(67, 28);
+            profilToolStripMenuItem.Size = new Size(67, 26);
             profilToolStripMenuItem.Text = "Profil";
             profilToolStripMenuItem.Click += profilToolStripMenuItem_Click;
             // 
@@ -211,7 +207,7 @@
             tbl_matkul.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             tbl_matkul.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             tbl_matkul.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            tbl_matkul.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7 });
+            tbl_matkul.Columns.AddRange(new DataGridViewColumn[] { Column3, Column4, Column5 });
             tbl_matkul.Location = new Point(69, 70);
             tbl_matkul.Name = "tbl_matkul";
             tbl_matkul.RowHeadersWidth = 82;
@@ -219,17 +215,15 @@
             tbl_matkul.Size = new Size(457, 441);
             tbl_matkul.TabIndex = 1;
             // 
-            // Column1
+            // lbl_daftarmatkul
             // 
-            Column1.HeaderText = "Kode";
-            Column1.MinimumWidth = 8;
-            Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Tahun Kurikulum";
-            Column2.MinimumWidth = 8;
-            Column2.Name = "Column2";
+            lbl_daftarmatkul.AutoSize = true;
+            lbl_daftarmatkul.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
+            lbl_daftarmatkul.Location = new Point(62, 30);
+            lbl_daftarmatkul.Name = "lbl_daftarmatkul";
+            lbl_daftarmatkul.Size = new Size(191, 25);
+            lbl_daftarmatkul.TabIndex = 0;
+            lbl_daftarmatkul.Text = "Daftar Mata Kuliah";
             // 
             // Column3
             // 
@@ -248,28 +242,6 @@
             Column5.HeaderText = "Jumlah SKS";
             Column5.MinimumWidth = 8;
             Column5.Name = "Column5";
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "SKS Tatap Muka";
-            Column6.MinimumWidth = 8;
-            Column6.Name = "Column6";
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "SKS Praktikum";
-            Column7.MinimumWidth = 8;
-            Column7.Name = "Column7";
-            // 
-            // lbl_daftarmatkul
-            // 
-            lbl_daftarmatkul.AutoSize = true;
-            lbl_daftarmatkul.Font = new Font("Microsoft Sans Serif", 10F, FontStyle.Bold, GraphicsUnit.Point);
-            lbl_daftarmatkul.Location = new Point(62, 30);
-            lbl_daftarmatkul.Name = "lbl_daftarmatkul";
-            lbl_daftarmatkul.Size = new Size(191, 25);
-            lbl_daftarmatkul.TabIndex = 0;
-            lbl_daftarmatkul.Text = "Daftar Mata Kuliah";
             // 
             // v_TambahMataKuliahTempuh
             // 
@@ -318,12 +290,8 @@
         private ToolStripMenuItem logOutToolStripMenuItem;
         private ToolStripMenuItem pengajuanMitraToolStripMenuItem;
         private ToolStripMenuItem statusMOAToolStripMenuItem;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
     }
 }
